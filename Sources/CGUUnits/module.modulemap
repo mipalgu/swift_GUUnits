@@ -1,0 +1,6 @@
+module CGUUnits [system] {
+  link "guunits"
+  umbrella header "libguunits_bridging.h"
+  export *
+  module * { export * }
+}
