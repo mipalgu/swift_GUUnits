@@ -62,6 +62,10 @@ public struct Radians_t {
 
     public let rawValue: radians_t
 
+    public init(rawValue: radians_t) {
+        self.rawValue = rawValue
+    }
+
     public var toDegrees_t: Degrees_t {
         return Degrees_t(rad_t_to_deg_t(self.rawValue))
     }
@@ -207,6 +211,10 @@ public struct Radians_t {
 public struct Radians_u {
 
     public let rawValue: radians_u
+
+    public init(rawValue: radians_u) {
+        self.rawValue = rawValue
+    }
 
     public var toDegrees_t: Degrees_t {
         return Degrees_t(rad_u_to_deg_t(self.rawValue))
@@ -354,6 +362,10 @@ public struct Radians_f {
 
     public let rawValue: radians_f
 
+    public init(rawValue: radians_f) {
+        self.rawValue = rawValue
+    }
+
     public var toDegrees_t: Degrees_t {
         return Degrees_t(rad_f_to_deg_t(self.rawValue))
     }
@@ -499,6 +511,10 @@ public struct Radians_f {
 public struct Radians_d {
 
     public let rawValue: radians_d
+
+    public init(rawValue: radians_d) {
+        self.rawValue = rawValue
+    }
 
     public var toDegrees_t: Degrees_t {
         return Degrees_t(rad_d_to_deg_t(self.rawValue))

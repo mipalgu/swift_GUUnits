@@ -62,6 +62,10 @@ public struct Millimetres_t {
 
     public let rawValue: millimetres_t
 
+    public init(rawValue: millimetres_t) {
+        self.rawValue = rawValue
+    }
+
     public var toCentimetres_t: Centimetres_t {
         return Centimetres_t(mm_t_to_cm_t(self.rawValue))
     }
@@ -239,6 +243,10 @@ public struct Millimetres_t {
 public struct Millimetres_u {
 
     public let rawValue: millimetres_u
+
+    public init(rawValue: millimetres_u) {
+        self.rawValue = rawValue
+    }
 
     public var toCentimetres_t: Centimetres_t {
         return Centimetres_t(mm_u_to_cm_t(self.rawValue))
@@ -418,6 +426,10 @@ public struct Millimetres_f {
 
     public let rawValue: millimetres_f
 
+    public init(rawValue: millimetres_f) {
+        self.rawValue = rawValue
+    }
+
     public var toCentimetres_t: Centimetres_t {
         return Centimetres_t(mm_f_to_cm_t(self.rawValue))
     }
@@ -595,6 +607,10 @@ public struct Millimetres_f {
 public struct Millimetres_d {
 
     public let rawValue: millimetres_d
+
+    public init(rawValue: millimetres_d) {
+        self.rawValue = rawValue
+    }
 
     public var toCentimetres_t: Centimetres_t {
         return Centimetres_t(mm_d_to_cm_t(self.rawValue))

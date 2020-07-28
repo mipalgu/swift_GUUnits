@@ -62,6 +62,10 @@ public struct Seconds_t {
 
     public let rawValue: seconds_t
 
+    public init(rawValue: seconds_t) {
+        self.rawValue = rawValue
+    }
+
     public var toMicroseconds_t: Microseconds_t {
         return Microseconds_t(s_t_to_us_t(self.rawValue))
     }
@@ -239,6 +243,10 @@ public struct Seconds_t {
 public struct Seconds_u {
 
     public let rawValue: seconds_u
+
+    public init(rawValue: seconds_u) {
+        self.rawValue = rawValue
+    }
 
     public var toMicroseconds_t: Microseconds_t {
         return Microseconds_t(s_u_to_us_t(self.rawValue))
@@ -418,6 +426,10 @@ public struct Seconds_f {
 
     public let rawValue: seconds_f
 
+    public init(rawValue: seconds_f) {
+        self.rawValue = rawValue
+    }
+
     public var toMicroseconds_t: Microseconds_t {
         return Microseconds_t(s_f_to_us_t(self.rawValue))
     }
@@ -595,6 +607,10 @@ public struct Seconds_f {
 public struct Seconds_d {
 
     public let rawValue: seconds_d
+
+    public init(rawValue: seconds_d) {
+        self.rawValue = rawValue
+    }
 
     public var toMicroseconds_t: Microseconds_t {
         return Microseconds_t(s_d_to_us_t(self.rawValue))

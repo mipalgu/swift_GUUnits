@@ -62,6 +62,10 @@ public struct Pixels_t {
 
     public let rawValue: pixels_t
 
+    public init(rawValue: pixels_t) {
+        self.rawValue = rawValue
+    }
+
     
 
     public var toInt8: Int8 {
@@ -179,6 +183,10 @@ public struct Pixels_t {
 public struct Pixels_u {
 
     public let rawValue: pixels_u
+
+    public init(rawValue: pixels_u) {
+        self.rawValue = rawValue
+    }
 
     
 
@@ -298,6 +306,10 @@ public struct Pixels_f {
 
     public let rawValue: pixels_f
 
+    public init(rawValue: pixels_f) {
+        self.rawValue = rawValue
+    }
+
     
 
     public var toInt8: Int8 {
@@ -415,6 +427,10 @@ public struct Pixels_f {
 public struct Pixels_d {
 
     public let rawValue: pixels_d
+
+    public init(rawValue: pixels_d) {
+        self.rawValue = rawValue
+    }
 
     
 

@@ -62,6 +62,10 @@ public struct Percent_t {
 
     public let rawValue: percent_t
 
+    public init(rawValue: percent_t) {
+        self.rawValue = rawValue
+    }
+
     
 
     public var toInt8: Int8 {
@@ -179,6 +183,10 @@ public struct Percent_t {
 public struct Percent_u {
 
     public let rawValue: percent_u
+
+    public init(rawValue: percent_u) {
+        self.rawValue = rawValue
+    }
 
     
 
@@ -298,6 +306,10 @@ public struct Percent_f {
 
     public let rawValue: percent_f
 
+    public init(rawValue: percent_f) {
+        self.rawValue = rawValue
+    }
+
     
 
     public var toInt8: Int8 {
@@ -415,6 +427,10 @@ public struct Percent_f {
 public struct Percent_d {
 
     public let rawValue: percent_d
+
+    public init(rawValue: percent_d) {
+        self.rawValue = rawValue
+    }
 
     
 
