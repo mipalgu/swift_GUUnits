@@ -66,22 +66,6 @@ public protocol GUUnitsType {
 
 }
 
-public protocol GUUnitsFType: GUUnitsType,
-    BinaryFloatingPoint,
-    CustomDebugStringConvertible,
-    CustomReflectable,
-    Decodable,
-    Encodable,
-    LosslessStringConvertible,
-    TextOutputStreamable
-{}
-
-extension Centimetres_t: GUUnitsTType {}
-
-extension Centimetres_u: GUUnitsUType {}
-
-//extension Centimetres_f: GUUnitsFType {}
-
 extension GUUnitsType where Self: CVarArg, Self.RawValue: CVarArg {
     
     public var _cVarArgEncoding: [Int] {
