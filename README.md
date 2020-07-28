@@ -1,3 +1,3 @@
-# swift_GUUnits
-
-A description of this package.
+GUUnits
+=======
+*Swift convenience wrappers around guunits*
