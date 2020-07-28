@@ -66,14 +66,35 @@ public protocol GUUnitsType {
 
 }
 
-/*extension Centimetres_t: GUUnitsType,
-CVarArg,
-CustomReflectable,
-Decodable,
-Encodable,
-FixedWidthInteger,
-Hashable
-{}*/
+public protocol GUUnitsInteger:
+    GUUnitsType,
+    CVarArg,
+    CustomReflectable,
+    Decodable,
+    Encodable,
+    FixedWidthInteger
+    where RawValue: CVarArg, RawValue: CustomReflectable, RawValue: Decodable, RawValue: Encodable, RawValue: FixedWidthInteger
+{}
+
+public protocol GUUnitsTType: GUUnitsInteger, SignedInteger {}
+
+public protocol GUUnitsUType: GUUnitsInteger, UnsignedInteger {}
+
+public protocol GUUnitsFType: GUUnitsType,
+    BinaryFloatingPoint,
+    CustomDebugStringConvertible,
+    CustomReflectable,
+    Decodable,
+    Encodable,
+    LosslessStringConvertible,
+    TextOutputStreamable
+{}
+
+extension Centimetres_t: GUUnitsTType {}
+
+extension Centimetres_u: GUUnitsUType {}
+
+//extension Centimetres_f: GUUnitsFType {}
 
 extension GUUnitsType where Self: CVarArg, Self.RawValue: CVarArg {
     
@@ -107,7 +128,7 @@ extension GUUnitsType where Self: Encodable, Self.RawValue: Encodable {
     
 }
 
-extension GUUnitsType where Self: FixedWidthInteger, Self.RawValue: FixedWidthInteger {
+extension GUUnitsInteger {
 
     public typealias Magnitude = RawValue.Magnitude
     public typealias Words = RawValue.Words
@@ -124,42 +145,28 @@ extension GUUnitsType where Self: FixedWidthInteger, Self.RawValue: FixedWidthIn
         self.rawValue.leadingZeroBitCount
     }
 
-    public var magnitude: RawValue.Magnitude {
-        return self.rawValue.magnitude
-    }
-
-    public static var max: Self {
-        return Self(rawValue: RawValue.max)
-    }
-
-    public static var min: Self {
-        return Self(rawValue: RawValue.min)
-    }
-
     public var nonzeroBitCount: Int {
         self.rawValue.nonzeroBitCount
     }
-
-    public init(integerLiteral value: RawValue) {
-        self.init(rawValue: value)
+    
+    public var magnitude: RawValue.Magnitude {
+        return self.rawValue.magnitude
+    }
+    
+    public init(integerLiteral value: RawValue.IntegerLiteralType) {
+        self.init(rawValue: RawValue(integerLiteral: value))
     }
 
     public init(_truncatingBits bits: UInt) {
         self.init(rawValue: RawValue(_truncatingBits: bits))
     }
-
+    
     public static func +(lhs: Self, rhs: Self) -> Self {
         return Self(rawValue: lhs.rawValue + rhs.rawValue)
     }
 
     public static func - (lhs: Self, rhs: Self) -> Self {
         return Self(rawValue: lhs.rawValue - rhs.rawValue)
-    }
-
-    public static func *= (lhs: inout Self, rhs: Self) {
-        var raw = lhs.rawValue
-        raw *= rhs.rawValue
-        lhs = Self(rawValue: raw)
     }
     
     public static func / (lhs: Self, rhs: Self) -> Self {
@@ -196,16 +203,22 @@ extension GUUnitsType where Self: FixedWidthInteger, Self.RawValue: FixedWidthIn
         return (Self(rawValue: quotient), Self(rawValue: remainder))
     }
     
-    public static var isSigned: Bool {
-        return RawValue.isSigned
-    }
-    
     public var words: RawValue.Words {
         return self.rawValue.words
     }
     
     public var trailingZeroBitCount: Int {
         return self.rawValue.trailingZeroBitCount
+    }
+    
+    public static func * (lhs: Self, rhs: Self) -> Self {
+        return Self(rawValue: lhs.rawValue * rhs.rawValue)
+    }
+
+    public static func *= (lhs: inout Self, rhs: Self) {
+        var raw = lhs.rawValue
+        raw *= rhs.rawValue
+        lhs = Self(rawValue: raw)
     }
     
     public static func /= (lhs: inout Self, rhs: Self) {
@@ -222,10 +235,6 @@ extension GUUnitsType where Self: FixedWidthInteger, Self.RawValue: FixedWidthIn
         var raw = lhs.rawValue
         raw %= rhs.rawValue
         lhs = Self(rawValue: raw)
-    }
-    
-    public static func * (lhs: Self, rhs: Self) -> Self {
-        return Self(rawValue: lhs.rawValue * rhs.rawValue)
     }
     
     public static func &= (lhs: inout Self, rhs: Self) {
@@ -245,17 +254,6 @@ extension GUUnitsType where Self: FixedWidthInteger, Self.RawValue: FixedWidthIn
         raw ^= rhs.rawValue
         lhs = Self(rawValue: raw)
     }
-    
-    public init?<T>(exactly source: T) where T : BinaryInteger {
-        guard let value = RawValue(exactly: source) else {
-            return nil
-        }
-        self.init(rawValue: value)
-    }
-    
-    public init<T>(_ source: T) where T : BinaryInteger {
-        self.init(rawValue: RawValue(source))
-    }
 
 }
 
@@ -266,3 +264,55 @@ extension GUUnitsType where Self: Hashable, Self.RawValue: Hashable {
     }
     
 }
+
+/*
+extension GUUnitsType where Self: AdditiveArithmetic, Self.RawValue: AdditiveArithmetic {
+
+    public static func +(lhs: Self, rhs: Self) -> Self {
+        return Self(rawValue: lhs.rawValue + rhs.rawValue)
+    }
+
+    public static func - (lhs: Self, rhs: Self) -> Self {
+        return Self(rawValue: lhs.rawValue - rhs.rawValue)
+    }
+    
+}
+
+extension GUUnitsType where Self: Numeric, Self.RawValue: Numeric {
+    
+    public typealias Magnitude = Self
+
+    public static func * (lhs: Self, rhs: Self) -> Self {
+        return Self(rawValue: lhs.rawValue * rhs.rawValue)
+    }
+
+    public static func *= (lhs: inout Self, rhs: Self) {
+        var raw = lhs.rawValue
+        raw *= rhs.rawValue
+        lhs = Self(rawValue: raw)
+    }
+    
+}
+
+extension GUUnitsType where Self: FloatingPoint, Self.RawValue: FloatingPoint {
+    
+    public typealias Exponent = RawValue.Exponent
+    
+}
+
+extension GUUnitsType where Self: ExpressibleByIntegerLiteral, Self.RawValue: ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: RawValue.IntegerLiteralType) {
+        self.init(rawValue: RawValue(integerLiteral: value))
+    }
+    
+}
+
+extension GUUnitsType where Self: ExpressibleByFloatLiteral, Self.RawValue: ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: RawValue.FloatLiteralType) {
+        self.init(rawValue: RawValue(floatLiteral: value))
+    }
+    
+}
+*/
