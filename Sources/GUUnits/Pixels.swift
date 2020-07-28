@@ -58,7 +58,7 @@
 
 import CGUUnits
 
-/// A signed integer type in the pixels unit.
+/// A signed integer type for the pixels unit.
 public struct Pixels_t {
 
     public let rawValue: pixels_t
@@ -68,64 +68,46 @@ public struct Pixels_t {
         self.rawValue = rawValue
     }
 
-    /// Convert to a `Int8`.
-    public var toInt8: Int8 {
-        Int8(px_t_to_i8(self.rawValue))
+    /// Create a `Pixels_t` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Pixels_t`.
+    public init(_ value: Double) {
+        self.rawValue = d_to_px_t(value)
     }
-    
-    /// Convert to a `Int16`.
-    public var toInt16: Int16 {
-        Int16(px_t_to_i16(self.rawValue))
+
+    /// Create a `Pixels_t` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Pixels_t`.
+    public init(_ value: Float) {
+        self.rawValue = f_to_px_t(value)
     }
-    
-    /// Convert to a `Int32`.
-    public var toInt32: Int32 {
-        Int32(px_t_to_i32(self.rawValue))
+
+    /// Create a `Pixels_t` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Pixels_t`.
+    public init(_ value: Int) {
+        self.rawValue = i64_to_px_t(Int64(value))
     }
-    
-    /// Convert to a `Int64`.
-    public var toInt64: Int64 {
-        Int64(px_t_to_i64(self.rawValue))
+
+    /// Create a `Pixels_t` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Pixels_t`.
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_px_t(value)
     }
-    
-    /// Convert to a `Int`.
-    public var toInt: Int {
-        Int(px_t_to_i(self.rawValue))
+
+    /// Create a `Pixels_t` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Pixels_t`.
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_px_t(value)
     }
-    
-    /// Convert to a `UInt8`.
-    public var toUInt8: UInt8 {
-        UInt8(px_t_to_u8(self.rawValue))
-    }
-    
-    /// Convert to a `UInt16`.
-    public var toUInt16: UInt16 {
-        UInt16(px_t_to_u16(self.rawValue))
-    }
-    
-    /// Convert to a `UInt32`.
-    public var toUInt32: UInt32 {
-        UInt32(px_t_to_u32(self.rawValue))
-    }
-    
-    /// Convert to a `UInt64`.
-    public var toUInt64: UInt64 {
-        UInt64(px_t_to_u64(self.rawValue))
-    }
-    
-    /// Convert to a `UInt`.
-    public var toUInt: UInt {
-        UInt(px_t_to_u(self.rawValue))
-    }
-    
-    /// Convert to a `Float`.
-    public var toFloat: Float {
-        Float(px_t_to_f(self.rawValue))
-    }
-    
-    /// Convert to a `Double`.
-    public var toDouble: Double {
-        Double(px_t_to_d(self.rawValue))
+
+    /// Create a `Pixels_t` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Pixels_t`.
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_px_t(value)
     }
 
     /// Create a `Pixels_t` by converting a `Int8`.
@@ -134,108 +116,162 @@ public struct Pixels_t {
     public init(_ value: Int8) {
         self.rawValue = i8_to_px_t(value)
     }
-    
-    /// Create a `Pixels_t` by converting a `Int16`.
+
+    /// Create a `Pixels_t` by converting a `UInt`.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Pixels_t`.
-    public init(_ value: Int16) {
-        self.rawValue = i16_to_px_t(value)
+    /// - Parameter value: A `UInt` value to convert to a `Pixels_t`.
+    public init(_ value: UInt) {
+        self.rawValue = u64_to_px_t(UInt64(value))
     }
-    
-    /// Create a `Pixels_t` by converting a `Int32`.
-    ///
-    /// - Parameter value: A `Int32` value to convert to a `Pixels_t`.
-    public init(_ value: Int32) {
-        self.rawValue = i32_to_px_t(value)
-    }
-    
-    /// Create a `Pixels_t` by converting a `Int64`.
-    ///
-    /// - Parameter value: A `Int64` value to convert to a `Pixels_t`.
-    public init(_ value: Int64) {
-        self.rawValue = i64_to_px_t(value)
-    }
-    
-    /// Create a `Pixels_t` by converting a `Int`.
-    ///
-    /// - Parameter value: A `Int` value to convert to a `Pixels_t`.
-    public init(_ value: Int) {
-        self.rawValue = i_to_px_t(CInt(value))
-    }
-    
-    /// Create a `Pixels_t` by converting a `UInt8`.
-    ///
-    /// - Parameter value: A `UInt8` value to convert to a `Pixels_t`.
-    public init(_ value: UInt8) {
-        self.rawValue = u8_to_px_t(value)
-    }
-    
+
     /// Create a `Pixels_t` by converting a `UInt16`.
     ///
     /// - Parameter value: A `UInt16` value to convert to a `Pixels_t`.
     public init(_ value: UInt16) {
         self.rawValue = u16_to_px_t(value)
     }
-    
+
     /// Create a `Pixels_t` by converting a `UInt32`.
     ///
     /// - Parameter value: A `UInt32` value to convert to a `Pixels_t`.
     public init(_ value: UInt32) {
         self.rawValue = u32_to_px_t(value)
     }
-    
+
     /// Create a `Pixels_t` by converting a `UInt64`.
     ///
     /// - Parameter value: A `UInt64` value to convert to a `Pixels_t`.
     public init(_ value: UInt64) {
         self.rawValue = u64_to_px_t(value)
     }
-    
-    /// Create a `Pixels_t` by converting a `UInt`.
+
+    /// Create a `Pixels_t` by converting a `UInt8`.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Pixels_t`.
-    public init(_ value: UInt) {
-        self.rawValue = u_to_px_t(CUnsignedInt(value))
-    }
-    
-    /// Create a `Pixels_t` by converting a `Float`.
-    ///
-    /// - Parameter value: A `Float` value to convert to a `Pixels_t`.
-    public init(_ value: Float) {
-        self.rawValue = f_to_px_t(value)
-    }
-    
-    /// Create a `Pixels_t` by converting a `Double`.
-    ///
-    /// - Parameter value: A `Double` value to convert to a `Pixels_t`.
-    public init(_ value: Double) {
-        self.rawValue = d_to_px_t(value)
+    /// - Parameter value: A `UInt8` value to convert to a `Pixels_t`.
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_px_t(value)
     }
 
-    /// Create a `pixels_t` by converting a `Pixels_d`.
+    /// Create a `Pixels_t` by converting a `Pixels_d`.
     ///
-    /// - Parameter value: A `Pixels_d` value to convert to a `pixels_t`.
+    /// - Parameter value: A `Pixels_d` value to convert to a `Pixels_t`.
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_t(value.rawValue)
     }
-    
-    /// Create a `pixels_t` by converting a `Pixels_f`.
+
+    /// Create a `Pixels_t` by converting a `Pixels_f`.
     ///
-    /// - Parameter value: A `Pixels_f` value to convert to a `pixels_t`.
+    /// - Parameter value: A `Pixels_f` value to convert to a `Pixels_t`.
     public init(_ value: Pixels_f) {
         self.rawValue = px_f_to_px_t(value.rawValue)
     }
-    
-    /// Create a `pixels_t` by converting a `Pixels_u`.
+
+    /// Create a `Pixels_t` by converting a `Pixels_u`.
     ///
-    /// - Parameter value: A `Pixels_u` value to convert to a `pixels_t`.
+    /// - Parameter value: A `Pixels_u` value to convert to a `Pixels_t`.
     public init(_ value: Pixels_u) {
         self.rawValue = px_u_to_px_t(value.rawValue)
     }
 
 }
 
-/// A unsigned integer type in the pixels unit.
+public extension Double {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_d(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_f(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+    init(_ value: Pixels_t) {
+        self = Int(px_t_to_i64(value.rawValue))
+    }
+
+}
+
+public extension Int16 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_i16(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_i32(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_i64(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_i8(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+    init(_ value: Pixels_t) {
+        self = UInt(px_t_to_u64(value.rawValue))
+    }
+
+}
+
+public extension UInt16 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_u16(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_u32(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_u64(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+    init(_ value: Pixels_t) {
+        self = px_t_to_u8(value.rawValue)
+    }
+
+}
+
+/// An unsigned integer type for the pixels unit.
 public struct Pixels_u {
 
     public let rawValue: pixels_u
@@ -245,64 +281,46 @@ public struct Pixels_u {
         self.rawValue = rawValue
     }
 
-    /// Convert to a `Int8`.
-    public var toInt8: Int8 {
-        Int8(px_u_to_i8(self.rawValue))
+    /// Create a `Pixels_u` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Pixels_u`.
+    public init(_ value: Double) {
+        self.rawValue = d_to_px_u(value)
     }
-    
-    /// Convert to a `Int16`.
-    public var toInt16: Int16 {
-        Int16(px_u_to_i16(self.rawValue))
+
+    /// Create a `Pixels_u` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Pixels_u`.
+    public init(_ value: Float) {
+        self.rawValue = f_to_px_u(value)
     }
-    
-    /// Convert to a `Int32`.
-    public var toInt32: Int32 {
-        Int32(px_u_to_i32(self.rawValue))
+
+    /// Create a `Pixels_u` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Pixels_u`.
+    public init(_ value: Int) {
+        self.rawValue = i64_to_px_u(Int64(value))
     }
-    
-    /// Convert to a `Int64`.
-    public var toInt64: Int64 {
-        Int64(px_u_to_i64(self.rawValue))
+
+    /// Create a `Pixels_u` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Pixels_u`.
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_px_u(value)
     }
-    
-    /// Convert to a `Int`.
-    public var toInt: Int {
-        Int(px_u_to_i(self.rawValue))
+
+    /// Create a `Pixels_u` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Pixels_u`.
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_px_u(value)
     }
-    
-    /// Convert to a `UInt8`.
-    public var toUInt8: UInt8 {
-        UInt8(px_u_to_u8(self.rawValue))
-    }
-    
-    /// Convert to a `UInt16`.
-    public var toUInt16: UInt16 {
-        UInt16(px_u_to_u16(self.rawValue))
-    }
-    
-    /// Convert to a `UInt32`.
-    public var toUInt32: UInt32 {
-        UInt32(px_u_to_u32(self.rawValue))
-    }
-    
-    /// Convert to a `UInt64`.
-    public var toUInt64: UInt64 {
-        UInt64(px_u_to_u64(self.rawValue))
-    }
-    
-    /// Convert to a `UInt`.
-    public var toUInt: UInt {
-        UInt(px_u_to_u(self.rawValue))
-    }
-    
-    /// Convert to a `Float`.
-    public var toFloat: Float {
-        Float(px_u_to_f(self.rawValue))
-    }
-    
-    /// Convert to a `Double`.
-    public var toDouble: Double {
-        Double(px_u_to_d(self.rawValue))
+
+    /// Create a `Pixels_u` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Pixels_u`.
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_px_u(value)
     }
 
     /// Create a `Pixels_u` by converting a `Int8`.
@@ -311,108 +329,162 @@ public struct Pixels_u {
     public init(_ value: Int8) {
         self.rawValue = i8_to_px_u(value)
     }
-    
-    /// Create a `Pixels_u` by converting a `Int16`.
+
+    /// Create a `Pixels_u` by converting a `UInt`.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Pixels_u`.
-    public init(_ value: Int16) {
-        self.rawValue = i16_to_px_u(value)
+    /// - Parameter value: A `UInt` value to convert to a `Pixels_u`.
+    public init(_ value: UInt) {
+        self.rawValue = u64_to_px_u(UInt64(value))
     }
-    
-    /// Create a `Pixels_u` by converting a `Int32`.
-    ///
-    /// - Parameter value: A `Int32` value to convert to a `Pixels_u`.
-    public init(_ value: Int32) {
-        self.rawValue = i32_to_px_u(value)
-    }
-    
-    /// Create a `Pixels_u` by converting a `Int64`.
-    ///
-    /// - Parameter value: A `Int64` value to convert to a `Pixels_u`.
-    public init(_ value: Int64) {
-        self.rawValue = i64_to_px_u(value)
-    }
-    
-    /// Create a `Pixels_u` by converting a `Int`.
-    ///
-    /// - Parameter value: A `Int` value to convert to a `Pixels_u`.
-    public init(_ value: Int) {
-        self.rawValue = i_to_px_u(CInt(value))
-    }
-    
-    /// Create a `Pixels_u` by converting a `UInt8`.
-    ///
-    /// - Parameter value: A `UInt8` value to convert to a `Pixels_u`.
-    public init(_ value: UInt8) {
-        self.rawValue = u8_to_px_u(value)
-    }
-    
+
     /// Create a `Pixels_u` by converting a `UInt16`.
     ///
     /// - Parameter value: A `UInt16` value to convert to a `Pixels_u`.
     public init(_ value: UInt16) {
         self.rawValue = u16_to_px_u(value)
     }
-    
+
     /// Create a `Pixels_u` by converting a `UInt32`.
     ///
     /// - Parameter value: A `UInt32` value to convert to a `Pixels_u`.
     public init(_ value: UInt32) {
         self.rawValue = u32_to_px_u(value)
     }
-    
+
     /// Create a `Pixels_u` by converting a `UInt64`.
     ///
     /// - Parameter value: A `UInt64` value to convert to a `Pixels_u`.
     public init(_ value: UInt64) {
         self.rawValue = u64_to_px_u(value)
     }
-    
-    /// Create a `Pixels_u` by converting a `UInt`.
+
+    /// Create a `Pixels_u` by converting a `UInt8`.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Pixels_u`.
-    public init(_ value: UInt) {
-        self.rawValue = u_to_px_u(CUnsignedInt(value))
-    }
-    
-    /// Create a `Pixels_u` by converting a `Float`.
-    ///
-    /// - Parameter value: A `Float` value to convert to a `Pixels_u`.
-    public init(_ value: Float) {
-        self.rawValue = f_to_px_u(value)
-    }
-    
-    /// Create a `Pixels_u` by converting a `Double`.
-    ///
-    /// - Parameter value: A `Double` value to convert to a `Pixels_u`.
-    public init(_ value: Double) {
-        self.rawValue = d_to_px_u(value)
+    /// - Parameter value: A `UInt8` value to convert to a `Pixels_u`.
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_px_u(value)
     }
 
-    /// Create a `pixels_u` by converting a `Pixels_d`.
+    /// Create a `Pixels_u` by converting a `Pixels_d`.
     ///
-    /// - Parameter value: A `Pixels_d` value to convert to a `pixels_u`.
+    /// - Parameter value: A `Pixels_d` value to convert to a `Pixels_u`.
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_u(value.rawValue)
     }
-    
-    /// Create a `pixels_u` by converting a `Pixels_f`.
+
+    /// Create a `Pixels_u` by converting a `Pixels_f`.
     ///
-    /// - Parameter value: A `Pixels_f` value to convert to a `pixels_u`.
+    /// - Parameter value: A `Pixels_f` value to convert to a `Pixels_u`.
     public init(_ value: Pixels_f) {
         self.rawValue = px_f_to_px_u(value.rawValue)
     }
-    
-    /// Create a `pixels_u` by converting a `Pixels_t`.
+
+    /// Create a `Pixels_u` by converting a `Pixels_t`.
     ///
-    /// - Parameter value: A `Pixels_t` value to convert to a `pixels_u`.
+    /// - Parameter value: A `Pixels_t` value to convert to a `Pixels_u`.
     public init(_ value: Pixels_t) {
         self.rawValue = px_t_to_px_u(value.rawValue)
     }
 
 }
 
-/// A floating point type in the pixels unit.
+public extension Double {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_d(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_f(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+    init(_ value: Pixels_u) {
+        self = Int(px_u_to_i64(value.rawValue))
+    }
+
+}
+
+public extension Int16 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_i16(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_i32(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_i64(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_i8(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+    init(_ value: Pixels_u) {
+        self = UInt(px_u_to_u64(value.rawValue))
+    }
+
+}
+
+public extension UInt16 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_u16(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_u32(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_u64(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+    init(_ value: Pixels_u) {
+        self = px_u_to_u8(value.rawValue)
+    }
+
+}
+
+/// A floating point type for the pixels unit.
 public struct Pixels_f {
 
     public let rawValue: pixels_f
@@ -422,64 +494,46 @@ public struct Pixels_f {
         self.rawValue = rawValue
     }
 
-    /// Convert to a `Int8`.
-    public var toInt8: Int8 {
-        Int8(px_f_to_i8(self.rawValue))
+    /// Create a `Pixels_f` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Pixels_f`.
+    public init(_ value: Double) {
+        self.rawValue = d_to_px_f(value)
     }
-    
-    /// Convert to a `Int16`.
-    public var toInt16: Int16 {
-        Int16(px_f_to_i16(self.rawValue))
+
+    /// Create a `Pixels_f` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Pixels_f`.
+    public init(_ value: Float) {
+        self.rawValue = f_to_px_f(value)
     }
-    
-    /// Convert to a `Int32`.
-    public var toInt32: Int32 {
-        Int32(px_f_to_i32(self.rawValue))
+
+    /// Create a `Pixels_f` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Pixels_f`.
+    public init(_ value: Int) {
+        self.rawValue = i64_to_px_f(Int64(value))
     }
-    
-    /// Convert to a `Int64`.
-    public var toInt64: Int64 {
-        Int64(px_f_to_i64(self.rawValue))
+
+    /// Create a `Pixels_f` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Pixels_f`.
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_px_f(value)
     }
-    
-    /// Convert to a `Int`.
-    public var toInt: Int {
-        Int(px_f_to_i(self.rawValue))
+
+    /// Create a `Pixels_f` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Pixels_f`.
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_px_f(value)
     }
-    
-    /// Convert to a `UInt8`.
-    public var toUInt8: UInt8 {
-        UInt8(px_f_to_u8(self.rawValue))
-    }
-    
-    /// Convert to a `UInt16`.
-    public var toUInt16: UInt16 {
-        UInt16(px_f_to_u16(self.rawValue))
-    }
-    
-    /// Convert to a `UInt32`.
-    public var toUInt32: UInt32 {
-        UInt32(px_f_to_u32(self.rawValue))
-    }
-    
-    /// Convert to a `UInt64`.
-    public var toUInt64: UInt64 {
-        UInt64(px_f_to_u64(self.rawValue))
-    }
-    
-    /// Convert to a `UInt`.
-    public var toUInt: UInt {
-        UInt(px_f_to_u(self.rawValue))
-    }
-    
-    /// Convert to a `Float`.
-    public var toFloat: Float {
-        Float(px_f_to_f(self.rawValue))
-    }
-    
-    /// Convert to a `Double`.
-    public var toDouble: Double {
-        Double(px_f_to_d(self.rawValue))
+
+    /// Create a `Pixels_f` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Pixels_f`.
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_px_f(value)
     }
 
     /// Create a `Pixels_f` by converting a `Int8`.
@@ -488,108 +542,162 @@ public struct Pixels_f {
     public init(_ value: Int8) {
         self.rawValue = i8_to_px_f(value)
     }
-    
-    /// Create a `Pixels_f` by converting a `Int16`.
+
+    /// Create a `Pixels_f` by converting a `UInt`.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Pixels_f`.
-    public init(_ value: Int16) {
-        self.rawValue = i16_to_px_f(value)
+    /// - Parameter value: A `UInt` value to convert to a `Pixels_f`.
+    public init(_ value: UInt) {
+        self.rawValue = u64_to_px_f(UInt64(value))
     }
-    
-    /// Create a `Pixels_f` by converting a `Int32`.
-    ///
-    /// - Parameter value: A `Int32` value to convert to a `Pixels_f`.
-    public init(_ value: Int32) {
-        self.rawValue = i32_to_px_f(value)
-    }
-    
-    /// Create a `Pixels_f` by converting a `Int64`.
-    ///
-    /// - Parameter value: A `Int64` value to convert to a `Pixels_f`.
-    public init(_ value: Int64) {
-        self.rawValue = i64_to_px_f(value)
-    }
-    
-    /// Create a `Pixels_f` by converting a `Int`.
-    ///
-    /// - Parameter value: A `Int` value to convert to a `Pixels_f`.
-    public init(_ value: Int) {
-        self.rawValue = i_to_px_f(CInt(value))
-    }
-    
-    /// Create a `Pixels_f` by converting a `UInt8`.
-    ///
-    /// - Parameter value: A `UInt8` value to convert to a `Pixels_f`.
-    public init(_ value: UInt8) {
-        self.rawValue = u8_to_px_f(value)
-    }
-    
+
     /// Create a `Pixels_f` by converting a `UInt16`.
     ///
     /// - Parameter value: A `UInt16` value to convert to a `Pixels_f`.
     public init(_ value: UInt16) {
         self.rawValue = u16_to_px_f(value)
     }
-    
+
     /// Create a `Pixels_f` by converting a `UInt32`.
     ///
     /// - Parameter value: A `UInt32` value to convert to a `Pixels_f`.
     public init(_ value: UInt32) {
         self.rawValue = u32_to_px_f(value)
     }
-    
+
     /// Create a `Pixels_f` by converting a `UInt64`.
     ///
     /// - Parameter value: A `UInt64` value to convert to a `Pixels_f`.
     public init(_ value: UInt64) {
         self.rawValue = u64_to_px_f(value)
     }
-    
-    /// Create a `Pixels_f` by converting a `UInt`.
+
+    /// Create a `Pixels_f` by converting a `UInt8`.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Pixels_f`.
-    public init(_ value: UInt) {
-        self.rawValue = u_to_px_f(CUnsignedInt(value))
-    }
-    
-    /// Create a `Pixels_f` by converting a `Float`.
-    ///
-    /// - Parameter value: A `Float` value to convert to a `Pixels_f`.
-    public init(_ value: Float) {
-        self.rawValue = f_to_px_f(value)
-    }
-    
-    /// Create a `Pixels_f` by converting a `Double`.
-    ///
-    /// - Parameter value: A `Double` value to convert to a `Pixels_f`.
-    public init(_ value: Double) {
-        self.rawValue = d_to_px_f(value)
+    /// - Parameter value: A `UInt8` value to convert to a `Pixels_f`.
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_px_f(value)
     }
 
-    /// Create a `pixels_f` by converting a `Pixels_d`.
+    /// Create a `Pixels_f` by converting a `Pixels_d`.
     ///
-    /// - Parameter value: A `Pixels_d` value to convert to a `pixels_f`.
+    /// - Parameter value: A `Pixels_d` value to convert to a `Pixels_f`.
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_f(value.rawValue)
     }
-    
-    /// Create a `pixels_f` by converting a `Pixels_t`.
+
+    /// Create a `Pixels_f` by converting a `Pixels_t`.
     ///
-    /// - Parameter value: A `Pixels_t` value to convert to a `pixels_f`.
+    /// - Parameter value: A `Pixels_t` value to convert to a `Pixels_f`.
     public init(_ value: Pixels_t) {
         self.rawValue = px_t_to_px_f(value.rawValue)
     }
-    
-    /// Create a `pixels_f` by converting a `Pixels_u`.
+
+    /// Create a `Pixels_f` by converting a `Pixels_u`.
     ///
-    /// - Parameter value: A `Pixels_u` value to convert to a `pixels_f`.
+    /// - Parameter value: A `Pixels_u` value to convert to a `Pixels_f`.
     public init(_ value: Pixels_u) {
         self.rawValue = px_u_to_px_f(value.rawValue)
     }
 
 }
 
-/// A double type in the pixels unit.
+public extension Double {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_d(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_f(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+    init(_ value: Pixels_f) {
+        self = Int(px_f_to_i64(value.rawValue))
+    }
+
+}
+
+public extension Int16 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_i16(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_i32(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_i64(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_i8(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+    init(_ value: Pixels_f) {
+        self = UInt(px_f_to_u64(value.rawValue))
+    }
+
+}
+
+public extension UInt16 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_u16(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_u32(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_u64(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+    init(_ value: Pixels_f) {
+        self = px_f_to_u8(value.rawValue)
+    }
+
+}
+
+/// A double type for the pixels unit.
 public struct Pixels_d {
 
     public let rawValue: pixels_d
@@ -599,64 +707,46 @@ public struct Pixels_d {
         self.rawValue = rawValue
     }
 
-    /// Convert to a `Int8`.
-    public var toInt8: Int8 {
-        Int8(px_d_to_i8(self.rawValue))
+    /// Create a `Pixels_d` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Pixels_d`.
+    public init(_ value: Double) {
+        self.rawValue = d_to_px_d(value)
     }
-    
-    /// Convert to a `Int16`.
-    public var toInt16: Int16 {
-        Int16(px_d_to_i16(self.rawValue))
+
+    /// Create a `Pixels_d` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Pixels_d`.
+    public init(_ value: Float) {
+        self.rawValue = f_to_px_d(value)
     }
-    
-    /// Convert to a `Int32`.
-    public var toInt32: Int32 {
-        Int32(px_d_to_i32(self.rawValue))
+
+    /// Create a `Pixels_d` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Pixels_d`.
+    public init(_ value: Int) {
+        self.rawValue = i64_to_px_d(Int64(value))
     }
-    
-    /// Convert to a `Int64`.
-    public var toInt64: Int64 {
-        Int64(px_d_to_i64(self.rawValue))
+
+    /// Create a `Pixels_d` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Pixels_d`.
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_px_d(value)
     }
-    
-    /// Convert to a `Int`.
-    public var toInt: Int {
-        Int(px_d_to_i(self.rawValue))
+
+    /// Create a `Pixels_d` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Pixels_d`.
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_px_d(value)
     }
-    
-    /// Convert to a `UInt8`.
-    public var toUInt8: UInt8 {
-        UInt8(px_d_to_u8(self.rawValue))
-    }
-    
-    /// Convert to a `UInt16`.
-    public var toUInt16: UInt16 {
-        UInt16(px_d_to_u16(self.rawValue))
-    }
-    
-    /// Convert to a `UInt32`.
-    public var toUInt32: UInt32 {
-        UInt32(px_d_to_u32(self.rawValue))
-    }
-    
-    /// Convert to a `UInt64`.
-    public var toUInt64: UInt64 {
-        UInt64(px_d_to_u64(self.rawValue))
-    }
-    
-    /// Convert to a `UInt`.
-    public var toUInt: UInt {
-        UInt(px_d_to_u(self.rawValue))
-    }
-    
-    /// Convert to a `Float`.
-    public var toFloat: Float {
-        Float(px_d_to_f(self.rawValue))
-    }
-    
-    /// Convert to a `Double`.
-    public var toDouble: Double {
-        Double(px_d_to_d(self.rawValue))
+
+    /// Create a `Pixels_d` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Pixels_d`.
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_px_d(value)
     }
 
     /// Create a `Pixels_d` by converting a `Int8`.
@@ -665,103 +755,157 @@ public struct Pixels_d {
     public init(_ value: Int8) {
         self.rawValue = i8_to_px_d(value)
     }
-    
-    /// Create a `Pixels_d` by converting a `Int16`.
+
+    /// Create a `Pixels_d` by converting a `UInt`.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Pixels_d`.
-    public init(_ value: Int16) {
-        self.rawValue = i16_to_px_d(value)
+    /// - Parameter value: A `UInt` value to convert to a `Pixels_d`.
+    public init(_ value: UInt) {
+        self.rawValue = u64_to_px_d(UInt64(value))
     }
-    
-    /// Create a `Pixels_d` by converting a `Int32`.
-    ///
-    /// - Parameter value: A `Int32` value to convert to a `Pixels_d`.
-    public init(_ value: Int32) {
-        self.rawValue = i32_to_px_d(value)
-    }
-    
-    /// Create a `Pixels_d` by converting a `Int64`.
-    ///
-    /// - Parameter value: A `Int64` value to convert to a `Pixels_d`.
-    public init(_ value: Int64) {
-        self.rawValue = i64_to_px_d(value)
-    }
-    
-    /// Create a `Pixels_d` by converting a `Int`.
-    ///
-    /// - Parameter value: A `Int` value to convert to a `Pixels_d`.
-    public init(_ value: Int) {
-        self.rawValue = i_to_px_d(CInt(value))
-    }
-    
-    /// Create a `Pixels_d` by converting a `UInt8`.
-    ///
-    /// - Parameter value: A `UInt8` value to convert to a `Pixels_d`.
-    public init(_ value: UInt8) {
-        self.rawValue = u8_to_px_d(value)
-    }
-    
+
     /// Create a `Pixels_d` by converting a `UInt16`.
     ///
     /// - Parameter value: A `UInt16` value to convert to a `Pixels_d`.
     public init(_ value: UInt16) {
         self.rawValue = u16_to_px_d(value)
     }
-    
+
     /// Create a `Pixels_d` by converting a `UInt32`.
     ///
     /// - Parameter value: A `UInt32` value to convert to a `Pixels_d`.
     public init(_ value: UInt32) {
         self.rawValue = u32_to_px_d(value)
     }
-    
+
     /// Create a `Pixels_d` by converting a `UInt64`.
     ///
     /// - Parameter value: A `UInt64` value to convert to a `Pixels_d`.
     public init(_ value: UInt64) {
         self.rawValue = u64_to_px_d(value)
     }
-    
-    /// Create a `Pixels_d` by converting a `UInt`.
+
+    /// Create a `Pixels_d` by converting a `UInt8`.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Pixels_d`.
-    public init(_ value: UInt) {
-        self.rawValue = u_to_px_d(CUnsignedInt(value))
-    }
-    
-    /// Create a `Pixels_d` by converting a `Float`.
-    ///
-    /// - Parameter value: A `Float` value to convert to a `Pixels_d`.
-    public init(_ value: Float) {
-        self.rawValue = f_to_px_d(value)
-    }
-    
-    /// Create a `Pixels_d` by converting a `Double`.
-    ///
-    /// - Parameter value: A `Double` value to convert to a `Pixels_d`.
-    public init(_ value: Double) {
-        self.rawValue = d_to_px_d(value)
+    /// - Parameter value: A `UInt8` value to convert to a `Pixels_d`.
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_px_d(value)
     }
 
-    /// Create a `pixels_d` by converting a `Pixels_f`.
+    /// Create a `Pixels_d` by converting a `Pixels_f`.
     ///
-    /// - Parameter value: A `Pixels_f` value to convert to a `pixels_d`.
+    /// - Parameter value: A `Pixels_f` value to convert to a `Pixels_d`.
     public init(_ value: Pixels_f) {
         self.rawValue = px_f_to_px_d(value.rawValue)
     }
-    
-    /// Create a `pixels_d` by converting a `Pixels_t`.
+
+    /// Create a `Pixels_d` by converting a `Pixels_t`.
     ///
-    /// - Parameter value: A `Pixels_t` value to convert to a `pixels_d`.
+    /// - Parameter value: A `Pixels_t` value to convert to a `Pixels_d`.
     public init(_ value: Pixels_t) {
         self.rawValue = px_t_to_px_d(value.rawValue)
     }
-    
-    /// Create a `pixels_d` by converting a `Pixels_u`.
+
+    /// Create a `Pixels_d` by converting a `Pixels_u`.
     ///
-    /// - Parameter value: A `Pixels_u` value to convert to a `pixels_d`.
+    /// - Parameter value: A `Pixels_u` value to convert to a `Pixels_d`.
     public init(_ value: Pixels_u) {
         self.rawValue = px_u_to_px_d(value.rawValue)
+    }
+
+}
+
+public extension Double {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_d(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_f(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+    init(_ value: Pixels_d) {
+        self = Int(px_d_to_i64(value.rawValue))
+    }
+
+}
+
+public extension Int16 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_i16(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_i32(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_i64(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_i8(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+    init(_ value: Pixels_d) {
+        self = UInt(px_d_to_u64(value.rawValue))
+    }
+
+}
+
+public extension UInt16 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_u16(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_u32(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_u64(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+    init(_ value: Pixels_d) {
+        self = px_d_to_u8(value.rawValue)
     }
 
 }
