@@ -58,548 +58,714 @@
 
 import CGUUnits
 
-public struct Metres {
+public struct Metres_t {
 
-    enum InternalRepresentation {    
-        
-        case Int8(_ value: Int8)
-        
-        case Int16(_ value: Int16)
-        
-        case Int32(_ value: Int32)
-        
-        case Int64(_ value: Int64)
-        
-        case Int(_ value: Int)
-        
-        case UInt8(_ value: UInt8)
-        
-        case UInt16(_ value: UInt16)
-        
-        case UInt32(_ value: UInt32)
-        
-        case UInt64(_ value: UInt64)
-        
-        case UInt(_ value: UInt)
-        
-        case Float(_ value: Float)
-        
-        case Double(_ value: Double)
-    
-    }
+    public let rawValue: metres_t
 
-    internal let internalRepresentation: InternalRepresentation
-
-    public var toCentimetres: Centimetres {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Centimetres(m_t_to_cm_d(i8_to_m_t(value)))
-        case .Int16(let value):
-            return Centimetres(m_t_to_cm_d(i16_to_m_t(value)))
-        case .Int32(let value):
-            return Centimetres(m_t_to_cm_d(i32_to_m_t(value)))
-        case .Int64(let value):
-            return Centimetres(m_t_to_cm_d(i64_to_m_t(value)))
-        case .Int(let value):
-            return Centimetres(m_t_to_cm_d(i_to_m_t(CInt(value))))
-        case .UInt8(let value):
-            return Centimetres(m_u_to_cm_d(u8_to_m_u(value)))
-        case .UInt16(let value):
-            return Centimetres(m_u_to_cm_d(u16_to_m_u(value)))
-        case .UInt32(let value):
-            return Centimetres(m_u_to_cm_d(u32_to_m_u(value)))
-        case .UInt64(let value):
-            return Centimetres(m_u_to_cm_d(u64_to_m_u(value)))
-        case .UInt(let value):
-            return Centimetres(m_u_to_cm_d(u_to_m_u(CUnsignedInt(value))))
-        case .Float(let value):
-            return Centimetres(m_f_to_cm_d(f_to_m_f(value)))
-        case .Double(let value):
-            return Centimetres(m_d_to_cm_d(d_to_m_d(value)))
-        }
+    public var toCentimetres_t: Centimetres_t {
+        return Centimetres_t(m_t_to_cm_t(self.rawValue))
     }
     
-    public var toMillimetres: Millimetres {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Millimetres(m_t_to_mm_d(i8_to_m_t(value)))
-        case .Int16(let value):
-            return Millimetres(m_t_to_mm_d(i16_to_m_t(value)))
-        case .Int32(let value):
-            return Millimetres(m_t_to_mm_d(i32_to_m_t(value)))
-        case .Int64(let value):
-            return Millimetres(m_t_to_mm_d(i64_to_m_t(value)))
-        case .Int(let value):
-            return Millimetres(m_t_to_mm_d(i_to_m_t(CInt(value))))
-        case .UInt8(let value):
-            return Millimetres(m_u_to_mm_d(u8_to_m_u(value)))
-        case .UInt16(let value):
-            return Millimetres(m_u_to_mm_d(u16_to_m_u(value)))
-        case .UInt32(let value):
-            return Millimetres(m_u_to_mm_d(u32_to_m_u(value)))
-        case .UInt64(let value):
-            return Millimetres(m_u_to_mm_d(u64_to_m_u(value)))
-        case .UInt(let value):
-            return Millimetres(m_u_to_mm_d(u_to_m_u(CUnsignedInt(value))))
-        case .Float(let value):
-            return Millimetres(m_f_to_mm_d(f_to_m_f(value)))
-        case .Double(let value):
-            return Millimetres(m_d_to_mm_d(d_to_m_d(value)))
-        }
+    public var toCentimetres_u: Centimetres_u {
+        return Centimetres_u(m_t_to_cm_u(self.rawValue))
+    }
+    
+    public var toCentimetres_f: Centimetres_f {
+        return Centimetres_f(m_t_to_cm_f(self.rawValue))
+    }
+    
+    public var toCentimetres_d: Centimetres_d {
+        return Centimetres_d(m_t_to_cm_d(self.rawValue))
+    }
+    
+    public var toMillimetres_t: Millimetres_t {
+        return Millimetres_t(m_t_to_mm_t(self.rawValue))
+    }
+    
+    public var toMillimetres_u: Millimetres_u {
+        return Millimetres_u(m_t_to_mm_u(self.rawValue))
+    }
+    
+    public var toMillimetres_f: Millimetres_f {
+        return Millimetres_f(m_t_to_mm_f(self.rawValue))
+    }
+    
+    public var toMillimetres_d: Millimetres_d {
+        return Millimetres_d(m_t_to_mm_d(self.rawValue))
     }
 
     public var toInt8: Int8 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Int8(value)
-        case .Int16(let value):
-            return Int8(value)
-        case .Int32(let value):
-            return Int8(value)
-        case .Int64(let value):
-            return Int8(value)
-        case .Int(let value):
-            return Int8(value)
-        case .UInt8(let value):
-            return Int8(value)
-        case .UInt16(let value):
-            return Int8(value)
-        case .UInt32(let value):
-            return Int8(value)
-        case .UInt64(let value):
-            return Int8(value)
-        case .UInt(let value):
-            return Int8(value)
-        case .Float(let value):
-            return Int8(value)
-        case .Double(let value):
-            return Int8(value)
-        }
+        Int8(m_t_to_i8(self.rawValue))
     }
     
     public var toInt16: Int16 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Int16(value)
-        case .Int16(let value):
-            return Int16(value)
-        case .Int32(let value):
-            return Int16(value)
-        case .Int64(let value):
-            return Int16(value)
-        case .Int(let value):
-            return Int16(value)
-        case .UInt8(let value):
-            return Int16(value)
-        case .UInt16(let value):
-            return Int16(value)
-        case .UInt32(let value):
-            return Int16(value)
-        case .UInt64(let value):
-            return Int16(value)
-        case .UInt(let value):
-            return Int16(value)
-        case .Float(let value):
-            return Int16(value)
-        case .Double(let value):
-            return Int16(value)
-        }
+        Int16(m_t_to_i16(self.rawValue))
     }
     
     public var toInt32: Int32 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Int32(value)
-        case .Int16(let value):
-            return Int32(value)
-        case .Int32(let value):
-            return Int32(value)
-        case .Int64(let value):
-            return Int32(value)
-        case .Int(let value):
-            return Int32(value)
-        case .UInt8(let value):
-            return Int32(value)
-        case .UInt16(let value):
-            return Int32(value)
-        case .UInt32(let value):
-            return Int32(value)
-        case .UInt64(let value):
-            return Int32(value)
-        case .UInt(let value):
-            return Int32(value)
-        case .Float(let value):
-            return Int32(value)
-        case .Double(let value):
-            return Int32(value)
-        }
+        Int32(m_t_to_i32(self.rawValue))
     }
     
     public var toInt64: Int64 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Int64(value)
-        case .Int16(let value):
-            return Int64(value)
-        case .Int32(let value):
-            return Int64(value)
-        case .Int64(let value):
-            return Int64(value)
-        case .Int(let value):
-            return Int64(value)
-        case .UInt8(let value):
-            return Int64(value)
-        case .UInt16(let value):
-            return Int64(value)
-        case .UInt32(let value):
-            return Int64(value)
-        case .UInt64(let value):
-            return Int64(value)
-        case .UInt(let value):
-            return Int64(value)
-        case .Float(let value):
-            return Int64(value)
-        case .Double(let value):
-            return Int64(value)
-        }
+        Int64(m_t_to_i64(self.rawValue))
     }
     
     public var toInt: Int {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Int(value)
-        case .Int16(let value):
-            return Int(value)
-        case .Int32(let value):
-            return Int(value)
-        case .Int64(let value):
-            return Int(value)
-        case .Int(let value):
-            return Int(value)
-        case .UInt8(let value):
-            return Int(value)
-        case .UInt16(let value):
-            return Int(value)
-        case .UInt32(let value):
-            return Int(value)
-        case .UInt64(let value):
-            return Int(value)
-        case .UInt(let value):
-            return Int(value)
-        case .Float(let value):
-            return Int(value)
-        case .Double(let value):
-            return Int(value)
-        }
+        Int(m_t_to_i(self.rawValue))
     }
     
     public var toUInt8: UInt8 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return UInt8(value)
-        case .Int16(let value):
-            return UInt8(value)
-        case .Int32(let value):
-            return UInt8(value)
-        case .Int64(let value):
-            return UInt8(value)
-        case .Int(let value):
-            return UInt8(value)
-        case .UInt8(let value):
-            return UInt8(value)
-        case .UInt16(let value):
-            return UInt8(value)
-        case .UInt32(let value):
-            return UInt8(value)
-        case .UInt64(let value):
-            return UInt8(value)
-        case .UInt(let value):
-            return UInt8(value)
-        case .Float(let value):
-            return UInt8(value)
-        case .Double(let value):
-            return UInt8(value)
-        }
+        UInt8(m_t_to_u8(self.rawValue))
     }
     
     public var toUInt16: UInt16 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return UInt16(value)
-        case .Int16(let value):
-            return UInt16(value)
-        case .Int32(let value):
-            return UInt16(value)
-        case .Int64(let value):
-            return UInt16(value)
-        case .Int(let value):
-            return UInt16(value)
-        case .UInt8(let value):
-            return UInt16(value)
-        case .UInt16(let value):
-            return UInt16(value)
-        case .UInt32(let value):
-            return UInt16(value)
-        case .UInt64(let value):
-            return UInt16(value)
-        case .UInt(let value):
-            return UInt16(value)
-        case .Float(let value):
-            return UInt16(value)
-        case .Double(let value):
-            return UInt16(value)
-        }
+        UInt16(m_t_to_u16(self.rawValue))
     }
     
     public var toUInt32: UInt32 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return UInt32(value)
-        case .Int16(let value):
-            return UInt32(value)
-        case .Int32(let value):
-            return UInt32(value)
-        case .Int64(let value):
-            return UInt32(value)
-        case .Int(let value):
-            return UInt32(value)
-        case .UInt8(let value):
-            return UInt32(value)
-        case .UInt16(let value):
-            return UInt32(value)
-        case .UInt32(let value):
-            return UInt32(value)
-        case .UInt64(let value):
-            return UInt32(value)
-        case .UInt(let value):
-            return UInt32(value)
-        case .Float(let value):
-            return UInt32(value)
-        case .Double(let value):
-            return UInt32(value)
-        }
+        UInt32(m_t_to_u32(self.rawValue))
     }
     
     public var toUInt64: UInt64 {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return UInt64(value)
-        case .Int16(let value):
-            return UInt64(value)
-        case .Int32(let value):
-            return UInt64(value)
-        case .Int64(let value):
-            return UInt64(value)
-        case .Int(let value):
-            return UInt64(value)
-        case .UInt8(let value):
-            return UInt64(value)
-        case .UInt16(let value):
-            return UInt64(value)
-        case .UInt32(let value):
-            return UInt64(value)
-        case .UInt64(let value):
-            return UInt64(value)
-        case .UInt(let value):
-            return UInt64(value)
-        case .Float(let value):
-            return UInt64(value)
-        case .Double(let value):
-            return UInt64(value)
-        }
+        UInt64(m_t_to_u64(self.rawValue))
     }
     
     public var toUInt: UInt {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return UInt(value)
-        case .Int16(let value):
-            return UInt(value)
-        case .Int32(let value):
-            return UInt(value)
-        case .Int64(let value):
-            return UInt(value)
-        case .Int(let value):
-            return UInt(value)
-        case .UInt8(let value):
-            return UInt(value)
-        case .UInt16(let value):
-            return UInt(value)
-        case .UInt32(let value):
-            return UInt(value)
-        case .UInt64(let value):
-            return UInt(value)
-        case .UInt(let value):
-            return UInt(value)
-        case .Float(let value):
-            return UInt(value)
-        case .Double(let value):
-            return UInt(value)
-        }
+        UInt(m_t_to_u(self.rawValue))
     }
     
     public var toFloat: Float {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Float(value)
-        case .Int16(let value):
-            return Float(value)
-        case .Int32(let value):
-            return Float(value)
-        case .Int64(let value):
-            return Float(value)
-        case .Int(let value):
-            return Float(value)
-        case .UInt8(let value):
-            return Float(value)
-        case .UInt16(let value):
-            return Float(value)
-        case .UInt32(let value):
-            return Float(value)
-        case .UInt64(let value):
-            return Float(value)
-        case .UInt(let value):
-            return Float(value)
-        case .Float(let value):
-            return Float(value)
-        case .Double(let value):
-            return Float(value)
-        }
+        Float(m_t_to_f(self.rawValue))
     }
     
     public var toDouble: Double {
-        switch self.internalRepresentation {
-        case .Int8(let value):
-            return Double(value)
-        case .Int16(let value):
-            return Double(value)
-        case .Int32(let value):
-            return Double(value)
-        case .Int64(let value):
-            return Double(value)
-        case .Int(let value):
-            return Double(value)
-        case .UInt8(let value):
-            return Double(value)
-        case .UInt16(let value):
-            return Double(value)
-        case .UInt32(let value):
-            return Double(value)
-        case .UInt64(let value):
-            return Double(value)
-        case .UInt(let value):
-            return Double(value)
-        case .Float(let value):
-            return Double(value)
-        case .Double(let value):
-            return Double(value)
-        }
+        Double(m_t_to_d(self.rawValue))
     }
 
     public init(_ value: Int8) {
-        self.internalRepresentation = .Int8(value)
+        self.rawValue = i8_to_m_t(value)
     }
     
     public init(_ value: Int16) {
-        self.internalRepresentation = .Int16(value)
+        self.rawValue = i16_to_m_t(value)
     }
     
     public init(_ value: Int32) {
-        self.internalRepresentation = .Int32(value)
+        self.rawValue = i32_to_m_t(value)
     }
     
     public init(_ value: Int64) {
-        self.internalRepresentation = .Int64(value)
+        self.rawValue = i64_to_m_t(value)
     }
     
     public init(_ value: Int) {
-        self.internalRepresentation = .Int(value)
+        self.rawValue = i_to_m_t(CInt(value))
     }
     
     public init(_ value: UInt8) {
-        self.internalRepresentation = .UInt8(value)
+        self.rawValue = u8_to_m_t(value)
     }
     
     public init(_ value: UInt16) {
-        self.internalRepresentation = .UInt16(value)
+        self.rawValue = u16_to_m_t(value)
     }
     
     public init(_ value: UInt32) {
-        self.internalRepresentation = .UInt32(value)
+        self.rawValue = u32_to_m_t(value)
     }
     
     public init(_ value: UInt64) {
-        self.internalRepresentation = .UInt64(value)
+        self.rawValue = u64_to_m_t(value)
     }
     
     public init(_ value: UInt) {
-        self.internalRepresentation = .UInt(value)
+        self.rawValue = u_to_m_t(CUnsignedInt(value))
     }
     
     public init(_ value: Float) {
-        self.internalRepresentation = .Float(value)
+        self.rawValue = f_to_m_t(value)
     }
     
     public init(_ value: Double) {
-        self.internalRepresentation = .Double(value)
+        self.rawValue = d_to_m_t(value)
     }
 
-    public init(_ value: Centimetres) {
-        switch value.internalRepresentation {
-        case .Int8(let value):
-            self.internalRepresentation = .Double(cm_t_to_m_d(i8_to_cm_t(value)))
-        case .Int16(let value):
-            self.internalRepresentation = .Double(cm_t_to_m_d(i16_to_cm_t(value)))
-        case .Int32(let value):
-            self.internalRepresentation = .Double(cm_t_to_m_d(i32_to_cm_t(value)))
-        case .Int64(let value):
-            self.internalRepresentation = .Double(cm_t_to_m_d(i64_to_cm_t(value)))
-        case .Int(let value):
-            self.internalRepresentation = .Double(cm_t_to_m_d(i_to_cm_t(CInt(value))))
-        case .UInt8(let value):
-            self.internalRepresentation = .Double(cm_u_to_m_d(u8_to_cm_u(value)))
-        case .UInt16(let value):
-            self.internalRepresentation = .Double(cm_u_to_m_d(u16_to_cm_u(value)))
-        case .UInt32(let value):
-            self.internalRepresentation = .Double(cm_u_to_m_d(u32_to_cm_u(value)))
-        case .UInt64(let value):
-            self.internalRepresentation = .Double(cm_u_to_m_d(u64_to_cm_u(value)))
-        case .UInt(let value):
-            self.internalRepresentation = .Double(cm_u_to_m_d(u_to_cm_u(CUnsignedInt(value))))
-        case .Float(let value):
-            self.internalRepresentation = .Double(cm_f_to_m_d(f_to_cm_f(value)))
-        case .Double(let value):
-            self.internalRepresentation = .Double(cm_d_to_m_d(d_to_cm_d(value)))
-        }
+    public init(_ value: Centimetres_t) {
+        self.rawValue = cm_t_to_m_t(value.rawValue)
     }
     
-    public init(_ value: Millimetres) {
-        switch value.internalRepresentation {
-        case .Int8(let value):
-            self.internalRepresentation = .Double(mm_t_to_m_d(i8_to_mm_t(value)))
-        case .Int16(let value):
-            self.internalRepresentation = .Double(mm_t_to_m_d(i16_to_mm_t(value)))
-        case .Int32(let value):
-            self.internalRepresentation = .Double(mm_t_to_m_d(i32_to_mm_t(value)))
-        case .Int64(let value):
-            self.internalRepresentation = .Double(mm_t_to_m_d(i64_to_mm_t(value)))
-        case .Int(let value):
-            self.internalRepresentation = .Double(mm_t_to_m_d(i_to_mm_t(CInt(value))))
-        case .UInt8(let value):
-            self.internalRepresentation = .Double(mm_u_to_m_d(u8_to_mm_u(value)))
-        case .UInt16(let value):
-            self.internalRepresentation = .Double(mm_u_to_m_d(u16_to_mm_u(value)))
-        case .UInt32(let value):
-            self.internalRepresentation = .Double(mm_u_to_m_d(u32_to_mm_u(value)))
-        case .UInt64(let value):
-            self.internalRepresentation = .Double(mm_u_to_m_d(u64_to_mm_u(value)))
-        case .UInt(let value):
-            self.internalRepresentation = .Double(mm_u_to_m_d(u_to_mm_u(CUnsignedInt(value))))
-        case .Float(let value):
-            self.internalRepresentation = .Double(mm_f_to_m_d(f_to_mm_f(value)))
-        case .Double(let value):
-            self.internalRepresentation = .Double(mm_d_to_m_d(d_to_mm_d(value)))
-        }
+    public init(_ value: Centimetres_u) {
+        self.rawValue = cm_u_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_f) {
+        self.rawValue = cm_f_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_d) {
+        self.rawValue = cm_d_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_t) {
+        self.rawValue = mm_t_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_u) {
+        self.rawValue = mm_u_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_f) {
+        self.rawValue = mm_f_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_d) {
+        self.rawValue = mm_d_to_m_t(value.rawValue)
+    }
+
+    public init(_ value: Metres_d) {
+        self.rawValue = m_d_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Metres_f) {
+        self.rawValue = m_f_to_m_t(value.rawValue)
+    }
+    
+    public init(_ value: Metres_u) {
+        self.rawValue = m_u_to_m_t(value.rawValue)
+    }
+
+}
+
+public struct Metres_u {
+
+    public let rawValue: metres_u
+
+    public var toCentimetres_t: Centimetres_t {
+        return Centimetres_t(m_u_to_cm_t(self.rawValue))
+    }
+    
+    public var toCentimetres_u: Centimetres_u {
+        return Centimetres_u(m_u_to_cm_u(self.rawValue))
+    }
+    
+    public var toCentimetres_f: Centimetres_f {
+        return Centimetres_f(m_u_to_cm_f(self.rawValue))
+    }
+    
+    public var toCentimetres_d: Centimetres_d {
+        return Centimetres_d(m_u_to_cm_d(self.rawValue))
+    }
+    
+    public var toMillimetres_t: Millimetres_t {
+        return Millimetres_t(m_u_to_mm_t(self.rawValue))
+    }
+    
+    public var toMillimetres_u: Millimetres_u {
+        return Millimetres_u(m_u_to_mm_u(self.rawValue))
+    }
+    
+    public var toMillimetres_f: Millimetres_f {
+        return Millimetres_f(m_u_to_mm_f(self.rawValue))
+    }
+    
+    public var toMillimetres_d: Millimetres_d {
+        return Millimetres_d(m_u_to_mm_d(self.rawValue))
+    }
+
+    public var toInt8: Int8 {
+        Int8(m_u_to_i8(self.rawValue))
+    }
+    
+    public var toInt16: Int16 {
+        Int16(m_u_to_i16(self.rawValue))
+    }
+    
+    public var toInt32: Int32 {
+        Int32(m_u_to_i32(self.rawValue))
+    }
+    
+    public var toInt64: Int64 {
+        Int64(m_u_to_i64(self.rawValue))
+    }
+    
+    public var toInt: Int {
+        Int(m_u_to_i(self.rawValue))
+    }
+    
+    public var toUInt8: UInt8 {
+        UInt8(m_u_to_u8(self.rawValue))
+    }
+    
+    public var toUInt16: UInt16 {
+        UInt16(m_u_to_u16(self.rawValue))
+    }
+    
+    public var toUInt32: UInt32 {
+        UInt32(m_u_to_u32(self.rawValue))
+    }
+    
+    public var toUInt64: UInt64 {
+        UInt64(m_u_to_u64(self.rawValue))
+    }
+    
+    public var toUInt: UInt {
+        UInt(m_u_to_u(self.rawValue))
+    }
+    
+    public var toFloat: Float {
+        Float(m_u_to_f(self.rawValue))
+    }
+    
+    public var toDouble: Double {
+        Double(m_u_to_d(self.rawValue))
+    }
+
+    public init(_ value: Int8) {
+        self.rawValue = i8_to_m_u(value)
+    }
+    
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_m_u(value)
+    }
+    
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_m_u(value)
+    }
+    
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_m_u(value)
+    }
+    
+    public init(_ value: Int) {
+        self.rawValue = i_to_m_u(CInt(value))
+    }
+    
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_m_u(value)
+    }
+    
+    public init(_ value: UInt16) {
+        self.rawValue = u16_to_m_u(value)
+    }
+    
+    public init(_ value: UInt32) {
+        self.rawValue = u32_to_m_u(value)
+    }
+    
+    public init(_ value: UInt64) {
+        self.rawValue = u64_to_m_u(value)
+    }
+    
+    public init(_ value: UInt) {
+        self.rawValue = u_to_m_u(CUnsignedInt(value))
+    }
+    
+    public init(_ value: Float) {
+        self.rawValue = f_to_m_u(value)
+    }
+    
+    public init(_ value: Double) {
+        self.rawValue = d_to_m_u(value)
+    }
+
+    public init(_ value: Centimetres_t) {
+        self.rawValue = cm_t_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_u) {
+        self.rawValue = cm_u_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_f) {
+        self.rawValue = cm_f_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_d) {
+        self.rawValue = cm_d_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_t) {
+        self.rawValue = mm_t_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_u) {
+        self.rawValue = mm_u_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_f) {
+        self.rawValue = mm_f_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_d) {
+        self.rawValue = mm_d_to_m_u(value.rawValue)
+    }
+
+    public init(_ value: Metres_d) {
+        self.rawValue = m_d_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Metres_f) {
+        self.rawValue = m_f_to_m_u(value.rawValue)
+    }
+    
+    public init(_ value: Metres_t) {
+        self.rawValue = m_t_to_m_u(value.rawValue)
+    }
+
+}
+
+public struct Metres_f {
+
+    public let rawValue: metres_f
+
+    public var toCentimetres_t: Centimetres_t {
+        return Centimetres_t(m_f_to_cm_t(self.rawValue))
+    }
+    
+    public var toCentimetres_u: Centimetres_u {
+        return Centimetres_u(m_f_to_cm_u(self.rawValue))
+    }
+    
+    public var toCentimetres_f: Centimetres_f {
+        return Centimetres_f(m_f_to_cm_f(self.rawValue))
+    }
+    
+    public var toCentimetres_d: Centimetres_d {
+        return Centimetres_d(m_f_to_cm_d(self.rawValue))
+    }
+    
+    public var toMillimetres_t: Millimetres_t {
+        return Millimetres_t(m_f_to_mm_t(self.rawValue))
+    }
+    
+    public var toMillimetres_u: Millimetres_u {
+        return Millimetres_u(m_f_to_mm_u(self.rawValue))
+    }
+    
+    public var toMillimetres_f: Millimetres_f {
+        return Millimetres_f(m_f_to_mm_f(self.rawValue))
+    }
+    
+    public var toMillimetres_d: Millimetres_d {
+        return Millimetres_d(m_f_to_mm_d(self.rawValue))
+    }
+
+    public var toInt8: Int8 {
+        Int8(m_f_to_i8(self.rawValue))
+    }
+    
+    public var toInt16: Int16 {
+        Int16(m_f_to_i16(self.rawValue))
+    }
+    
+    public var toInt32: Int32 {
+        Int32(m_f_to_i32(self.rawValue))
+    }
+    
+    public var toInt64: Int64 {
+        Int64(m_f_to_i64(self.rawValue))
+    }
+    
+    public var toInt: Int {
+        Int(m_f_to_i(self.rawValue))
+    }
+    
+    public var toUInt8: UInt8 {
+        UInt8(m_f_to_u8(self.rawValue))
+    }
+    
+    public var toUInt16: UInt16 {
+        UInt16(m_f_to_u16(self.rawValue))
+    }
+    
+    public var toUInt32: UInt32 {
+        UInt32(m_f_to_u32(self.rawValue))
+    }
+    
+    public var toUInt64: UInt64 {
+        UInt64(m_f_to_u64(self.rawValue))
+    }
+    
+    public var toUInt: UInt {
+        UInt(m_f_to_u(self.rawValue))
+    }
+    
+    public var toFloat: Float {
+        Float(m_f_to_f(self.rawValue))
+    }
+    
+    public var toDouble: Double {
+        Double(m_f_to_d(self.rawValue))
+    }
+
+    public init(_ value: Int8) {
+        self.rawValue = i8_to_m_f(value)
+    }
+    
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_m_f(value)
+    }
+    
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_m_f(value)
+    }
+    
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_m_f(value)
+    }
+    
+    public init(_ value: Int) {
+        self.rawValue = i_to_m_f(CInt(value))
+    }
+    
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_m_f(value)
+    }
+    
+    public init(_ value: UInt16) {
+        self.rawValue = u16_to_m_f(value)
+    }
+    
+    public init(_ value: UInt32) {
+        self.rawValue = u32_to_m_f(value)
+    }
+    
+    public init(_ value: UInt64) {
+        self.rawValue = u64_to_m_f(value)
+    }
+    
+    public init(_ value: UInt) {
+        self.rawValue = u_to_m_f(CUnsignedInt(value))
+    }
+    
+    public init(_ value: Float) {
+        self.rawValue = f_to_m_f(value)
+    }
+    
+    public init(_ value: Double) {
+        self.rawValue = d_to_m_f(value)
+    }
+
+    public init(_ value: Centimetres_t) {
+        self.rawValue = cm_t_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_u) {
+        self.rawValue = cm_u_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_f) {
+        self.rawValue = cm_f_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_d) {
+        self.rawValue = cm_d_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_t) {
+        self.rawValue = mm_t_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_u) {
+        self.rawValue = mm_u_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_f) {
+        self.rawValue = mm_f_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_d) {
+        self.rawValue = mm_d_to_m_f(value.rawValue)
+    }
+
+    public init(_ value: Metres_d) {
+        self.rawValue = m_d_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Metres_t) {
+        self.rawValue = m_t_to_m_f(value.rawValue)
+    }
+    
+    public init(_ value: Metres_u) {
+        self.rawValue = m_u_to_m_f(value.rawValue)
+    }
+
+}
+
+public struct Metres_d {
+
+    public let rawValue: metres_d
+
+    public var toCentimetres_t: Centimetres_t {
+        return Centimetres_t(m_d_to_cm_t(self.rawValue))
+    }
+    
+    public var toCentimetres_u: Centimetres_u {
+        return Centimetres_u(m_d_to_cm_u(self.rawValue))
+    }
+    
+    public var toCentimetres_f: Centimetres_f {
+        return Centimetres_f(m_d_to_cm_f(self.rawValue))
+    }
+    
+    public var toCentimetres_d: Centimetres_d {
+        return Centimetres_d(m_d_to_cm_d(self.rawValue))
+    }
+    
+    public var toMillimetres_t: Millimetres_t {
+        return Millimetres_t(m_d_to_mm_t(self.rawValue))
+    }
+    
+    public var toMillimetres_u: Millimetres_u {
+        return Millimetres_u(m_d_to_mm_u(self.rawValue))
+    }
+    
+    public var toMillimetres_f: Millimetres_f {
+        return Millimetres_f(m_d_to_mm_f(self.rawValue))
+    }
+    
+    public var toMillimetres_d: Millimetres_d {
+        return Millimetres_d(m_d_to_mm_d(self.rawValue))
+    }
+
+    public var toInt8: Int8 {
+        Int8(m_d_to_i8(self.rawValue))
+    }
+    
+    public var toInt16: Int16 {
+        Int16(m_d_to_i16(self.rawValue))
+    }
+    
+    public var toInt32: Int32 {
+        Int32(m_d_to_i32(self.rawValue))
+    }
+    
+    public var toInt64: Int64 {
+        Int64(m_d_to_i64(self.rawValue))
+    }
+    
+    public var toInt: Int {
+        Int(m_d_to_i(self.rawValue))
+    }
+    
+    public var toUInt8: UInt8 {
+        UInt8(m_d_to_u8(self.rawValue))
+    }
+    
+    public var toUInt16: UInt16 {
+        UInt16(m_d_to_u16(self.rawValue))
+    }
+    
+    public var toUInt32: UInt32 {
+        UInt32(m_d_to_u32(self.rawValue))
+    }
+    
+    public var toUInt64: UInt64 {
+        UInt64(m_d_to_u64(self.rawValue))
+    }
+    
+    public var toUInt: UInt {
+        UInt(m_d_to_u(self.rawValue))
+    }
+    
+    public var toFloat: Float {
+        Float(m_d_to_f(self.rawValue))
+    }
+    
+    public var toDouble: Double {
+        Double(m_d_to_d(self.rawValue))
+    }
+
+    public init(_ value: Int8) {
+        self.rawValue = i8_to_m_d(value)
+    }
+    
+    public init(_ value: Int16) {
+        self.rawValue = i16_to_m_d(value)
+    }
+    
+    public init(_ value: Int32) {
+        self.rawValue = i32_to_m_d(value)
+    }
+    
+    public init(_ value: Int64) {
+        self.rawValue = i64_to_m_d(value)
+    }
+    
+    public init(_ value: Int) {
+        self.rawValue = i_to_m_d(CInt(value))
+    }
+    
+    public init(_ value: UInt8) {
+        self.rawValue = u8_to_m_d(value)
+    }
+    
+    public init(_ value: UInt16) {
+        self.rawValue = u16_to_m_d(value)
+    }
+    
+    public init(_ value: UInt32) {
+        self.rawValue = u32_to_m_d(value)
+    }
+    
+    public init(_ value: UInt64) {
+        self.rawValue = u64_to_m_d(value)
+    }
+    
+    public init(_ value: UInt) {
+        self.rawValue = u_to_m_d(CUnsignedInt(value))
+    }
+    
+    public init(_ value: Float) {
+        self.rawValue = f_to_m_d(value)
+    }
+    
+    public init(_ value: Double) {
+        self.rawValue = d_to_m_d(value)
+    }
+
+    public init(_ value: Centimetres_t) {
+        self.rawValue = cm_t_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_u) {
+        self.rawValue = cm_u_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_f) {
+        self.rawValue = cm_f_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Centimetres_d) {
+        self.rawValue = cm_d_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_t) {
+        self.rawValue = mm_t_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_u) {
+        self.rawValue = mm_u_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_f) {
+        self.rawValue = mm_f_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Millimetres_d) {
+        self.rawValue = mm_d_to_m_d(value.rawValue)
+    }
+
+    public init(_ value: Metres_f) {
+        self.rawValue = m_f_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Metres_t) {
+        self.rawValue = m_t_to_m_d(value.rawValue)
+    }
+    
+    public init(_ value: Metres_u) {
+        self.rawValue = m_u_to_m_d(value.rawValue)
     }
 
 }
