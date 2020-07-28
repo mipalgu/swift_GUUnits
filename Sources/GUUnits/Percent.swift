@@ -66,8 +66,6 @@ public struct Percent_t {
         self.rawValue = rawValue
     }
 
-    
-
     public var toInt8: Int8 {
         Int8(pct_t_to_i8(self.rawValue))
     }
@@ -164,8 +162,6 @@ public struct Percent_t {
         self.rawValue = d_to_pct_t(value)
     }
 
-    
-
     public init(_ value: Percent_d) {
         self.rawValue = pct_d_to_pct_t(value.rawValue)
     }
@@ -187,8 +183,6 @@ public struct Percent_u {
     public init(rawValue: percent_u) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(pct_u_to_i8(self.rawValue))
@@ -286,8 +280,6 @@ public struct Percent_u {
         self.rawValue = d_to_pct_u(value)
     }
 
-    
-
     public init(_ value: Percent_d) {
         self.rawValue = pct_d_to_pct_u(value.rawValue)
     }
@@ -309,8 +301,6 @@ public struct Percent_f {
     public init(rawValue: percent_f) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(pct_f_to_i8(self.rawValue))
@@ -408,8 +398,6 @@ public struct Percent_f {
         self.rawValue = d_to_pct_f(value)
     }
 
-    
-
     public init(_ value: Percent_d) {
         self.rawValue = pct_d_to_pct_f(value.rawValue)
     }
@@ -431,8 +419,6 @@ public struct Percent_d {
     public init(rawValue: percent_d) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(pct_d_to_i8(self.rawValue))
@@ -529,8 +515,6 @@ public struct Percent_d {
     public init(_ value: Double) {
         self.rawValue = d_to_pct_d(value)
     }
-
-    
 
     public init(_ value: Percent_f) {
         self.rawValue = pct_f_to_pct_d(value.rawValue)

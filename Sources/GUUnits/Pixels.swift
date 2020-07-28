@@ -66,8 +66,6 @@ public struct Pixels_t {
         self.rawValue = rawValue
     }
 
-    
-
     public var toInt8: Int8 {
         Int8(px_t_to_i8(self.rawValue))
     }
@@ -164,8 +162,6 @@ public struct Pixels_t {
         self.rawValue = d_to_px_t(value)
     }
 
-    
-
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_t(value.rawValue)
     }
@@ -187,8 +183,6 @@ public struct Pixels_u {
     public init(rawValue: pixels_u) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(px_u_to_i8(self.rawValue))
@@ -286,8 +280,6 @@ public struct Pixels_u {
         self.rawValue = d_to_px_u(value)
     }
 
-    
-
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_u(value.rawValue)
     }
@@ -309,8 +301,6 @@ public struct Pixels_f {
     public init(rawValue: pixels_f) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(px_f_to_i8(self.rawValue))
@@ -408,8 +398,6 @@ public struct Pixels_f {
         self.rawValue = d_to_px_f(value)
     }
 
-    
-
     public init(_ value: Pixels_d) {
         self.rawValue = px_d_to_px_f(value.rawValue)
     }
@@ -431,8 +419,6 @@ public struct Pixels_d {
     public init(rawValue: pixels_d) {
         self.rawValue = rawValue
     }
-
-    
 
     public var toInt8: Int8 {
         Int8(px_d_to_i8(self.rawValue))
@@ -529,8 +515,6 @@ public struct Pixels_d {
     public init(_ value: Double) {
         self.rawValue = d_to_px_d(value)
     }
-
-    
 
     public init(_ value: Pixels_f) {
         self.rawValue = px_f_to_px_d(value.rawValue)
