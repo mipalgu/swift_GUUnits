@@ -3,6 +3,5 @@ import XCTest
 
 final class GUUnitsTests: XCTestCase {
 
-    static var allTests = [
-    ]
+    static var allTests: [(String, (GUUnitsTests) -> () throws -> Void)] = []
 }
