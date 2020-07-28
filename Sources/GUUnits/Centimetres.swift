@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the centimetres unit.
-public struct Centimetres_t {
+public struct Centimetres_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -241,7 +241,7 @@ public struct Centimetres_t {
 }
 
 /// An unsigned integer type for the centimetres unit.
-public struct Centimetres_u {
+public struct Centimetres_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -423,7 +423,7 @@ public struct Centimetres_u {
 }
 
 /// A floating point type for the centimetres unit.
-public struct Centimetres_f {
+public struct Centimetres_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -605,7 +605,7 @@ public struct Centimetres_f {
 }
 
 /// A double type for the centimetres unit.
-public struct Centimetres_d {
+public struct Centimetres_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

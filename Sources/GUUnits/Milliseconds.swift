@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the milliseconds unit.
-public struct Milliseconds_t {
+public struct Milliseconds_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -241,7 +241,7 @@ public struct Milliseconds_t {
 }
 
 /// An unsigned integer type for the milliseconds unit.
-public struct Milliseconds_u {
+public struct Milliseconds_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -423,7 +423,7 @@ public struct Milliseconds_u {
 }
 
 /// A floating point type for the milliseconds unit.
-public struct Milliseconds_f {
+public struct Milliseconds_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -605,7 +605,7 @@ public struct Milliseconds_f {
 }
 
 /// A double type for the milliseconds unit.
-public struct Milliseconds_d {
+public struct Milliseconds_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

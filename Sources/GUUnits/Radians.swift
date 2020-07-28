@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the radians unit.
-public struct Radians_t {
+public struct Radians_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -213,7 +213,7 @@ public struct Radians_t {
 }
 
 /// An unsigned integer type for the radians unit.
-public struct Radians_u {
+public struct Radians_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -367,7 +367,7 @@ public struct Radians_u {
 }
 
 /// A floating point type for the radians unit.
-public struct Radians_f {
+public struct Radians_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -521,7 +521,7 @@ public struct Radians_f {
 }
 
 /// A double type for the radians unit.
-public struct Radians_d {
+public struct Radians_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

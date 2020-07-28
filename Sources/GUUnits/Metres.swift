@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the metres unit.
-public struct Metres_t {
+public struct Metres_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -241,7 +241,7 @@ public struct Metres_t {
 }
 
 /// An unsigned integer type for the metres unit.
-public struct Metres_u {
+public struct Metres_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -423,7 +423,7 @@ public struct Metres_u {
 }
 
 /// A floating point type for the metres unit.
-public struct Metres_f {
+public struct Metres_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -605,7 +605,7 @@ public struct Metres_f {
 }
 
 /// A double type for the metres unit.
-public struct Metres_d {
+public struct Metres_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

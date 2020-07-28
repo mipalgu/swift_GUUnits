@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the seconds unit.
-public struct Seconds_t {
+public struct Seconds_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -241,7 +241,7 @@ public struct Seconds_t {
 }
 
 /// An unsigned integer type for the seconds unit.
-public struct Seconds_u {
+public struct Seconds_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -423,7 +423,7 @@ public struct Seconds_u {
 }
 
 /// A floating point type for the seconds unit.
-public struct Seconds_f {
+public struct Seconds_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -605,7 +605,7 @@ public struct Seconds_f {
 }
 
 /// A double type for the seconds unit.
-public struct Seconds_d {
+public struct Seconds_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

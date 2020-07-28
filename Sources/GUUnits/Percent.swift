@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the percent unit.
-public struct Percent_t {
+public struct Percent_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -185,7 +185,7 @@ public struct Percent_t {
 }
 
 /// An unsigned integer type for the percent unit.
-public struct Percent_u {
+public struct Percent_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -311,7 +311,7 @@ public struct Percent_u {
 }
 
 /// A floating point type for the percent unit.
-public struct Percent_f {
+public struct Percent_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -437,7 +437,7 @@ public struct Percent_f {
 }
 
 /// A double type for the percent unit.
-public struct Percent_d {
+public struct Percent_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

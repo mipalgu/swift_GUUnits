@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the degrees unit.
-public struct Degrees_t {
+public struct Degrees_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -213,7 +213,7 @@ public struct Degrees_t {
 }
 
 /// An unsigned integer type for the degrees unit.
-public struct Degrees_u {
+public struct Degrees_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -367,7 +367,7 @@ public struct Degrees_u {
 }
 
 /// A floating point type for the degrees unit.
-public struct Degrees_f {
+public struct Degrees_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -521,7 +521,7 @@ public struct Degrees_f {
 }
 
 /// A double type for the degrees unit.
-public struct Degrees_d {
+public struct Degrees_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

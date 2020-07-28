@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the pixels unit.
-public struct Pixels_t {
+public struct Pixels_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -185,7 +185,7 @@ public struct Pixels_t {
 }
 
 /// An unsigned integer type for the pixels unit.
-public struct Pixels_u {
+public struct Pixels_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -311,7 +311,7 @@ public struct Pixels_u {
 }
 
 /// A floating point type for the pixels unit.
-public struct Pixels_f {
+public struct Pixels_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -437,7 +437,7 @@ public struct Pixels_f {
 }
 
 /// A double type for the pixels unit.
-public struct Pixels_d {
+public struct Pixels_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

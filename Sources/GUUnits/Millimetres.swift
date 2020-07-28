@@ -59,7 +59,7 @@
 import CGUUnits
 
 /// A signed integer type for the millimetres unit.
-public struct Millimetres_t {
+public struct Millimetres_t: GUUnitsTType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -241,7 +241,7 @@ public struct Millimetres_t {
 }
 
 /// An unsigned integer type for the millimetres unit.
-public struct Millimetres_u {
+public struct Millimetres_u: GUUnitsUType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -423,7 +423,7 @@ public struct Millimetres_u {
 }
 
 /// A floating point type for the millimetres unit.
-public struct Millimetres_f {
+public struct Millimetres_f: GUUnitsFType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -605,7 +605,7 @@ public struct Millimetres_f {
 }
 
 /// A double type for the millimetres unit.
-public struct Millimetres_d {
+public struct Millimetres_d: GUUnitsDType {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
