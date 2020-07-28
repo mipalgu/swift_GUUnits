@@ -61,12 +61,17 @@ import CGUUnits
 /// A signed integer type for the degrees unit.
 public struct Degrees_t {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `degrees_t`
     public let rawValue: degrees_t
 
     /// Create a `Degrees_t` from the underlying guunits C type `degrees_t`.
     public init(rawValue: degrees_t) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Degrees_t` by converting a `Double`.
     ///
@@ -152,6 +157,8 @@ public struct Degrees_t {
         self.rawValue = u8_to_deg_t(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Degrees_t` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_t`.
@@ -180,6 +187,8 @@ public struct Degrees_t {
         self.rawValue = rad_d_to_deg_t(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Degrees_t` by converting a `Degrees_d`.
     ///
     /// - Parameter value: A `Degrees_d` value to convert to a `Degrees_t`.
@@ -203,111 +212,20 @@ public struct Degrees_t {
 
 }
 
-public extension Double {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Degrees_t) {
-        self = Int(deg_t_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Degrees_t) {
-        self = UInt(deg_t_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Degrees_t) {
-        self = deg_t_to_u8(value.rawValue)
-    }
-
-}
-
 /// An unsigned integer type for the degrees unit.
 public struct Degrees_u {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `degrees_u`
     public let rawValue: degrees_u
 
     /// Create a `Degrees_u` from the underlying guunits C type `degrees_u`.
     public init(rawValue: degrees_u) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Degrees_u` by converting a `Double`.
     ///
@@ -393,6 +311,8 @@ public struct Degrees_u {
         self.rawValue = u8_to_deg_u(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Degrees_u` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_u`.
@@ -421,6 +341,8 @@ public struct Degrees_u {
         self.rawValue = rad_d_to_deg_u(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Degrees_u` by converting a `Degrees_d`.
     ///
     /// - Parameter value: A `Degrees_d` value to convert to a `Degrees_u`.
@@ -444,111 +366,20 @@ public struct Degrees_u {
 
 }
 
-public extension Double {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Degrees_u) {
-        self = Int(deg_u_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Degrees_u) {
-        self = UInt(deg_u_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Degrees_u) {
-        self = deg_u_to_u8(value.rawValue)
-    }
-
-}
-
 /// A floating point type for the degrees unit.
 public struct Degrees_f {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `degrees_f`
     public let rawValue: degrees_f
 
     /// Create a `Degrees_f` from the underlying guunits C type `degrees_f`.
     public init(rawValue: degrees_f) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Degrees_f` by converting a `Double`.
     ///
@@ -634,6 +465,8 @@ public struct Degrees_f {
         self.rawValue = u8_to_deg_f(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Degrees_f` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_f`.
@@ -662,6 +495,8 @@ public struct Degrees_f {
         self.rawValue = rad_d_to_deg_f(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Degrees_f` by converting a `Degrees_d`.
     ///
     /// - Parameter value: A `Degrees_d` value to convert to a `Degrees_f`.
@@ -685,111 +520,20 @@ public struct Degrees_f {
 
 }
 
-public extension Double {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Degrees_f) {
-        self = Int(deg_f_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Degrees_f) {
-        self = UInt(deg_f_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Degrees_f) {
-        self = deg_f_to_u8(value.rawValue)
-    }
-
-}
-
 /// A double type for the degrees unit.
 public struct Degrees_d {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `degrees_d`
     public let rawValue: degrees_d
 
     /// Create a `Degrees_d` from the underlying guunits C type `degrees_d`.
     public init(rawValue: degrees_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Degrees_d` by converting a `Double`.
     ///
@@ -875,6 +619,8 @@ public struct Degrees_d {
         self.rawValue = u8_to_deg_d(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Degrees_d` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_d`.
@@ -903,6 +649,8 @@ public struct Degrees_d {
         self.rawValue = rad_d_to_deg_d(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Degrees_d` by converting a `Degrees_f`.
     ///
     /// - Parameter value: A `Degrees_f` value to convert to a `Degrees_d`.
@@ -928,6 +676,32 @@ public struct Degrees_d {
 
 public extension Double {
 
+// MARK: - Creating a Double From The Degrees Units
+
+    /// Create a `Double` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Double`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Double`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Double`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Double`.
     init(_ value: Degrees_d) {
         self = deg_d_to_d(value.rawValue)
     }
@@ -936,6 +710,32 @@ public extension Double {
 
 public extension Float {
 
+// MARK: - Creating a Float From The Degrees Units
+
+    /// Create a `Float` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Float`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Float`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Float`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Float`.
     init(_ value: Degrees_d) {
         self = deg_d_to_f(value.rawValue)
     }
@@ -944,6 +744,32 @@ public extension Float {
 
 public extension Int {
 
+// MARK: - Creating a Int From The Degrees Units
+
+    /// Create a `Int` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Int`.
+    init(_ value: Degrees_t) {
+        self = Int(deg_t_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Int`.
+    init(_ value: Degrees_u) {
+        self = Int(deg_u_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Int`.
+    init(_ value: Degrees_f) {
+        self = Int(deg_f_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Int`.
     init(_ value: Degrees_d) {
         self = Int(deg_d_to_i64(value.rawValue))
     }
@@ -952,6 +778,32 @@ public extension Int {
 
 public extension Int16 {
 
+// MARK: - Creating a Int16 From The Degrees Units
+
+    /// Create a `Int16` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Int16`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Int16`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Int16`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Int16`.
     init(_ value: Degrees_d) {
         self = deg_d_to_i16(value.rawValue)
     }
@@ -960,6 +812,32 @@ public extension Int16 {
 
 public extension Int32 {
 
+// MARK: - Creating a Int32 From The Degrees Units
+
+    /// Create a `Int32` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Int32`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Int32`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Int32`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Int32`.
     init(_ value: Degrees_d) {
         self = deg_d_to_i32(value.rawValue)
     }
@@ -968,6 +846,32 @@ public extension Int32 {
 
 public extension Int64 {
 
+// MARK: - Creating a Int64 From The Degrees Units
+
+    /// Create a `Int64` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Int64`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Int64`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Int64`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Int64`.
     init(_ value: Degrees_d) {
         self = deg_d_to_i64(value.rawValue)
     }
@@ -976,6 +880,32 @@ public extension Int64 {
 
 public extension Int8 {
 
+// MARK: - Creating a Int8 From The Degrees Units
+
+    /// Create a `Int8` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Int8`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Int8`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Int8`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Int8`.
     init(_ value: Degrees_d) {
         self = deg_d_to_i8(value.rawValue)
     }
@@ -984,6 +914,32 @@ public extension Int8 {
 
 public extension UInt {
 
+// MARK: - Creating a UInt From The Degrees Units
+
+    /// Create a `UInt` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `UInt`.
+    init(_ value: Degrees_t) {
+        self = UInt(deg_t_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `UInt`.
+    init(_ value: Degrees_u) {
+        self = UInt(deg_u_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `UInt`.
+    init(_ value: Degrees_f) {
+        self = UInt(deg_f_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `UInt`.
     init(_ value: Degrees_d) {
         self = UInt(deg_d_to_u64(value.rawValue))
     }
@@ -992,6 +948,32 @@ public extension UInt {
 
 public extension UInt16 {
 
+// MARK: - Creating a UInt16 From The Degrees Units
+
+    /// Create a `UInt16` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `UInt16`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `UInt16`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `UInt16`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `UInt16`.
     init(_ value: Degrees_d) {
         self = deg_d_to_u16(value.rawValue)
     }
@@ -1000,6 +982,32 @@ public extension UInt16 {
 
 public extension UInt32 {
 
+// MARK: - Creating a UInt32 From The Degrees Units
+
+    /// Create a `UInt32` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `UInt32`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `UInt32`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `UInt32`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `UInt32`.
     init(_ value: Degrees_d) {
         self = deg_d_to_u32(value.rawValue)
     }
@@ -1008,6 +1016,32 @@ public extension UInt32 {
 
 public extension UInt64 {
 
+// MARK: - Creating a UInt64 From The Degrees Units
+
+    /// Create a `UInt64` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `UInt64`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `UInt64`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `UInt64`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `UInt64`.
     init(_ value: Degrees_d) {
         self = deg_d_to_u64(value.rawValue)
     }
@@ -1016,6 +1050,32 @@ public extension UInt64 {
 
 public extension UInt8 {
 
+// MARK: - Creating a UInt8 From The Degrees Units
+
+    /// Create a `UInt8` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `UInt8`.
+    init(_ value: Degrees_t) {
+        self = deg_t_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `UInt8`.
+    init(_ value: Degrees_u) {
+        self = deg_u_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `UInt8`.
+    init(_ value: Degrees_f) {
+        self = deg_f_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `UInt8`.
     init(_ value: Degrees_d) {
         self = deg_d_to_u8(value.rawValue)
     }

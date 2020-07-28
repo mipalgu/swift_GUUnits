@@ -61,12 +61,17 @@ import CGUUnits
 /// A signed integer type for the microseconds unit.
 public struct Microseconds_t {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `microseconds_t`
     public let rawValue: microseconds_t
 
     /// Create a `Microseconds_t` from the underlying guunits C type `microseconds_t`.
     public init(rawValue: microseconds_t) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Microseconds_t` by converting a `Double`.
     ///
@@ -152,6 +157,8 @@ public struct Microseconds_t {
         self.rawValue = u8_to_us_t(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Microseconds_t` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_t`.
@@ -208,6 +215,8 @@ public struct Microseconds_t {
         self.rawValue = s_d_to_us_t(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Microseconds_t` by converting a `Microseconds_d`.
     ///
     /// - Parameter value: A `Microseconds_d` value to convert to a `Microseconds_t`.
@@ -231,111 +240,20 @@ public struct Microseconds_t {
 
 }
 
-public extension Double {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Microseconds_t) {
-        self = Int(us_t_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Microseconds_t) {
-        self = UInt(us_t_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Microseconds_t) {
-        self = us_t_to_u8(value.rawValue)
-    }
-
-}
-
 /// An unsigned integer type for the microseconds unit.
 public struct Microseconds_u {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `microseconds_u`
     public let rawValue: microseconds_u
 
     /// Create a `Microseconds_u` from the underlying guunits C type `microseconds_u`.
     public init(rawValue: microseconds_u) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Microseconds_u` by converting a `Double`.
     ///
@@ -421,6 +339,8 @@ public struct Microseconds_u {
         self.rawValue = u8_to_us_u(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Microseconds_u` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_u`.
@@ -477,6 +397,8 @@ public struct Microseconds_u {
         self.rawValue = s_d_to_us_u(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Microseconds_u` by converting a `Microseconds_d`.
     ///
     /// - Parameter value: A `Microseconds_d` value to convert to a `Microseconds_u`.
@@ -500,111 +422,20 @@ public struct Microseconds_u {
 
 }
 
-public extension Double {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Microseconds_u) {
-        self = Int(us_u_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Microseconds_u) {
-        self = UInt(us_u_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Microseconds_u) {
-        self = us_u_to_u8(value.rawValue)
-    }
-
-}
-
 /// A floating point type for the microseconds unit.
 public struct Microseconds_f {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `microseconds_f`
     public let rawValue: microseconds_f
 
     /// Create a `Microseconds_f` from the underlying guunits C type `microseconds_f`.
     public init(rawValue: microseconds_f) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Microseconds_f` by converting a `Double`.
     ///
@@ -690,6 +521,8 @@ public struct Microseconds_f {
         self.rawValue = u8_to_us_f(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Microseconds_f` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_f`.
@@ -746,6 +579,8 @@ public struct Microseconds_f {
         self.rawValue = s_d_to_us_f(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Microseconds_f` by converting a `Microseconds_d`.
     ///
     /// - Parameter value: A `Microseconds_d` value to convert to a `Microseconds_f`.
@@ -769,111 +604,20 @@ public struct Microseconds_f {
 
 }
 
-public extension Double {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Microseconds_f) {
-        self = Int(us_f_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Microseconds_f) {
-        self = UInt(us_f_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Microseconds_f) {
-        self = us_f_to_u8(value.rawValue)
-    }
-
-}
-
 /// A double type for the microseconds unit.
 public struct Microseconds_d {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `microseconds_d`
     public let rawValue: microseconds_d
 
     /// Create a `Microseconds_d` from the underlying guunits C type `microseconds_d`.
     public init(rawValue: microseconds_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Microseconds_d` by converting a `Double`.
     ///
@@ -959,6 +703,8 @@ public struct Microseconds_d {
         self.rawValue = u8_to_us_d(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Microseconds_d` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_d`.
@@ -1015,6 +761,8 @@ public struct Microseconds_d {
         self.rawValue = s_d_to_us_d(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Microseconds_d` by converting a `Microseconds_f`.
     ///
     /// - Parameter value: A `Microseconds_f` value to convert to a `Microseconds_d`.
@@ -1040,6 +788,32 @@ public struct Microseconds_d {
 
 public extension Double {
 
+// MARK: - Creating a Double From The Microseconds Units
+
+    /// Create a `Double` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Double`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Double`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Double`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Double`.
     init(_ value: Microseconds_d) {
         self = us_d_to_d(value.rawValue)
     }
@@ -1048,6 +822,32 @@ public extension Double {
 
 public extension Float {
 
+// MARK: - Creating a Float From The Microseconds Units
+
+    /// Create a `Float` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Float`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Float`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Float`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Float`.
     init(_ value: Microseconds_d) {
         self = us_d_to_f(value.rawValue)
     }
@@ -1056,6 +856,32 @@ public extension Float {
 
 public extension Int {
 
+// MARK: - Creating a Int From The Microseconds Units
+
+    /// Create a `Int` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Int`.
+    init(_ value: Microseconds_t) {
+        self = Int(us_t_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Int`.
+    init(_ value: Microseconds_u) {
+        self = Int(us_u_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Int`.
+    init(_ value: Microseconds_f) {
+        self = Int(us_f_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Int`.
     init(_ value: Microseconds_d) {
         self = Int(us_d_to_i64(value.rawValue))
     }
@@ -1064,6 +890,32 @@ public extension Int {
 
 public extension Int16 {
 
+// MARK: - Creating a Int16 From The Microseconds Units
+
+    /// Create a `Int16` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Int16`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Int16`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Int16`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Int16`.
     init(_ value: Microseconds_d) {
         self = us_d_to_i16(value.rawValue)
     }
@@ -1072,6 +924,32 @@ public extension Int16 {
 
 public extension Int32 {
 
+// MARK: - Creating a Int32 From The Microseconds Units
+
+    /// Create a `Int32` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Int32`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Int32`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Int32`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Int32`.
     init(_ value: Microseconds_d) {
         self = us_d_to_i32(value.rawValue)
     }
@@ -1080,6 +958,32 @@ public extension Int32 {
 
 public extension Int64 {
 
+// MARK: - Creating a Int64 From The Microseconds Units
+
+    /// Create a `Int64` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Int64`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Int64`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Int64`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Int64`.
     init(_ value: Microseconds_d) {
         self = us_d_to_i64(value.rawValue)
     }
@@ -1088,6 +992,32 @@ public extension Int64 {
 
 public extension Int8 {
 
+// MARK: - Creating a Int8 From The Microseconds Units
+
+    /// Create a `Int8` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Int8`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Int8`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Int8`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Int8`.
     init(_ value: Microseconds_d) {
         self = us_d_to_i8(value.rawValue)
     }
@@ -1096,6 +1026,32 @@ public extension Int8 {
 
 public extension UInt {
 
+// MARK: - Creating a UInt From The Microseconds Units
+
+    /// Create a `UInt` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `UInt`.
+    init(_ value: Microseconds_t) {
+        self = UInt(us_t_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `UInt`.
+    init(_ value: Microseconds_u) {
+        self = UInt(us_u_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `UInt`.
+    init(_ value: Microseconds_f) {
+        self = UInt(us_f_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `UInt`.
     init(_ value: Microseconds_d) {
         self = UInt(us_d_to_u64(value.rawValue))
     }
@@ -1104,6 +1060,32 @@ public extension UInt {
 
 public extension UInt16 {
 
+// MARK: - Creating a UInt16 From The Microseconds Units
+
+    /// Create a `UInt16` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `UInt16`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `UInt16`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `UInt16`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `UInt16`.
     init(_ value: Microseconds_d) {
         self = us_d_to_u16(value.rawValue)
     }
@@ -1112,6 +1094,32 @@ public extension UInt16 {
 
 public extension UInt32 {
 
+// MARK: - Creating a UInt32 From The Microseconds Units
+
+    /// Create a `UInt32` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `UInt32`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `UInt32`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `UInt32`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `UInt32`.
     init(_ value: Microseconds_d) {
         self = us_d_to_u32(value.rawValue)
     }
@@ -1120,6 +1128,32 @@ public extension UInt32 {
 
 public extension UInt64 {
 
+// MARK: - Creating a UInt64 From The Microseconds Units
+
+    /// Create a `UInt64` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `UInt64`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `UInt64`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `UInt64`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `UInt64`.
     init(_ value: Microseconds_d) {
         self = us_d_to_u64(value.rawValue)
     }
@@ -1128,6 +1162,32 @@ public extension UInt64 {
 
 public extension UInt8 {
 
+// MARK: - Creating a UInt8 From The Microseconds Units
+
+    /// Create a `UInt8` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `UInt8`.
+    init(_ value: Microseconds_t) {
+        self = us_t_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `UInt8`.
+    init(_ value: Microseconds_u) {
+        self = us_u_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `UInt8`.
+    init(_ value: Microseconds_f) {
+        self = us_f_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `UInt8`.
     init(_ value: Microseconds_d) {
         self = us_d_to_u8(value.rawValue)
     }

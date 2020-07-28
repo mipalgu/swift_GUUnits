@@ -61,12 +61,17 @@ import CGUUnits
 /// A signed integer type for the centimetres unit.
 public struct Centimetres_t {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `centimetres_t`
     public let rawValue: centimetres_t
 
     /// Create a `Centimetres_t` from the underlying guunits C type `centimetres_t`.
     public init(rawValue: centimetres_t) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Centimetres_t` by converting a `Double`.
     ///
@@ -152,6 +157,8 @@ public struct Centimetres_t {
         self.rawValue = u8_to_cm_t(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Centimetres_t` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_t`.
@@ -208,6 +215,8 @@ public struct Centimetres_t {
         self.rawValue = mm_d_to_cm_t(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Centimetres_t` by converting a `Centimetres_d`.
     ///
     /// - Parameter value: A `Centimetres_d` value to convert to a `Centimetres_t`.
@@ -231,111 +240,20 @@ public struct Centimetres_t {
 
 }
 
-public extension Double {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Centimetres_t) {
-        self = Int(cm_t_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Centimetres_t) {
-        self = UInt(cm_t_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Centimetres_t) {
-        self = cm_t_to_u8(value.rawValue)
-    }
-
-}
-
 /// An unsigned integer type for the centimetres unit.
 public struct Centimetres_u {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `centimetres_u`
     public let rawValue: centimetres_u
 
     /// Create a `Centimetres_u` from the underlying guunits C type `centimetres_u`.
     public init(rawValue: centimetres_u) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Centimetres_u` by converting a `Double`.
     ///
@@ -421,6 +339,8 @@ public struct Centimetres_u {
         self.rawValue = u8_to_cm_u(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Centimetres_u` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_u`.
@@ -477,6 +397,8 @@ public struct Centimetres_u {
         self.rawValue = mm_d_to_cm_u(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Centimetres_u` by converting a `Centimetres_d`.
     ///
     /// - Parameter value: A `Centimetres_d` value to convert to a `Centimetres_u`.
@@ -500,111 +422,20 @@ public struct Centimetres_u {
 
 }
 
-public extension Double {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Centimetres_u) {
-        self = Int(cm_u_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Centimetres_u) {
-        self = UInt(cm_u_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Centimetres_u) {
-        self = cm_u_to_u8(value.rawValue)
-    }
-
-}
-
 /// A floating point type for the centimetres unit.
 public struct Centimetres_f {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `centimetres_f`
     public let rawValue: centimetres_f
 
     /// Create a `Centimetres_f` from the underlying guunits C type `centimetres_f`.
     public init(rawValue: centimetres_f) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Centimetres_f` by converting a `Double`.
     ///
@@ -690,6 +521,8 @@ public struct Centimetres_f {
         self.rawValue = u8_to_cm_f(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Centimetres_f` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_f`.
@@ -746,6 +579,8 @@ public struct Centimetres_f {
         self.rawValue = mm_d_to_cm_f(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Centimetres_f` by converting a `Centimetres_d`.
     ///
     /// - Parameter value: A `Centimetres_d` value to convert to a `Centimetres_f`.
@@ -769,111 +604,20 @@ public struct Centimetres_f {
 
 }
 
-public extension Double {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Centimetres_f) {
-        self = Int(cm_f_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Centimetres_f) {
-        self = UInt(cm_f_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Centimetres_f) {
-        self = cm_f_to_u8(value.rawValue)
-    }
-
-}
-
 /// A double type for the centimetres unit.
 public struct Centimetres_d {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `centimetres_d`
     public let rawValue: centimetres_d
 
     /// Create a `Centimetres_d` from the underlying guunits C type `centimetres_d`.
     public init(rawValue: centimetres_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Centimetres_d` by converting a `Double`.
     ///
@@ -959,6 +703,8 @@ public struct Centimetres_d {
         self.rawValue = u8_to_cm_d(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Centimetres_d` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_d`.
@@ -1015,6 +761,8 @@ public struct Centimetres_d {
         self.rawValue = mm_d_to_cm_d(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Centimetres_d` by converting a `Centimetres_f`.
     ///
     /// - Parameter value: A `Centimetres_f` value to convert to a `Centimetres_d`.
@@ -1040,6 +788,32 @@ public struct Centimetres_d {
 
 public extension Double {
 
+// MARK: - Creating a Double From The Centimetres Units
+
+    /// Create a `Double` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Double`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Double`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Double`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Double`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_d(value.rawValue)
     }
@@ -1048,6 +822,32 @@ public extension Double {
 
 public extension Float {
 
+// MARK: - Creating a Float From The Centimetres Units
+
+    /// Create a `Float` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Float`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Float`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Float`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Float`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_f(value.rawValue)
     }
@@ -1056,6 +856,32 @@ public extension Float {
 
 public extension Int {
 
+// MARK: - Creating a Int From The Centimetres Units
+
+    /// Create a `Int` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Int`.
+    init(_ value: Centimetres_t) {
+        self = Int(cm_t_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Int`.
+    init(_ value: Centimetres_u) {
+        self = Int(cm_u_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Int`.
+    init(_ value: Centimetres_f) {
+        self = Int(cm_f_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Int`.
     init(_ value: Centimetres_d) {
         self = Int(cm_d_to_i64(value.rawValue))
     }
@@ -1064,6 +890,32 @@ public extension Int {
 
 public extension Int16 {
 
+// MARK: - Creating a Int16 From The Centimetres Units
+
+    /// Create a `Int16` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Int16`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Int16`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Int16`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Int16`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_i16(value.rawValue)
     }
@@ -1072,6 +924,32 @@ public extension Int16 {
 
 public extension Int32 {
 
+// MARK: - Creating a Int32 From The Centimetres Units
+
+    /// Create a `Int32` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Int32`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Int32`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Int32`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Int32`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_i32(value.rawValue)
     }
@@ -1080,6 +958,32 @@ public extension Int32 {
 
 public extension Int64 {
 
+// MARK: - Creating a Int64 From The Centimetres Units
+
+    /// Create a `Int64` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Int64`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Int64`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Int64`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Int64`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_i64(value.rawValue)
     }
@@ -1088,6 +992,32 @@ public extension Int64 {
 
 public extension Int8 {
 
+// MARK: - Creating a Int8 From The Centimetres Units
+
+    /// Create a `Int8` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Int8`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Int8`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Int8`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Int8`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_i8(value.rawValue)
     }
@@ -1096,6 +1026,32 @@ public extension Int8 {
 
 public extension UInt {
 
+// MARK: - Creating a UInt From The Centimetres Units
+
+    /// Create a `UInt` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `UInt`.
+    init(_ value: Centimetres_t) {
+        self = UInt(cm_t_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `UInt`.
+    init(_ value: Centimetres_u) {
+        self = UInt(cm_u_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `UInt`.
+    init(_ value: Centimetres_f) {
+        self = UInt(cm_f_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `UInt`.
     init(_ value: Centimetres_d) {
         self = UInt(cm_d_to_u64(value.rawValue))
     }
@@ -1104,6 +1060,32 @@ public extension UInt {
 
 public extension UInt16 {
 
+// MARK: - Creating a UInt16 From The Centimetres Units
+
+    /// Create a `UInt16` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `UInt16`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `UInt16`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `UInt16`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `UInt16`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_u16(value.rawValue)
     }
@@ -1112,6 +1094,32 @@ public extension UInt16 {
 
 public extension UInt32 {
 
+// MARK: - Creating a UInt32 From The Centimetres Units
+
+    /// Create a `UInt32` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `UInt32`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `UInt32`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `UInt32`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `UInt32`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_u32(value.rawValue)
     }
@@ -1120,6 +1128,32 @@ public extension UInt32 {
 
 public extension UInt64 {
 
+// MARK: - Creating a UInt64 From The Centimetres Units
+
+    /// Create a `UInt64` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `UInt64`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `UInt64`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `UInt64`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `UInt64`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_u64(value.rawValue)
     }
@@ -1128,6 +1162,32 @@ public extension UInt64 {
 
 public extension UInt8 {
 
+// MARK: - Creating a UInt8 From The Centimetres Units
+
+    /// Create a `UInt8` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `UInt8`.
+    init(_ value: Centimetres_t) {
+        self = cm_t_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `UInt8`.
+    init(_ value: Centimetres_u) {
+        self = cm_u_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `UInt8`.
+    init(_ value: Centimetres_f) {
+        self = cm_f_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `UInt8`.
     init(_ value: Centimetres_d) {
         self = cm_d_to_u8(value.rawValue)
     }

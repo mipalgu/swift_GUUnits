@@ -61,12 +61,17 @@ import CGUUnits
 /// A signed integer type for the radians unit.
 public struct Radians_t {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `radians_t`
     public let rawValue: radians_t
 
     /// Create a `Radians_t` from the underlying guunits C type `radians_t`.
     public init(rawValue: radians_t) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Radians_t` by converting a `Double`.
     ///
@@ -152,6 +157,8 @@ public struct Radians_t {
         self.rawValue = u8_to_rad_t(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Radians_t` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_t`.
@@ -180,6 +187,8 @@ public struct Radians_t {
         self.rawValue = deg_d_to_rad_t(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Radians_t` by converting a `Radians_d`.
     ///
     /// - Parameter value: A `Radians_d` value to convert to a `Radians_t`.
@@ -203,111 +212,20 @@ public struct Radians_t {
 
 }
 
-public extension Double {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Radians_t) {
-        self = Int(rad_t_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Radians_t) {
-        self = UInt(rad_t_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Radians_t) {
-        self = rad_t_to_u8(value.rawValue)
-    }
-
-}
-
 /// An unsigned integer type for the radians unit.
 public struct Radians_u {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `radians_u`
     public let rawValue: radians_u
 
     /// Create a `Radians_u` from the underlying guunits C type `radians_u`.
     public init(rawValue: radians_u) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Radians_u` by converting a `Double`.
     ///
@@ -393,6 +311,8 @@ public struct Radians_u {
         self.rawValue = u8_to_rad_u(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Radians_u` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_u`.
@@ -421,6 +341,8 @@ public struct Radians_u {
         self.rawValue = deg_d_to_rad_u(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Radians_u` by converting a `Radians_d`.
     ///
     /// - Parameter value: A `Radians_d` value to convert to a `Radians_u`.
@@ -444,111 +366,20 @@ public struct Radians_u {
 
 }
 
-public extension Double {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Radians_u) {
-        self = Int(rad_u_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Radians_u) {
-        self = UInt(rad_u_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Radians_u) {
-        self = rad_u_to_u8(value.rawValue)
-    }
-
-}
-
 /// A floating point type for the radians unit.
 public struct Radians_f {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `radians_f`
     public let rawValue: radians_f
 
     /// Create a `Radians_f` from the underlying guunits C type `radians_f`.
     public init(rawValue: radians_f) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Radians_f` by converting a `Double`.
     ///
@@ -634,6 +465,8 @@ public struct Radians_f {
         self.rawValue = u8_to_rad_f(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Radians_f` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_f`.
@@ -662,6 +495,8 @@ public struct Radians_f {
         self.rawValue = deg_d_to_rad_f(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Radians_f` by converting a `Radians_d`.
     ///
     /// - Parameter value: A `Radians_d` value to convert to a `Radians_f`.
@@ -685,111 +520,20 @@ public struct Radians_f {
 
 }
 
-public extension Double {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_d(value.rawValue)
-    }
-
-}
-
-public extension Float {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_f(value.rawValue)
-    }
-
-}
-
-public extension Int {
-
-    init(_ value: Radians_f) {
-        self = Int(rad_f_to_i64(value.rawValue))
-    }
-
-}
-
-public extension Int16 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_i16(value.rawValue)
-    }
-
-}
-
-public extension Int32 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_i32(value.rawValue)
-    }
-
-}
-
-public extension Int64 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_i64(value.rawValue)
-    }
-
-}
-
-public extension Int8 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_i8(value.rawValue)
-    }
-
-}
-
-public extension UInt {
-
-    init(_ value: Radians_f) {
-        self = UInt(rad_f_to_u64(value.rawValue))
-    }
-
-}
-
-public extension UInt16 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_u16(value.rawValue)
-    }
-
-}
-
-public extension UInt32 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_u32(value.rawValue)
-    }
-
-}
-
-public extension UInt64 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_u64(value.rawValue)
-    }
-
-}
-
-public extension UInt8 {
-
-    init(_ value: Radians_f) {
-        self = rad_f_to_u8(value.rawValue)
-    }
-
-}
-
 /// A double type for the radians unit.
 public struct Radians_d {
 
+// MARK: - Converting Between The Underlying guunits C Type
+
+    /// Convert to the guunits underlying C type `radians_d`
     public let rawValue: radians_d
 
     /// Create a `Radians_d` from the underlying guunits C type `radians_d`.
     public init(rawValue: radians_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Radians_d` by converting a `Double`.
     ///
@@ -875,6 +619,8 @@ public struct Radians_d {
         self.rawValue = u8_to_rad_d(value)
     }
 
+// MARK: - Converting From Other Units
+
     /// Create a `Radians_d` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_d`.
@@ -903,6 +649,8 @@ public struct Radians_d {
         self.rawValue = deg_d_to_rad_d(value.rawValue)
     }
 
+// MARK: - Converting From Other Precisions
+
     /// Create a `Radians_d` by converting a `Radians_f`.
     ///
     /// - Parameter value: A `Radians_f` value to convert to a `Radians_d`.
@@ -928,6 +676,32 @@ public struct Radians_d {
 
 public extension Double {
 
+// MARK: - Creating a Double From The Radians Units
+
+    /// Create a `Double` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Double`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Double`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Double`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_d(value.rawValue)
+    }
+
+    /// Create a `Double` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Double`.
     init(_ value: Radians_d) {
         self = rad_d_to_d(value.rawValue)
     }
@@ -936,6 +710,32 @@ public extension Double {
 
 public extension Float {
 
+// MARK: - Creating a Float From The Radians Units
+
+    /// Create a `Float` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Float`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Float`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Float`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_f(value.rawValue)
+    }
+
+    /// Create a `Float` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Float`.
     init(_ value: Radians_d) {
         self = rad_d_to_f(value.rawValue)
     }
@@ -944,6 +744,32 @@ public extension Float {
 
 public extension Int {
 
+// MARK: - Creating a Int From The Radians Units
+
+    /// Create a `Int` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Int`.
+    init(_ value: Radians_t) {
+        self = Int(rad_t_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Int`.
+    init(_ value: Radians_u) {
+        self = Int(rad_u_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Int`.
+    init(_ value: Radians_f) {
+        self = Int(rad_f_to_i64(value.rawValue))
+    }
+
+    /// Create a `Int` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Int`.
     init(_ value: Radians_d) {
         self = Int(rad_d_to_i64(value.rawValue))
     }
@@ -952,6 +778,32 @@ public extension Int {
 
 public extension Int16 {
 
+// MARK: - Creating a Int16 From The Radians Units
+
+    /// Create a `Int16` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Int16`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Int16`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Int16`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_i16(value.rawValue)
+    }
+
+    /// Create a `Int16` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Int16`.
     init(_ value: Radians_d) {
         self = rad_d_to_i16(value.rawValue)
     }
@@ -960,6 +812,32 @@ public extension Int16 {
 
 public extension Int32 {
 
+// MARK: - Creating a Int32 From The Radians Units
+
+    /// Create a `Int32` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Int32`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Int32`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Int32`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_i32(value.rawValue)
+    }
+
+    /// Create a `Int32` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Int32`.
     init(_ value: Radians_d) {
         self = rad_d_to_i32(value.rawValue)
     }
@@ -968,6 +846,32 @@ public extension Int32 {
 
 public extension Int64 {
 
+// MARK: - Creating a Int64 From The Radians Units
+
+    /// Create a `Int64` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Int64`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Int64`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Int64`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_i64(value.rawValue)
+    }
+
+    /// Create a `Int64` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Int64`.
     init(_ value: Radians_d) {
         self = rad_d_to_i64(value.rawValue)
     }
@@ -976,6 +880,32 @@ public extension Int64 {
 
 public extension Int8 {
 
+// MARK: - Creating a Int8 From The Radians Units
+
+    /// Create a `Int8` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Int8`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Int8`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Int8`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_i8(value.rawValue)
+    }
+
+    /// Create a `Int8` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Int8`.
     init(_ value: Radians_d) {
         self = rad_d_to_i8(value.rawValue)
     }
@@ -984,6 +914,32 @@ public extension Int8 {
 
 public extension UInt {
 
+// MARK: - Creating a UInt From The Radians Units
+
+    /// Create a `UInt` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `UInt`.
+    init(_ value: Radians_t) {
+        self = UInt(rad_t_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `UInt`.
+    init(_ value: Radians_u) {
+        self = UInt(rad_u_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `UInt`.
+    init(_ value: Radians_f) {
+        self = UInt(rad_f_to_u64(value.rawValue))
+    }
+
+    /// Create a `UInt` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `UInt`.
     init(_ value: Radians_d) {
         self = UInt(rad_d_to_u64(value.rawValue))
     }
@@ -992,6 +948,32 @@ public extension UInt {
 
 public extension UInt16 {
 
+// MARK: - Creating a UInt16 From The Radians Units
+
+    /// Create a `UInt16` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `UInt16`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `UInt16`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `UInt16`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_u16(value.rawValue)
+    }
+
+    /// Create a `UInt16` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `UInt16`.
     init(_ value: Radians_d) {
         self = rad_d_to_u16(value.rawValue)
     }
@@ -1000,6 +982,32 @@ public extension UInt16 {
 
 public extension UInt32 {
 
+// MARK: - Creating a UInt32 From The Radians Units
+
+    /// Create a `UInt32` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `UInt32`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `UInt32`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `UInt32`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_u32(value.rawValue)
+    }
+
+    /// Create a `UInt32` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `UInt32`.
     init(_ value: Radians_d) {
         self = rad_d_to_u32(value.rawValue)
     }
@@ -1008,6 +1016,32 @@ public extension UInt32 {
 
 public extension UInt64 {
 
+// MARK: - Creating a UInt64 From The Radians Units
+
+    /// Create a `UInt64` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `UInt64`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `UInt64`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `UInt64`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_u64(value.rawValue)
+    }
+
+    /// Create a `UInt64` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `UInt64`.
     init(_ value: Radians_d) {
         self = rad_d_to_u64(value.rawValue)
     }
@@ -1016,6 +1050,32 @@ public extension UInt64 {
 
 public extension UInt8 {
 
+// MARK: - Creating a UInt8 From The Radians Units
+
+    /// Create a `UInt8` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `UInt8`.
+    init(_ value: Radians_t) {
+        self = rad_t_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `UInt8`.
+    init(_ value: Radians_u) {
+        self = rad_u_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `UInt8`.
+    init(_ value: Radians_f) {
+        self = rad_f_to_u8(value.rawValue)
+    }
+
+    /// Create a `UInt8` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `UInt8`.
     init(_ value: Radians_d) {
         self = rad_d_to_u8(value.rawValue)
     }
