@@ -157,8 +157,6 @@ public struct Percent_t: GUUnitsTType {
         self.rawValue = u8_to_pct_t(value)
     }
 
-// MARK: - Converting From Other Units
-
 // MARK: - Converting From Other Precisions
 
     /// Create a `Percent_t` by converting a `Percent_d`.
@@ -282,8 +280,6 @@ public struct Percent_u: GUUnitsUType {
     public init(_ value: UInt8) {
         self.rawValue = u8_to_pct_u(value)
     }
-
-// MARK: - Converting From Other Units
 
 // MARK: - Converting From Other Precisions
 
@@ -409,8 +405,6 @@ public struct Percent_f: GUUnitsFType {
         self.rawValue = u8_to_pct_f(value)
     }
 
-// MARK: - Converting From Other Units
-
 // MARK: - Converting From Other Precisions
 
     /// Create a `Percent_f` by converting a `Percent_d`.
@@ -534,8 +528,6 @@ public struct Percent_d: GUUnitsDType {
     public init(_ value: UInt8) {
         self.rawValue = u8_to_pct_d(value)
     }
-
-// MARK: - Converting From Other Units
 
 // MARK: - Converting From Other Precisions
 

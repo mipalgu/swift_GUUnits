@@ -157,8 +157,6 @@ public struct Pixels_t: GUUnitsTType {
         self.rawValue = u8_to_px_t(value)
     }
 
-// MARK: - Converting From Other Units
-
 // MARK: - Converting From Other Precisions
 
     /// Create a `Pixels_t` by converting a `Pixels_d`.
@@ -282,8 +280,6 @@ public struct Pixels_u: GUUnitsUType {
     public init(_ value: UInt8) {
         self.rawValue = u8_to_px_u(value)
     }
-
-// MARK: - Converting From Other Units
 
 // MARK: - Converting From Other Precisions
 
@@ -409,8 +405,6 @@ public struct Pixels_f: GUUnitsFType {
         self.rawValue = u8_to_px_f(value)
     }
 
-// MARK: - Converting From Other Units
-
 // MARK: - Converting From Other Precisions
 
     /// Create a `Pixels_f` by converting a `Pixels_d`.
@@ -534,8 +528,6 @@ public struct Pixels_d: GUUnitsDType {
     public init(_ value: UInt8) {
         self.rawValue = u8_to_px_d(value)
     }
-
-// MARK: - Converting From Other Units
 
 // MARK: - Converting From Other Precisions
 
