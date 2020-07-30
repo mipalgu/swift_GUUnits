@@ -58,14 +58,189 @@
 
 import CGUUnits
 
+/// Provides a generic way of working with time units.
+///
+/// This type is useful as it allows you to specify that you are
+/// working with a particular type of unit, without having to
+/// specify in which units you are working. This type allows you
+/// to convert to any of the related underlying unit types.
+///
+/// It is recommended that if you are creating a library or public
+/// api of some sort, then this type should be used in your function
+/// declaration over the more specific underlying unit types that
+/// this type can convert to. If you are performing some
+/// sort of calculations then you obviously need to use one of the
+/// underlying unit types that this type can convert to; however,
+/// the public api should take this type which you should then
+/// convert to the underlying unit type you need.
+///
+/// - Attention: Because this type is numeric, and therefore allows
+/// you to perform arithmetic, this type must behave like a double
+/// as a double has the highest precision. If this is not
+/// necessary, then you may opt to use one of the integer
+/// variants of the underlying unit types that this type can convert
+/// to.
 public struct Time: GUUnitsDType {
+
+// MARK: - Converting Between The Internal Representation
 
     /// Always store internally as a `Microseconds_d`
     public let rawValue: Microseconds_d
 
+    /// Initialise `Time` from its internally representation.
     public init(rawValue: Microseconds_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting To The Underlying Unit Types
+
+    /// Create a `Microseconds_t`.
+    public var microseconds_t: Microseconds_t {
+        return Microseconds_t(self.rawValue)
+    }
+
+    /// Create a `Microseconds_u`.
+    public var microseconds_u: Microseconds_u {
+        return Microseconds_u(self.rawValue)
+    }
+
+    /// Create a `Microseconds_f`.
+    public var microseconds_f: Microseconds_f {
+        return Microseconds_f(self.rawValue)
+    }
+
+    /// Create a `Microseconds_d`.
+    public var microseconds_d: Microseconds_d {
+        return Microseconds_d(self.rawValue)
+    }
+
+    /// Create a `Milliseconds_t`.
+    public var milliseconds_t: Milliseconds_t {
+        return Milliseconds_t(self.rawValue)
+    }
+
+    /// Create a `Milliseconds_u`.
+    public var milliseconds_u: Milliseconds_u {
+        return Milliseconds_u(self.rawValue)
+    }
+
+    /// Create a `Milliseconds_f`.
+    public var milliseconds_f: Milliseconds_f {
+        return Milliseconds_f(self.rawValue)
+    }
+
+    /// Create a `Milliseconds_d`.
+    public var milliseconds_d: Milliseconds_d {
+        return Milliseconds_d(self.rawValue)
+    }
+
+    /// Create a `Seconds_t`.
+    public var seconds_t: Seconds_t {
+        return Seconds_t(self.rawValue)
+    }
+
+    /// Create a `Seconds_u`.
+    public var seconds_u: Seconds_u {
+        return Seconds_u(self.rawValue)
+    }
+
+    /// Create a `Seconds_f`.
+    public var seconds_f: Seconds_f {
+        return Seconds_f(self.rawValue)
+    }
+
+    /// Create a `Seconds_d`.
+    public var seconds_d: Seconds_d {
+        return Seconds_d(self.rawValue)
+    }
+
+// MARK: - Converting From The Underlying Unit Types
+
+    /// Create a `Time` by converting a `Microseconds_t`.
+    ///
+    /// - Parameter value: A `Microseconds_t` value to convert to a `Time`.
+    public init(_ value: Microseconds_t) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Microseconds_u`.
+    ///
+    /// - Parameter value: A `Microseconds_u` value to convert to a `Time`.
+    public init(_ value: Microseconds_u) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Microseconds_f`.
+    ///
+    /// - Parameter value: A `Microseconds_f` value to convert to a `Time`.
+    public init(_ value: Microseconds_f) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Microseconds_d`.
+    ///
+    /// - Parameter value: A `Microseconds_d` value to convert to a `Time`.
+    public init(_ value: Microseconds_d) {
+        self.rawValue = value
+    }
+
+    /// Create a `Time` by converting a `Milliseconds_t`.
+    ///
+    /// - Parameter value: A `Milliseconds_t` value to convert to a `Time`.
+    public init(_ value: Milliseconds_t) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Milliseconds_u`.
+    ///
+    /// - Parameter value: A `Milliseconds_u` value to convert to a `Time`.
+    public init(_ value: Milliseconds_u) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Milliseconds_f`.
+    ///
+    /// - Parameter value: A `Milliseconds_f` value to convert to a `Time`.
+    public init(_ value: Milliseconds_f) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Milliseconds_d`.
+    ///
+    /// - Parameter value: A `Milliseconds_d` value to convert to a `Time`.
+    public init(_ value: Milliseconds_d) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Seconds_t`.
+    ///
+    /// - Parameter value: A `Seconds_t` value to convert to a `Time`.
+    public init(_ value: Seconds_t) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Seconds_u`.
+    ///
+    /// - Parameter value: A `Seconds_u` value to convert to a `Time`.
+    public init(_ value: Seconds_u) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Seconds_f`.
+    ///
+    /// - Parameter value: A `Seconds_f` value to convert to a `Time`.
+    public init(_ value: Seconds_f) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+    /// Create a `Time` by converting a `Seconds_d`.
+    ///
+    /// - Parameter value: A `Seconds_d` value to convert to a `Time`.
+    public init(_ value: Seconds_d) {
+        self.rawValue = Microseconds_d(value)
+    }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Time` by converting a `Double`.
     ///
@@ -148,54 +323,6 @@ public struct Time: GUUnitsDType {
     ///
     /// - Parameter value: A `UInt8` value to convert to a `Time`.
     public init(_ value: UInt8) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Microseconds_t) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Microseconds_u) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Microseconds_f) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Microseconds_d) {
-        self.rawValue = value
-    }
-
-    public init(_ value: Milliseconds_t) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Milliseconds_u) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Milliseconds_f) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Milliseconds_d) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Seconds_t) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Seconds_u) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Seconds_f) {
-        self.rawValue = Microseconds_d(value)
-    }
-
-    public init(_ value: Seconds_d) {
         self.rawValue = Microseconds_d(value)
     }
 
@@ -321,126 +448,6 @@ public extension UInt8 {
 
 }
 
-public extension Microseconds_t {
-
-// MARK: - Creating a Microseconds_t From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Microseconds_u {
-
-// MARK: - Creating a Microseconds_u From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Microseconds_f {
-
-// MARK: - Creating a Microseconds_f From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Microseconds_d {
-
-// MARK: - Creating a Microseconds_d From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Milliseconds_t {
-
-// MARK: - Creating a Milliseconds_t From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Milliseconds_u {
-
-// MARK: - Creating a Milliseconds_u From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Milliseconds_f {
-
-// MARK: - Creating a Milliseconds_f From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Milliseconds_d {
-
-// MARK: - Creating a Milliseconds_d From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Seconds_t {
-
-// MARK: - Creating a Seconds_t From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Seconds_u {
-
-// MARK: - Creating a Seconds_u From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Seconds_f {
-
-// MARK: - Creating a Seconds_f From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Seconds_d {
-
-// MARK: - Creating a Seconds_d From `Time`
-
-    init(_ value: Time) {
-        self.init(value.rawValue)
-    }
-
-}
-
 /// A signed integer type for the microseconds unit.
 public struct Microseconds_t: GUUnitsTType {
 
@@ -541,6 +548,13 @@ public struct Microseconds_t: GUUnitsTType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Microseconds_t` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Microseconds_t`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Microseconds_t` by converting a `Milliseconds_t`.
     ///
@@ -724,6 +738,13 @@ public struct Microseconds_u: GUUnitsUType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Microseconds_u` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Microseconds_u`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Microseconds_u` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_u`.
@@ -906,6 +927,13 @@ public struct Microseconds_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Microseconds_f` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Microseconds_f`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Microseconds_f` by converting a `Milliseconds_t`.
     ///
     /// - Parameter value: A `Milliseconds_t` value to convert to a `Microseconds_f`.
@@ -1087,6 +1115,13 @@ public struct Microseconds_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Microseconds_d` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Microseconds_d`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Microseconds_d` by converting a `Milliseconds_t`.
     ///
@@ -1681,6 +1716,13 @@ public struct Milliseconds_t: GUUnitsTType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Milliseconds_t` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Milliseconds_t`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Milliseconds_t` by converting a `Microseconds_t`.
     ///
     /// - Parameter value: A `Microseconds_t` value to convert to a `Milliseconds_t`.
@@ -1862,6 +1904,13 @@ public struct Milliseconds_u: GUUnitsUType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Milliseconds_u` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Milliseconds_u`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Milliseconds_u` by converting a `Microseconds_t`.
     ///
@@ -2045,6 +2094,13 @@ public struct Milliseconds_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Milliseconds_f` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Milliseconds_f`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Milliseconds_f` by converting a `Microseconds_t`.
     ///
     /// - Parameter value: A `Microseconds_t` value to convert to a `Milliseconds_f`.
@@ -2226,6 +2282,13 @@ public struct Milliseconds_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Milliseconds_d` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Milliseconds_d`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Milliseconds_d` by converting a `Microseconds_t`.
     ///
@@ -2820,6 +2883,13 @@ public struct Seconds_t: GUUnitsTType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Seconds_t` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Seconds_t`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Seconds_t` by converting a `Microseconds_t`.
     ///
     /// - Parameter value: A `Microseconds_t` value to convert to a `Seconds_t`.
@@ -3001,6 +3071,13 @@ public struct Seconds_u: GUUnitsUType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Seconds_u` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Seconds_u`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Seconds_u` by converting a `Microseconds_t`.
     ///
@@ -3184,6 +3261,13 @@ public struct Seconds_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Seconds_f` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Seconds_f`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Seconds_f` by converting a `Microseconds_t`.
     ///
     /// - Parameter value: A `Microseconds_t` value to convert to a `Seconds_f`.
@@ -3365,6 +3449,13 @@ public struct Seconds_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Seconds_d` by converting a `Time`.
+    ///
+    /// - Parameter value: A `Time` value to convert to a `Seconds_d`.
+    public init(_ value: Time) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Seconds_d` by converting a `Microseconds_t`.
     ///

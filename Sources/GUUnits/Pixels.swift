@@ -58,14 +58,93 @@
 
 import CGUUnits
 
+/// Provides a generic way of working with pixels units.
+///
+/// This type is useful as it allows you to specify that you are
+/// working with a particular type of unit, without having to
+/// specify in which units you are working. This type allows you
+/// to convert to any of the related underlying unit types.
+///
+/// It is recommended that if you are creating a library or public
+/// api of some sort, then this type should be used in your function
+/// declaration over the more specific underlying unit types that
+/// this type can convert to. If you are performing some
+/// sort of calculations then you obviously need to use one of the
+/// underlying unit types that this type can convert to; however,
+/// the public api should take this type which you should then
+/// convert to the underlying unit type you need.
+///
+/// - Attention: Because this type is numeric, and therefore allows
+/// you to perform arithmetic, this type must behave like a double
+/// as a double has the highest precision. If this is not
+/// necessary, then you may opt to use one of the integer
+/// variants of the underlying unit types that this type can convert
+/// to.
 public struct Pixels: GUUnitsDType {
+
+// MARK: - Converting Between The Internal Representation
 
     /// Always store internally as a `Pixels_d`
     public let rawValue: Pixels_d
 
+    /// Initialise `Pixels` from its internally representation.
     public init(rawValue: Pixels_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting To The Underlying Unit Types
+
+    /// Create a `Pixels_t`.
+    public var pixels_t: Pixels_t {
+        return Pixels_t(self.rawValue)
+    }
+
+    /// Create a `Pixels_u`.
+    public var pixels_u: Pixels_u {
+        return Pixels_u(self.rawValue)
+    }
+
+    /// Create a `Pixels_f`.
+    public var pixels_f: Pixels_f {
+        return Pixels_f(self.rawValue)
+    }
+
+    /// Create a `Pixels_d`.
+    public var pixels_d: Pixels_d {
+        return Pixels_d(self.rawValue)
+    }
+
+// MARK: - Converting From The Underlying Unit Types
+
+    /// Create a `Pixels` by converting a `Pixels_t`.
+    ///
+    /// - Parameter value: A `Pixels_t` value to convert to a `Pixels`.
+    public init(_ value: Pixels_t) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Pixels_u`.
+    ///
+    /// - Parameter value: A `Pixels_u` value to convert to a `Pixels`.
+    public init(_ value: Pixels_u) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Pixels_f`.
+    ///
+    /// - Parameter value: A `Pixels_f` value to convert to a `Pixels`.
+    public init(_ value: Pixels_f) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Pixels_d`.
+    ///
+    /// - Parameter value: A `Pixels_d` value to convert to a `Pixels`.
+    public init(_ value: Pixels_d) {
+        self.rawValue = value
+    }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Pixels` by converting a `Double`.
     ///
@@ -149,22 +228,6 @@ public struct Pixels: GUUnitsDType {
     /// - Parameter value: A `UInt8` value to convert to a `Pixels`.
     public init(_ value: UInt8) {
         self.rawValue = Pixels_d(value)
-    }
-
-    public init(_ value: Pixels_t) {
-        self.rawValue = Pixels_d(value)
-    }
-
-    public init(_ value: Pixels_u) {
-        self.rawValue = Pixels_d(value)
-    }
-
-    public init(_ value: Pixels_f) {
-        self.rawValue = Pixels_d(value)
-    }
-
-    public init(_ value: Pixels_d) {
-        self.rawValue = value
     }
 
 }
@@ -282,46 +345,6 @@ public extension UInt64 {
 public extension UInt8 {
 
 // MARK: - Creating a UInt8 From `Pixels`
-
-    init(_ value: Pixels) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Pixels_t {
-
-// MARK: - Creating a Pixels_t From `Pixels`
-
-    init(_ value: Pixels) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Pixels_u {
-
-// MARK: - Creating a Pixels_u From `Pixels`
-
-    init(_ value: Pixels) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Pixels_f {
-
-// MARK: - Creating a Pixels_f From `Pixels`
-
-    init(_ value: Pixels) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Pixels_d {
-
-// MARK: - Creating a Pixels_d From `Pixels`
 
     init(_ value: Pixels) {
         self.init(value.rawValue)

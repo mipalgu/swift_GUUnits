@@ -58,14 +58,189 @@
 
 import CGUUnits
 
+/// Provides a generic way of working with distance units.
+///
+/// This type is useful as it allows you to specify that you are
+/// working with a particular type of unit, without having to
+/// specify in which units you are working. This type allows you
+/// to convert to any of the related underlying unit types.
+///
+/// It is recommended that if you are creating a library or public
+/// api of some sort, then this type should be used in your function
+/// declaration over the more specific underlying unit types that
+/// this type can convert to. If you are performing some
+/// sort of calculations then you obviously need to use one of the
+/// underlying unit types that this type can convert to; however,
+/// the public api should take this type which you should then
+/// convert to the underlying unit type you need.
+///
+/// - Attention: Because this type is numeric, and therefore allows
+/// you to perform arithmetic, this type must behave like a double
+/// as a double has the highest precision. If this is not
+/// necessary, then you may opt to use one of the integer
+/// variants of the underlying unit types that this type can convert
+/// to.
 public struct Distance: GUUnitsDType {
+
+// MARK: - Converting Between The Internal Representation
 
     /// Always store internally as a `Millimetres_d`
     public let rawValue: Millimetres_d
 
+    /// Initialise `Distance` from its internally representation.
     public init(rawValue: Millimetres_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting To The Underlying Unit Types
+
+    /// Create a `Millimetres_t`.
+    public var millimetres_t: Millimetres_t {
+        return Millimetres_t(self.rawValue)
+    }
+
+    /// Create a `Millimetres_u`.
+    public var millimetres_u: Millimetres_u {
+        return Millimetres_u(self.rawValue)
+    }
+
+    /// Create a `Millimetres_f`.
+    public var millimetres_f: Millimetres_f {
+        return Millimetres_f(self.rawValue)
+    }
+
+    /// Create a `Millimetres_d`.
+    public var millimetres_d: Millimetres_d {
+        return Millimetres_d(self.rawValue)
+    }
+
+    /// Create a `Centimetres_t`.
+    public var centimetres_t: Centimetres_t {
+        return Centimetres_t(self.rawValue)
+    }
+
+    /// Create a `Centimetres_u`.
+    public var centimetres_u: Centimetres_u {
+        return Centimetres_u(self.rawValue)
+    }
+
+    /// Create a `Centimetres_f`.
+    public var centimetres_f: Centimetres_f {
+        return Centimetres_f(self.rawValue)
+    }
+
+    /// Create a `Centimetres_d`.
+    public var centimetres_d: Centimetres_d {
+        return Centimetres_d(self.rawValue)
+    }
+
+    /// Create a `Metres_t`.
+    public var metres_t: Metres_t {
+        return Metres_t(self.rawValue)
+    }
+
+    /// Create a `Metres_u`.
+    public var metres_u: Metres_u {
+        return Metres_u(self.rawValue)
+    }
+
+    /// Create a `Metres_f`.
+    public var metres_f: Metres_f {
+        return Metres_f(self.rawValue)
+    }
+
+    /// Create a `Metres_d`.
+    public var metres_d: Metres_d {
+        return Metres_d(self.rawValue)
+    }
+
+// MARK: - Converting From The Underlying Unit Types
+
+    /// Create a `Distance` by converting a `Millimetres_t`.
+    ///
+    /// - Parameter value: A `Millimetres_t` value to convert to a `Distance`.
+    public init(_ value: Millimetres_t) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Millimetres_u`.
+    ///
+    /// - Parameter value: A `Millimetres_u` value to convert to a `Distance`.
+    public init(_ value: Millimetres_u) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Millimetres_f`.
+    ///
+    /// - Parameter value: A `Millimetres_f` value to convert to a `Distance`.
+    public init(_ value: Millimetres_f) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Millimetres_d`.
+    ///
+    /// - Parameter value: A `Millimetres_d` value to convert to a `Distance`.
+    public init(_ value: Millimetres_d) {
+        self.rawValue = value
+    }
+
+    /// Create a `Distance` by converting a `Centimetres_t`.
+    ///
+    /// - Parameter value: A `Centimetres_t` value to convert to a `Distance`.
+    public init(_ value: Centimetres_t) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Centimetres_u`.
+    ///
+    /// - Parameter value: A `Centimetres_u` value to convert to a `Distance`.
+    public init(_ value: Centimetres_u) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Centimetres_f`.
+    ///
+    /// - Parameter value: A `Centimetres_f` value to convert to a `Distance`.
+    public init(_ value: Centimetres_f) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Centimetres_d`.
+    ///
+    /// - Parameter value: A `Centimetres_d` value to convert to a `Distance`.
+    public init(_ value: Centimetres_d) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Metres_t`.
+    ///
+    /// - Parameter value: A `Metres_t` value to convert to a `Distance`.
+    public init(_ value: Metres_t) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Metres_u`.
+    ///
+    /// - Parameter value: A `Metres_u` value to convert to a `Distance`.
+    public init(_ value: Metres_u) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Metres_f`.
+    ///
+    /// - Parameter value: A `Metres_f` value to convert to a `Distance`.
+    public init(_ value: Metres_f) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+    /// Create a `Distance` by converting a `Metres_d`.
+    ///
+    /// - Parameter value: A `Metres_d` value to convert to a `Distance`.
+    public init(_ value: Metres_d) {
+        self.rawValue = Millimetres_d(value)
+    }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Distance` by converting a `Double`.
     ///
@@ -148,54 +323,6 @@ public struct Distance: GUUnitsDType {
     ///
     /// - Parameter value: A `UInt8` value to convert to a `Distance`.
     public init(_ value: UInt8) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Millimetres_t) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Millimetres_u) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Millimetres_f) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Millimetres_d) {
-        self.rawValue = value
-    }
-
-    public init(_ value: Centimetres_t) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Centimetres_u) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Centimetres_f) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Centimetres_d) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Metres_t) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Metres_u) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Metres_f) {
-        self.rawValue = Millimetres_d(value)
-    }
-
-    public init(_ value: Metres_d) {
         self.rawValue = Millimetres_d(value)
     }
 
@@ -321,126 +448,6 @@ public extension UInt8 {
 
 }
 
-public extension Millimetres_t {
-
-// MARK: - Creating a Millimetres_t From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Millimetres_u {
-
-// MARK: - Creating a Millimetres_u From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Millimetres_f {
-
-// MARK: - Creating a Millimetres_f From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Millimetres_d {
-
-// MARK: - Creating a Millimetres_d From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Centimetres_t {
-
-// MARK: - Creating a Centimetres_t From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Centimetres_u {
-
-// MARK: - Creating a Centimetres_u From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Centimetres_f {
-
-// MARK: - Creating a Centimetres_f From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Centimetres_d {
-
-// MARK: - Creating a Centimetres_d From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Metres_t {
-
-// MARK: - Creating a Metres_t From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Metres_u {
-
-// MARK: - Creating a Metres_u From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Metres_f {
-
-// MARK: - Creating a Metres_f From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Metres_d {
-
-// MARK: - Creating a Metres_d From `Distance`
-
-    init(_ value: Distance) {
-        self.init(value.rawValue)
-    }
-
-}
-
 /// A signed integer type for the millimetres unit.
 public struct Millimetres_t: GUUnitsTType {
 
@@ -541,6 +548,13 @@ public struct Millimetres_t: GUUnitsTType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Millimetres_t` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Millimetres_t`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Millimetres_t` by converting a `Centimetres_t`.
     ///
@@ -724,6 +738,13 @@ public struct Millimetres_u: GUUnitsUType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Millimetres_u` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Millimetres_u`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Millimetres_u` by converting a `Centimetres_t`.
     ///
     /// - Parameter value: A `Centimetres_t` value to convert to a `Millimetres_u`.
@@ -906,6 +927,13 @@ public struct Millimetres_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Millimetres_f` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Millimetres_f`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Millimetres_f` by converting a `Centimetres_t`.
     ///
     /// - Parameter value: A `Centimetres_t` value to convert to a `Millimetres_f`.
@@ -1087,6 +1115,13 @@ public struct Millimetres_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Millimetres_d` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Millimetres_d`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Millimetres_d` by converting a `Centimetres_t`.
     ///
@@ -1681,6 +1716,13 @@ public struct Centimetres_t: GUUnitsTType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Centimetres_t` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Centimetres_t`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Centimetres_t` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_t`.
@@ -1862,6 +1904,13 @@ public struct Centimetres_u: GUUnitsUType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Centimetres_u` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Centimetres_u`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Centimetres_u` by converting a `Metres_t`.
     ///
@@ -2045,6 +2094,13 @@ public struct Centimetres_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Centimetres_f` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Centimetres_f`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Centimetres_f` by converting a `Metres_t`.
     ///
     /// - Parameter value: A `Metres_t` value to convert to a `Centimetres_f`.
@@ -2226,6 +2282,13 @@ public struct Centimetres_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Centimetres_d` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Centimetres_d`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Centimetres_d` by converting a `Metres_t`.
     ///
@@ -2820,6 +2883,13 @@ public struct Metres_t: GUUnitsTType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Metres_t` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Metres_t`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Metres_t` by converting a `Centimetres_t`.
     ///
     /// - Parameter value: A `Centimetres_t` value to convert to a `Metres_t`.
@@ -3001,6 +3071,13 @@ public struct Metres_u: GUUnitsUType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Metres_u` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Metres_u`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Metres_u` by converting a `Centimetres_t`.
     ///
@@ -3184,6 +3261,13 @@ public struct Metres_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Metres_f` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Metres_f`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Metres_f` by converting a `Centimetres_t`.
     ///
     /// - Parameter value: A `Centimetres_t` value to convert to a `Metres_f`.
@@ -3365,6 +3449,13 @@ public struct Metres_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Metres_d` by converting a `Distance`.
+    ///
+    /// - Parameter value: A `Distance` value to convert to a `Metres_d`.
+    public init(_ value: Distance) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Metres_d` by converting a `Centimetres_t`.
     ///

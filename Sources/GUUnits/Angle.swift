@@ -58,14 +58,141 @@
 
 import CGUUnits
 
+/// Provides a generic way of working with angle units.
+///
+/// This type is useful as it allows you to specify that you are
+/// working with a particular type of unit, without having to
+/// specify in which units you are working. This type allows you
+/// to convert to any of the related underlying unit types.
+///
+/// It is recommended that if you are creating a library or public
+/// api of some sort, then this type should be used in your function
+/// declaration over the more specific underlying unit types that
+/// this type can convert to. If you are performing some
+/// sort of calculations then you obviously need to use one of the
+/// underlying unit types that this type can convert to; however,
+/// the public api should take this type which you should then
+/// convert to the underlying unit type you need.
+///
+/// - Attention: Because this type is numeric, and therefore allows
+/// you to perform arithmetic, this type must behave like a double
+/// as a double has the highest precision. If this is not
+/// necessary, then you may opt to use one of the integer
+/// variants of the underlying unit types that this type can convert
+/// to.
 public struct Angle: GUUnitsDType {
+
+// MARK: - Converting Between The Internal Representation
 
     /// Always store internally as a `Degrees_d`
     public let rawValue: Degrees_d
 
+    /// Initialise `Angle` from its internally representation.
     public init(rawValue: Degrees_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting To The Underlying Unit Types
+
+    /// Create a `Degrees_t`.
+    public var degrees_t: Degrees_t {
+        return Degrees_t(self.rawValue)
+    }
+
+    /// Create a `Degrees_u`.
+    public var degrees_u: Degrees_u {
+        return Degrees_u(self.rawValue)
+    }
+
+    /// Create a `Degrees_f`.
+    public var degrees_f: Degrees_f {
+        return Degrees_f(self.rawValue)
+    }
+
+    /// Create a `Degrees_d`.
+    public var degrees_d: Degrees_d {
+        return Degrees_d(self.rawValue)
+    }
+
+    /// Create a `Radians_t`.
+    public var radians_t: Radians_t {
+        return Radians_t(self.rawValue)
+    }
+
+    /// Create a `Radians_u`.
+    public var radians_u: Radians_u {
+        return Radians_u(self.rawValue)
+    }
+
+    /// Create a `Radians_f`.
+    public var radians_f: Radians_f {
+        return Radians_f(self.rawValue)
+    }
+
+    /// Create a `Radians_d`.
+    public var radians_d: Radians_d {
+        return Radians_d(self.rawValue)
+    }
+
+// MARK: - Converting From The Underlying Unit Types
+
+    /// Create a `Angle` by converting a `Degrees_t`.
+    ///
+    /// - Parameter value: A `Degrees_t` value to convert to a `Angle`.
+    public init(_ value: Degrees_t) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Degrees_u`.
+    ///
+    /// - Parameter value: A `Degrees_u` value to convert to a `Angle`.
+    public init(_ value: Degrees_u) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Degrees_f`.
+    ///
+    /// - Parameter value: A `Degrees_f` value to convert to a `Angle`.
+    public init(_ value: Degrees_f) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Degrees_d`.
+    ///
+    /// - Parameter value: A `Degrees_d` value to convert to a `Angle`.
+    public init(_ value: Degrees_d) {
+        self.rawValue = value
+    }
+
+    /// Create a `Angle` by converting a `Radians_t`.
+    ///
+    /// - Parameter value: A `Radians_t` value to convert to a `Angle`.
+    public init(_ value: Radians_t) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Radians_u`.
+    ///
+    /// - Parameter value: A `Radians_u` value to convert to a `Angle`.
+    public init(_ value: Radians_u) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Radians_f`.
+    ///
+    /// - Parameter value: A `Radians_f` value to convert to a `Angle`.
+    public init(_ value: Radians_f) {
+        self.rawValue = Degrees_d(value)
+    }
+
+    /// Create a `Angle` by converting a `Radians_d`.
+    ///
+    /// - Parameter value: A `Radians_d` value to convert to a `Angle`.
+    public init(_ value: Radians_d) {
+        self.rawValue = Degrees_d(value)
+    }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Angle` by converting a `Double`.
     ///
@@ -148,38 +275,6 @@ public struct Angle: GUUnitsDType {
     ///
     /// - Parameter value: A `UInt8` value to convert to a `Angle`.
     public init(_ value: UInt8) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Degrees_t) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Degrees_u) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Degrees_f) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Degrees_d) {
-        self.rawValue = value
-    }
-
-    public init(_ value: Radians_t) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Radians_u) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Radians_f) {
-        self.rawValue = Degrees_d(value)
-    }
-
-    public init(_ value: Radians_d) {
         self.rawValue = Degrees_d(value)
     }
 
@@ -305,86 +400,6 @@ public extension UInt8 {
 
 }
 
-public extension Degrees_t {
-
-// MARK: - Creating a Degrees_t From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Degrees_u {
-
-// MARK: - Creating a Degrees_u From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Degrees_f {
-
-// MARK: - Creating a Degrees_f From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Degrees_d {
-
-// MARK: - Creating a Degrees_d From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Radians_t {
-
-// MARK: - Creating a Radians_t From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Radians_u {
-
-// MARK: - Creating a Radians_u From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Radians_f {
-
-// MARK: - Creating a Radians_f From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Radians_d {
-
-// MARK: - Creating a Radians_d From `Angle`
-
-    init(_ value: Angle) {
-        self.init(value.rawValue)
-    }
-
-}
-
 /// A signed integer type for the degrees unit.
 public struct Degrees_t: GUUnitsTType {
 
@@ -485,6 +500,13 @@ public struct Degrees_t: GUUnitsTType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Degrees_t` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Degrees_t`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Degrees_t` by converting a `Radians_t`.
     ///
@@ -640,6 +662,13 @@ public struct Degrees_u: GUUnitsUType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Degrees_u` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Degrees_u`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Degrees_u` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_u`.
@@ -794,6 +823,13 @@ public struct Degrees_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Degrees_f` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Degrees_f`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Degrees_f` by converting a `Radians_t`.
     ///
     /// - Parameter value: A `Radians_t` value to convert to a `Degrees_f`.
@@ -947,6 +983,13 @@ public struct Degrees_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Degrees_d` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Degrees_d`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Degrees_d` by converting a `Radians_t`.
     ///
@@ -1513,6 +1556,13 @@ public struct Radians_t: GUUnitsTType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Radians_t` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Radians_t`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Radians_t` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_t`.
@@ -1666,6 +1716,13 @@ public struct Radians_u: GUUnitsUType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Radians_u` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Radians_u`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Radians_u` by converting a `Degrees_t`.
     ///
@@ -1821,6 +1878,13 @@ public struct Radians_f: GUUnitsFType {
 
 // MARK: - Converting From Other Units
 
+    /// Create a `Radians_f` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Radians_f`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
+
     /// Create a `Radians_f` by converting a `Degrees_t`.
     ///
     /// - Parameter value: A `Degrees_t` value to convert to a `Radians_f`.
@@ -1974,6 +2038,13 @@ public struct Radians_d: GUUnitsDType {
     }
 
 // MARK: - Converting From Other Units
+
+    /// Create a `Radians_d` by converting a `Angle`.
+    ///
+    /// - Parameter value: A `Angle` value to convert to a `Radians_d`.
+    public init(_ value: Angle) {
+        self.init(value.rawValue)
+    }
 
     /// Create a `Radians_d` by converting a `Degrees_t`.
     ///

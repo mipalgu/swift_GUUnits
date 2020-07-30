@@ -58,14 +58,93 @@
 
 import CGUUnits
 
+/// Provides a generic way of working with percent units.
+///
+/// This type is useful as it allows you to specify that you are
+/// working with a particular type of unit, without having to
+/// specify in which units you are working. This type allows you
+/// to convert to any of the related underlying unit types.
+///
+/// It is recommended that if you are creating a library or public
+/// api of some sort, then this type should be used in your function
+/// declaration over the more specific underlying unit types that
+/// this type can convert to. If you are performing some
+/// sort of calculations then you obviously need to use one of the
+/// underlying unit types that this type can convert to; however,
+/// the public api should take this type which you should then
+/// convert to the underlying unit type you need.
+///
+/// - Attention: Because this type is numeric, and therefore allows
+/// you to perform arithmetic, this type must behave like a double
+/// as a double has the highest precision. If this is not
+/// necessary, then you may opt to use one of the integer
+/// variants of the underlying unit types that this type can convert
+/// to.
 public struct Percent: GUUnitsDType {
+
+// MARK: - Converting Between The Internal Representation
 
     /// Always store internally as a `Percent_d`
     public let rawValue: Percent_d
 
+    /// Initialise `Percent` from its internally representation.
     public init(rawValue: Percent_d) {
         self.rawValue = rawValue
     }
+
+// MARK: - Converting To The Underlying Unit Types
+
+    /// Create a `Percent_t`.
+    public var percent_t: Percent_t {
+        return Percent_t(self.rawValue)
+    }
+
+    /// Create a `Percent_u`.
+    public var percent_u: Percent_u {
+        return Percent_u(self.rawValue)
+    }
+
+    /// Create a `Percent_f`.
+    public var percent_f: Percent_f {
+        return Percent_f(self.rawValue)
+    }
+
+    /// Create a `Percent_d`.
+    public var percent_d: Percent_d {
+        return Percent_d(self.rawValue)
+    }
+
+// MARK: - Converting From The Underlying Unit Types
+
+    /// Create a `Percent` by converting a `Percent_t`.
+    ///
+    /// - Parameter value: A `Percent_t` value to convert to a `Percent`.
+    public init(_ value: Percent_t) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Percent_u`.
+    ///
+    /// - Parameter value: A `Percent_u` value to convert to a `Percent`.
+    public init(_ value: Percent_u) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Percent_f`.
+    ///
+    /// - Parameter value: A `Percent_f` value to convert to a `Percent`.
+    public init(_ value: Percent_f) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Percent_d`.
+    ///
+    /// - Parameter value: A `Percent_d` value to convert to a `Percent`.
+    public init(_ value: Percent_d) {
+        self.rawValue = value
+    }
+
+// MARK: - Converting From Swift Numeric Types
 
     /// Create a `Percent` by converting a `Double`.
     ///
@@ -149,22 +228,6 @@ public struct Percent: GUUnitsDType {
     /// - Parameter value: A `UInt8` value to convert to a `Percent`.
     public init(_ value: UInt8) {
         self.rawValue = Percent_d(value)
-    }
-
-    public init(_ value: Percent_t) {
-        self.rawValue = Percent_d(value)
-    }
-
-    public init(_ value: Percent_u) {
-        self.rawValue = Percent_d(value)
-    }
-
-    public init(_ value: Percent_f) {
-        self.rawValue = Percent_d(value)
-    }
-
-    public init(_ value: Percent_d) {
-        self.rawValue = value
     }
 
 }
@@ -282,46 +345,6 @@ public extension UInt64 {
 public extension UInt8 {
 
 // MARK: - Creating a UInt8 From `Percent`
-
-    init(_ value: Percent) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Percent_t {
-
-// MARK: - Creating a Percent_t From `Percent`
-
-    init(_ value: Percent) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Percent_u {
-
-// MARK: - Creating a Percent_u From `Percent`
-
-    init(_ value: Percent) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Percent_f {
-
-// MARK: - Creating a Percent_f From `Percent`
-
-    init(_ value: Percent) {
-        self.init(value.rawValue)
-    }
-
-}
-
-public extension Percent_d {
-
-// MARK: - Creating a Percent_d From `Percent`
 
     init(_ value: Percent) {
         self.init(value.rawValue)
