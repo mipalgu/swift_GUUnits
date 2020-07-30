@@ -330,7 +330,7 @@ public struct Time: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From `Time`
+// MARK: - Creating a Double From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -340,7 +340,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From `Time`
+// MARK: - Creating a Float From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -350,7 +350,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From `Time`
+// MARK: - Creating a Int From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -360,7 +360,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From `Time`
+// MARK: - Creating a Int16 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -370,7 +370,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From `Time`
+// MARK: - Creating a Int32 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -380,7 +380,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From `Time`
+// MARK: - Creating a Int64 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -390,7 +390,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From `Time`
+// MARK: - Creating a Int8 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -400,7 +400,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From `Time`
+// MARK: - Creating a UInt From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -410,7 +410,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From `Time`
+// MARK: - Creating a UInt16 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -420,7 +420,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From `Time`
+// MARK: - Creating a UInt32 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -430,7 +430,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From `Time`
+// MARK: - Creating a UInt64 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -440,7 +440,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From `Time`
+// MARK: - Creating a UInt8 From The Time Units
 
     init(_ value: Time) {
         self.init(value.rawValue)
@@ -1206,7 +1206,7 @@ public struct Microseconds_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Microseconds Units
+// MARK: Creating a Double From The Microseconds Units
 
     /// Create a `Double` by converting a `Microseconds_t`.
     ///
@@ -1240,7 +1240,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Microseconds Units
+// MARK: Creating a Float From The Microseconds Units
 
     /// Create a `Float` by converting a `Microseconds_t`.
     ///
@@ -1274,7 +1274,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Microseconds Units
+// MARK: Creating a Int From The Microseconds Units
 
     /// Create a `Int` by converting a `Microseconds_t`.
     ///
@@ -1308,7 +1308,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Microseconds Units
+// MARK: Creating a Int16 From The Microseconds Units
 
     /// Create a `Int16` by converting a `Microseconds_t`.
     ///
@@ -1342,7 +1342,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Microseconds Units
+// MARK: Creating a Int32 From The Microseconds Units
 
     /// Create a `Int32` by converting a `Microseconds_t`.
     ///
@@ -1376,7 +1376,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Microseconds Units
+// MARK: Creating a Int64 From The Microseconds Units
 
     /// Create a `Int64` by converting a `Microseconds_t`.
     ///
@@ -1410,7 +1410,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Microseconds Units
+// MARK: Creating a Int8 From The Microseconds Units
 
     /// Create a `Int8` by converting a `Microseconds_t`.
     ///
@@ -1444,7 +1444,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Microseconds Units
+// MARK: Creating a UInt From The Microseconds Units
 
     /// Create a `UInt` by converting a `Microseconds_t`.
     ///
@@ -1478,7 +1478,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Microseconds Units
+// MARK: Creating a UInt16 From The Microseconds Units
 
     /// Create a `UInt16` by converting a `Microseconds_t`.
     ///
@@ -1512,7 +1512,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Microseconds Units
+// MARK: Creating a UInt32 From The Microseconds Units
 
     /// Create a `UInt32` by converting a `Microseconds_t`.
     ///
@@ -1546,7 +1546,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Microseconds Units
+// MARK: Creating a UInt64 From The Microseconds Units
 
     /// Create a `UInt64` by converting a `Microseconds_t`.
     ///
@@ -1580,7 +1580,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Microseconds Units
+// MARK: Creating a UInt8 From The Microseconds Units
 
     /// Create a `UInt8` by converting a `Microseconds_t`.
     ///
@@ -2373,7 +2373,7 @@ public struct Milliseconds_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Milliseconds Units
+// MARK: Creating a Double From The Milliseconds Units
 
     /// Create a `Double` by converting a `Milliseconds_t`.
     ///
@@ -2407,7 +2407,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Milliseconds Units
+// MARK: Creating a Float From The Milliseconds Units
 
     /// Create a `Float` by converting a `Milliseconds_t`.
     ///
@@ -2441,7 +2441,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Milliseconds Units
+// MARK: Creating a Int From The Milliseconds Units
 
     /// Create a `Int` by converting a `Milliseconds_t`.
     ///
@@ -2475,7 +2475,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Milliseconds Units
+// MARK: Creating a Int16 From The Milliseconds Units
 
     /// Create a `Int16` by converting a `Milliseconds_t`.
     ///
@@ -2509,7 +2509,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Milliseconds Units
+// MARK: Creating a Int32 From The Milliseconds Units
 
     /// Create a `Int32` by converting a `Milliseconds_t`.
     ///
@@ -2543,7 +2543,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Milliseconds Units
+// MARK: Creating a Int64 From The Milliseconds Units
 
     /// Create a `Int64` by converting a `Milliseconds_t`.
     ///
@@ -2577,7 +2577,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Milliseconds Units
+// MARK: Creating a Int8 From The Milliseconds Units
 
     /// Create a `Int8` by converting a `Milliseconds_t`.
     ///
@@ -2611,7 +2611,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Milliseconds Units
+// MARK: Creating a UInt From The Milliseconds Units
 
     /// Create a `UInt` by converting a `Milliseconds_t`.
     ///
@@ -2645,7 +2645,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Milliseconds Units
+// MARK: Creating a UInt16 From The Milliseconds Units
 
     /// Create a `UInt16` by converting a `Milliseconds_t`.
     ///
@@ -2679,7 +2679,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Milliseconds Units
+// MARK: Creating a UInt32 From The Milliseconds Units
 
     /// Create a `UInt32` by converting a `Milliseconds_t`.
     ///
@@ -2713,7 +2713,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Milliseconds Units
+// MARK: Creating a UInt64 From The Milliseconds Units
 
     /// Create a `UInt64` by converting a `Milliseconds_t`.
     ///
@@ -2747,7 +2747,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Milliseconds Units
+// MARK: Creating a UInt8 From The Milliseconds Units
 
     /// Create a `UInt8` by converting a `Milliseconds_t`.
     ///
@@ -3540,7 +3540,7 @@ public struct Seconds_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Seconds Units
+// MARK: Creating a Double From The Seconds Units
 
     /// Create a `Double` by converting a `Seconds_t`.
     ///
@@ -3574,7 +3574,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Seconds Units
+// MARK: Creating a Float From The Seconds Units
 
     /// Create a `Float` by converting a `Seconds_t`.
     ///
@@ -3608,7 +3608,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Seconds Units
+// MARK: Creating a Int From The Seconds Units
 
     /// Create a `Int` by converting a `Seconds_t`.
     ///
@@ -3642,7 +3642,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Seconds Units
+// MARK: Creating a Int16 From The Seconds Units
 
     /// Create a `Int16` by converting a `Seconds_t`.
     ///
@@ -3676,7 +3676,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Seconds Units
+// MARK: Creating a Int32 From The Seconds Units
 
     /// Create a `Int32` by converting a `Seconds_t`.
     ///
@@ -3710,7 +3710,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Seconds Units
+// MARK: Creating a Int64 From The Seconds Units
 
     /// Create a `Int64` by converting a `Seconds_t`.
     ///
@@ -3744,7 +3744,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Seconds Units
+// MARK: Creating a Int8 From The Seconds Units
 
     /// Create a `Int8` by converting a `Seconds_t`.
     ///
@@ -3778,7 +3778,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Seconds Units
+// MARK: Creating a UInt From The Seconds Units
 
     /// Create a `UInt` by converting a `Seconds_t`.
     ///
@@ -3812,7 +3812,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Seconds Units
+// MARK: Creating a UInt16 From The Seconds Units
 
     /// Create a `UInt16` by converting a `Seconds_t`.
     ///
@@ -3846,7 +3846,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Seconds Units
+// MARK: Creating a UInt32 From The Seconds Units
 
     /// Create a `UInt32` by converting a `Seconds_t`.
     ///
@@ -3880,7 +3880,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Seconds Units
+// MARK: Creating a UInt64 From The Seconds Units
 
     /// Create a `UInt64` by converting a `Seconds_t`.
     ///
@@ -3914,7 +3914,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Seconds Units
+// MARK: Creating a UInt8 From The Seconds Units
 
     /// Create a `UInt8` by converting a `Seconds_t`.
     ///

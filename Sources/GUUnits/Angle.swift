@@ -282,7 +282,7 @@ public struct Angle: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From `Angle`
+// MARK: - Creating a Double From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -292,7 +292,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From `Angle`
+// MARK: - Creating a Float From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -302,7 +302,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From `Angle`
+// MARK: - Creating a Int From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -312,7 +312,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From `Angle`
+// MARK: - Creating a Int16 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -322,7 +322,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From `Angle`
+// MARK: - Creating a Int32 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -332,7 +332,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From `Angle`
+// MARK: - Creating a Int64 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -342,7 +342,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From `Angle`
+// MARK: - Creating a Int8 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -352,7 +352,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From `Angle`
+// MARK: - Creating a UInt From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -362,7 +362,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From `Angle`
+// MARK: - Creating a UInt16 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -372,7 +372,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From `Angle`
+// MARK: - Creating a UInt32 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -382,7 +382,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From `Angle`
+// MARK: - Creating a UInt64 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -392,7 +392,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From `Angle`
+// MARK: - Creating a UInt8 From The Angle Units
 
     init(_ value: Angle) {
         self.init(value.rawValue)
@@ -1046,7 +1046,7 @@ public struct Degrees_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Degrees Units
+// MARK: Creating a Double From The Degrees Units
 
     /// Create a `Double` by converting a `Degrees_t`.
     ///
@@ -1080,7 +1080,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Degrees Units
+// MARK: Creating a Float From The Degrees Units
 
     /// Create a `Float` by converting a `Degrees_t`.
     ///
@@ -1114,7 +1114,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Degrees Units
+// MARK: Creating a Int From The Degrees Units
 
     /// Create a `Int` by converting a `Degrees_t`.
     ///
@@ -1148,7 +1148,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Degrees Units
+// MARK: Creating a Int16 From The Degrees Units
 
     /// Create a `Int16` by converting a `Degrees_t`.
     ///
@@ -1182,7 +1182,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Degrees Units
+// MARK: Creating a Int32 From The Degrees Units
 
     /// Create a `Int32` by converting a `Degrees_t`.
     ///
@@ -1216,7 +1216,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Degrees Units
+// MARK: Creating a Int64 From The Degrees Units
 
     /// Create a `Int64` by converting a `Degrees_t`.
     ///
@@ -1250,7 +1250,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Degrees Units
+// MARK: Creating a Int8 From The Degrees Units
 
     /// Create a `Int8` by converting a `Degrees_t`.
     ///
@@ -1284,7 +1284,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Degrees Units
+// MARK: Creating a UInt From The Degrees Units
 
     /// Create a `UInt` by converting a `Degrees_t`.
     ///
@@ -1318,7 +1318,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Degrees Units
+// MARK: Creating a UInt16 From The Degrees Units
 
     /// Create a `UInt16` by converting a `Degrees_t`.
     ///
@@ -1352,7 +1352,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Degrees Units
+// MARK: Creating a UInt32 From The Degrees Units
 
     /// Create a `UInt32` by converting a `Degrees_t`.
     ///
@@ -1386,7 +1386,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Degrees Units
+// MARK: Creating a UInt64 From The Degrees Units
 
     /// Create a `UInt64` by converting a `Degrees_t`.
     ///
@@ -1420,7 +1420,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Degrees Units
+// MARK: Creating a UInt8 From The Degrees Units
 
     /// Create a `UInt8` by converting a `Degrees_t`.
     ///
@@ -2101,7 +2101,7 @@ public struct Radians_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Radians Units
+// MARK: Creating a Double From The Radians Units
 
     /// Create a `Double` by converting a `Radians_t`.
     ///
@@ -2135,7 +2135,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Radians Units
+// MARK: Creating a Float From The Radians Units
 
     /// Create a `Float` by converting a `Radians_t`.
     ///
@@ -2169,7 +2169,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Radians Units
+// MARK: Creating a Int From The Radians Units
 
     /// Create a `Int` by converting a `Radians_t`.
     ///
@@ -2203,7 +2203,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Radians Units
+// MARK: Creating a Int16 From The Radians Units
 
     /// Create a `Int16` by converting a `Radians_t`.
     ///
@@ -2237,7 +2237,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Radians Units
+// MARK: Creating a Int32 From The Radians Units
 
     /// Create a `Int32` by converting a `Radians_t`.
     ///
@@ -2271,7 +2271,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Radians Units
+// MARK: Creating a Int64 From The Radians Units
 
     /// Create a `Int64` by converting a `Radians_t`.
     ///
@@ -2305,7 +2305,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Radians Units
+// MARK: Creating a Int8 From The Radians Units
 
     /// Create a `Int8` by converting a `Radians_t`.
     ///
@@ -2339,7 +2339,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Radians Units
+// MARK: Creating a UInt From The Radians Units
 
     /// Create a `UInt` by converting a `Radians_t`.
     ///
@@ -2373,7 +2373,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Radians Units
+// MARK: Creating a UInt16 From The Radians Units
 
     /// Create a `UInt16` by converting a `Radians_t`.
     ///
@@ -2407,7 +2407,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Radians Units
+// MARK: Creating a UInt32 From The Radians Units
 
     /// Create a `UInt32` by converting a `Radians_t`.
     ///
@@ -2441,7 +2441,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Radians Units
+// MARK: Creating a UInt64 From The Radians Units
 
     /// Create a `UInt64` by converting a `Radians_t`.
     ///
@@ -2475,7 +2475,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Radians Units
+// MARK: Creating a UInt8 From The Radians Units
 
     /// Create a `UInt8` by converting a `Radians_t`.
     ///

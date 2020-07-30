@@ -234,7 +234,7 @@ public struct Pixels: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From `Pixels`
+// MARK: - Creating a Double From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -244,7 +244,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From `Pixels`
+// MARK: - Creating a Float From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -254,7 +254,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From `Pixels`
+// MARK: - Creating a Int From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -264,7 +264,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From `Pixels`
+// MARK: - Creating a Int16 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -274,7 +274,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From `Pixels`
+// MARK: - Creating a Int32 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -284,7 +284,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From `Pixels`
+// MARK: - Creating a Int64 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -294,7 +294,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From `Pixels`
+// MARK: - Creating a Int8 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -304,7 +304,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From `Pixels`
+// MARK: - Creating a UInt From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -314,7 +314,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From `Pixels`
+// MARK: - Creating a UInt16 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -324,7 +324,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From `Pixels`
+// MARK: - Creating a UInt32 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -334,7 +334,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From `Pixels`
+// MARK: - Creating a UInt64 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -344,7 +344,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From `Pixels`
+// MARK: - Creating a UInt8 From The Pixels Units
 
     init(_ value: Pixels) {
         self.init(value.rawValue)
@@ -850,7 +850,7 @@ public struct Pixels_d: GUUnitsDType {
 
 public extension Double {
 
-// MARK: - Creating a Double From The Pixels Units
+// MARK: Creating a Double From The Pixels Units
 
     /// Create a `Double` by converting a `Pixels_t`.
     ///
@@ -884,7 +884,7 @@ public extension Double {
 
 public extension Float {
 
-// MARK: - Creating a Float From The Pixels Units
+// MARK: Creating a Float From The Pixels Units
 
     /// Create a `Float` by converting a `Pixels_t`.
     ///
@@ -918,7 +918,7 @@ public extension Float {
 
 public extension Int {
 
-// MARK: - Creating a Int From The Pixels Units
+// MARK: Creating a Int From The Pixels Units
 
     /// Create a `Int` by converting a `Pixels_t`.
     ///
@@ -952,7 +952,7 @@ public extension Int {
 
 public extension Int16 {
 
-// MARK: - Creating a Int16 From The Pixels Units
+// MARK: Creating a Int16 From The Pixels Units
 
     /// Create a `Int16` by converting a `Pixels_t`.
     ///
@@ -986,7 +986,7 @@ public extension Int16 {
 
 public extension Int32 {
 
-// MARK: - Creating a Int32 From The Pixels Units
+// MARK: Creating a Int32 From The Pixels Units
 
     /// Create a `Int32` by converting a `Pixels_t`.
     ///
@@ -1020,7 +1020,7 @@ public extension Int32 {
 
 public extension Int64 {
 
-// MARK: - Creating a Int64 From The Pixels Units
+// MARK: Creating a Int64 From The Pixels Units
 
     /// Create a `Int64` by converting a `Pixels_t`.
     ///
@@ -1054,7 +1054,7 @@ public extension Int64 {
 
 public extension Int8 {
 
-// MARK: - Creating a Int8 From The Pixels Units
+// MARK: Creating a Int8 From The Pixels Units
 
     /// Create a `Int8` by converting a `Pixels_t`.
     ///
@@ -1088,7 +1088,7 @@ public extension Int8 {
 
 public extension UInt {
 
-// MARK: - Creating a UInt From The Pixels Units
+// MARK: Creating a UInt From The Pixels Units
 
     /// Create a `UInt` by converting a `Pixels_t`.
     ///
@@ -1122,7 +1122,7 @@ public extension UInt {
 
 public extension UInt16 {
 
-// MARK: - Creating a UInt16 From The Pixels Units
+// MARK: Creating a UInt16 From The Pixels Units
 
     /// Create a `UInt16` by converting a `Pixels_t`.
     ///
@@ -1156,7 +1156,7 @@ public extension UInt16 {
 
 public extension UInt32 {
 
-// MARK: - Creating a UInt32 From The Pixels Units
+// MARK: Creating a UInt32 From The Pixels Units
 
     /// Create a `UInt32` by converting a `Pixels_t`.
     ///
@@ -1190,7 +1190,7 @@ public extension UInt32 {
 
 public extension UInt64 {
 
-// MARK: - Creating a UInt64 From The Pixels Units
+// MARK: Creating a UInt64 From The Pixels Units
 
     /// Create a `UInt64` by converting a `Pixels_t`.
     ///
@@ -1224,7 +1224,7 @@ public extension UInt64 {
 
 public extension UInt8 {
 
-// MARK: - Creating a UInt8 From The Pixels Units
+// MARK: Creating a UInt8 From The Pixels Units
 
     /// Create a `UInt8` by converting a `Pixels_t`.
     ///
