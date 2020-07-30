@@ -58,6 +58,277 @@
 
 import CGUUnits
 
+public struct Pixels: GUUnitsDType {
+
+    /// Always store internally as a `Pixels_d`
+    public let rawValue: Pixels_d
+
+    public init(rawValue: Pixels_d) {
+        self.rawValue = rawValue
+    }
+
+    /// Create a `Pixels` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Pixels`.
+    public init(_ value: Double) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Pixels`.
+    public init(_ value: Float) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Pixels`.
+    public init(_ value: Int) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Pixels`.
+    public init(_ value: Int16) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Pixels`.
+    public init(_ value: Int32) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Pixels`.
+    public init(_ value: Int64) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `Int8`.
+    ///
+    /// - Parameter value: A `Int8` value to convert to a `Pixels`.
+    public init(_ value: Int8) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt`.
+    ///
+    /// - Parameter value: A `UInt` value to convert to a `Pixels`.
+    public init(_ value: UInt) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt16`.
+    ///
+    /// - Parameter value: A `UInt16` value to convert to a `Pixels`.
+    public init(_ value: UInt16) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt32`.
+    ///
+    /// - Parameter value: A `UInt32` value to convert to a `Pixels`.
+    public init(_ value: UInt32) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt64`.
+    ///
+    /// - Parameter value: A `UInt64` value to convert to a `Pixels`.
+    public init(_ value: UInt64) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt8`.
+    ///
+    /// - Parameter value: A `UInt8` value to convert to a `Pixels`.
+    public init(_ value: UInt8) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    public init(_ value: Pixels_t) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    public init(_ value: Pixels_u) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    public init(_ value: Pixels_f) {
+        self.rawValue = Pixels_d(value)
+    }
+
+    public init(_ value: Pixels_d) {
+        self.rawValue = value
+    }
+
+}
+
+public extension Double {
+
+// MARK: - Creating a Double From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+// MARK: - Creating a Float From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+// MARK: - Creating a Int From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int16 {
+
+// MARK: - Creating a Int16 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+// MARK: - Creating a Int32 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+// MARK: - Creating a Int64 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+// MARK: - Creating a Int8 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+// MARK: - Creating a UInt From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt16 {
+
+// MARK: - Creating a UInt16 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+// MARK: - Creating a UInt32 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+// MARK: - Creating a UInt64 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+// MARK: - Creating a UInt8 From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Pixels_t {
+
+// MARK: - Creating a Pixels_t From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Pixels_u {
+
+// MARK: - Creating a Pixels_u From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Pixels_f {
+
+// MARK: - Creating a Pixels_f From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Pixels_d {
+
+// MARK: - Creating a Pixels_d From `Pixels`
+
+    init(_ value: Pixels) {
+        self.init(value.rawValue)
+    }
+
+}
+
 /// A signed integer type for the pixels unit.
 public struct Pixels_t: GUUnitsTType {
 

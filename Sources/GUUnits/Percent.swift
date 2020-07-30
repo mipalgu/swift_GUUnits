@@ -58,6 +58,277 @@
 
 import CGUUnits
 
+public struct Percent: GUUnitsDType {
+
+    /// Always store internally as a `Percent_d`
+    public let rawValue: Percent_d
+
+    public init(rawValue: Percent_d) {
+        self.rawValue = rawValue
+    }
+
+    /// Create a `Percent` by converting a `Double`.
+    ///
+    /// - Parameter value: A `Double` value to convert to a `Percent`.
+    public init(_ value: Double) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Float`.
+    ///
+    /// - Parameter value: A `Float` value to convert to a `Percent`.
+    public init(_ value: Float) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Int`.
+    ///
+    /// - Parameter value: A `Int` value to convert to a `Percent`.
+    public init(_ value: Int) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Int16`.
+    ///
+    /// - Parameter value: A `Int16` value to convert to a `Percent`.
+    public init(_ value: Int16) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Int32`.
+    ///
+    /// - Parameter value: A `Int32` value to convert to a `Percent`.
+    public init(_ value: Int32) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Int64`.
+    ///
+    /// - Parameter value: A `Int64` value to convert to a `Percent`.
+    public init(_ value: Int64) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `Int8`.
+    ///
+    /// - Parameter value: A `Int8` value to convert to a `Percent`.
+    public init(_ value: Int8) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `UInt`.
+    ///
+    /// - Parameter value: A `UInt` value to convert to a `Percent`.
+    public init(_ value: UInt) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `UInt16`.
+    ///
+    /// - Parameter value: A `UInt16` value to convert to a `Percent`.
+    public init(_ value: UInt16) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `UInt32`.
+    ///
+    /// - Parameter value: A `UInt32` value to convert to a `Percent`.
+    public init(_ value: UInt32) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `UInt64`.
+    ///
+    /// - Parameter value: A `UInt64` value to convert to a `Percent`.
+    public init(_ value: UInt64) {
+        self.rawValue = Percent_d(value)
+    }
+
+    /// Create a `Percent` by converting a `UInt8`.
+    ///
+    /// - Parameter value: A `UInt8` value to convert to a `Percent`.
+    public init(_ value: UInt8) {
+        self.rawValue = Percent_d(value)
+    }
+
+    public init(_ value: Percent_t) {
+        self.rawValue = Percent_d(value)
+    }
+
+    public init(_ value: Percent_u) {
+        self.rawValue = Percent_d(value)
+    }
+
+    public init(_ value: Percent_f) {
+        self.rawValue = Percent_d(value)
+    }
+
+    public init(_ value: Percent_d) {
+        self.rawValue = value
+    }
+
+}
+
+public extension Double {
+
+// MARK: - Creating a Double From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Float {
+
+// MARK: - Creating a Float From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int {
+
+// MARK: - Creating a Int From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int16 {
+
+// MARK: - Creating a Int16 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int32 {
+
+// MARK: - Creating a Int32 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int64 {
+
+// MARK: - Creating a Int64 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Int8 {
+
+// MARK: - Creating a Int8 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt {
+
+// MARK: - Creating a UInt From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt16 {
+
+// MARK: - Creating a UInt16 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt32 {
+
+// MARK: - Creating a UInt32 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt64 {
+
+// MARK: - Creating a UInt64 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension UInt8 {
+
+// MARK: - Creating a UInt8 From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Percent_t {
+
+// MARK: - Creating a Percent_t From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Percent_u {
+
+// MARK: - Creating a Percent_u From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Percent_f {
+
+// MARK: - Creating a Percent_f From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
+public extension Percent_d {
+
+// MARK: - Creating a Percent_d From `Percent`
+
+    init(_ value: Percent) {
+        self.init(value.rawValue)
+    }
+
+}
+
 /// A signed integer type for the percent unit.
 public struct Percent_t: GUUnitsTType {
 
