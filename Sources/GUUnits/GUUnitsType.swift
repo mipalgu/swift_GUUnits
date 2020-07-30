@@ -106,54 +106,91 @@ extension GUUnitsType where Self: Hashable, Self.RawValue: Hashable {
     
 }
 
-/*
-extension GUUnitsType where Self: AdditiveArithmetic, Self.RawValue: AdditiveArithmetic {
-
-    public static func +(lhs: Self, rhs: Self) -> Self {
-        return Self(rawValue: lhs.rawValue + rhs.rawValue)
+extension GUUnitsType where Self: BinaryInteger, Self.RawValue: BinaryInteger {
+    
+    public init?(exactly source: Self) {
+        guard let value = RawValue(exactly: source.rawValue) else {
+            return nil
+        }
+        self.init(rawValue: value)
+    }
+    
+    public init?<T>(exactly source: T) where T: BinaryFloatingPoint, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
     }
 
-    public static func - (lhs: Self, rhs: Self) -> Self {
-        return Self(rawValue: lhs.rawValue - rhs.rawValue)
+    public init<T>(_ source: T) where T: BinaryFloatingPoint, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
+    }
+    
+    public init(_ source: Self) {
+        self.init(rawValue: RawValue(source.rawValue))
+    }
+    
+    public init<T>(_: T) where T: BinaryInteger, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
+    }
+    
+    public init(truncatingIfNeeded source: Self) {
+        self.init(rawValue: RawValue(truncatingIfNeeded: source.rawValue))
+    }
+
+    public init<T>(truncatingIfNeeded source: T) where T: BinaryInteger, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
+    }
+    
+    public init(clamping source: Self) {
+        self.init(rawValue: RawValue(clamping: source.rawValue))
+    }
+
+    public init<T>(clamping source: T) where T: BinaryInteger, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
+    }
+    
+}
+
+extension GUUnitsType where Self: BinaryFloatingPoint, Self.RawValue: BinaryFloatingPoint {
+    
+    public init(_ source: Self) {
+        self.init(rawValue: RawValue(source.rawValue))
+    }
+    
+    public init<T>(_ source: T) where T: BinaryFloatingPoint, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
+    }
+    
+    public init?(exactly source: Self) {
+        guard let value = RawValue(exactly: source.rawValue) else {
+            return nil
+        }
+        self.init(rawValue: value)
+    }
+    
+    public init?<T>(exactly source: T) where T: BinaryFloatingPoint, T: GUUnitsType {
+        fatalError("You cannot convert \(T.self) to \(Self.self).")
     }
     
 }
 
-extension GUUnitsType where Self: Numeric, Self.RawValue: Numeric {
-    
-    public typealias Magnitude = Self
+extension GUUnitsType where Self: BinaryFloatingPoint, Self.RawValue: BinaryFloatingPoint, Self.RawSignificand : FixedWidthInteger {
 
-    public static func * (lhs: Self, rhs: Self) -> Self {
-        return Self(rawValue: lhs.rawValue * rhs.rawValue)
-    }
-
-    public static func *= (lhs: inout Self, rhs: Self) {
-        var raw = lhs.rawValue
-        raw *= rhs.rawValue
-        lhs = Self(rawValue: raw)
+    public init(_ value: Self) {
+        self.init(rawValue: RawValue(value.rawValue))
     }
     
-}
-
-extension GUUnitsType where Self: FloatingPoint, Self.RawValue: FloatingPoint {
-    
-    public typealias Exponent = RawValue.Exponent
-    
-}
-
-extension GUUnitsType where Self: ExpressibleByIntegerLiteral, Self.RawValue: ExpressibleByIntegerLiteral {
-    
-    public init(integerLiteral value: RawValue.IntegerLiteralType) {
-        self.init(rawValue: RawValue(integerLiteral: value))
+    public init<Source>(_ value: Source) where Source: BinaryInteger, Source: GUUnitsType {
+        fatalError("You cannot convert \(Source.self) to \(Self.self).")
     }
     
-}
-
-extension GUUnitsType where Self: ExpressibleByFloatLiteral, Self.RawValue: ExpressibleByFloatLiteral {
-    
-    public init(floatLiteral value: RawValue.FloatLiteralType) {
-        self.init(rawValue: RawValue(floatLiteral: value))
+    public init?(exactly value: Self) {
+        guard let value = RawValue(exactly: value.rawValue) else {
+            return nil
+        }
+        self.init(rawValue: value)
     }
-    
+
+    public init?<Source>(exactly value: Source) where Source: BinaryInteger, Source: GUUnitsType {
+        fatalError("You cannot convert \(Source.self) to \(Self.self).")
+    }
+
 }
-*/
