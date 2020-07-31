@@ -146,88 +146,88 @@ public struct Pixels: GUUnitsDType {
 
 // MARK: - Converting From Swift Numeric Types
 
-    /// Create a `Pixels` by converting a `Double`.
+    /// Create a `Pixels` by converting a `Double` pixels value.
     ///
-    /// - Parameter value: A `Double` value to convert to a `Pixels`.
-    public init(_ value: Double) {
+    /// - Parameter value: A `Double` pixels value to convert to a `Pixels`.
+    public init(pixels value: Double) {
         self.rawValue = Pixels_d(value)
     }
 
-    /// Create a `Pixels` by converting a `Float`.
+    /// Create a `Pixels` by converting a `Float` pixels value.
     ///
-    /// - Parameter value: A `Float` value to convert to a `Pixels`.
-    public init(_ value: Float) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Float` pixels value to convert to a `Pixels`.
+    public init(pixels value: Float) {
+        self.rawValue = Pixels_d(Pixels_f(value))
     }
 
-    /// Create a `Pixels` by converting a `Int`.
+    /// Create a `Pixels` by converting a `Int` pixels value.
     ///
-    /// - Parameter value: A `Int` value to convert to a `Pixels`.
-    public init(_ value: Int) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Int` pixels value to convert to a `Pixels`.
+    public init(pixels value: Int) {
+        self.rawValue = Pixels_d(Pixels_t(value))
     }
 
-    /// Create a `Pixels` by converting a `Int16`.
+    /// Create a `Pixels` by converting a `Int16` pixels value.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Pixels`.
-    public init(_ value: Int16) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Int16` pixels value to convert to a `Pixels`.
+    public init(pixels value: Int16) {
+        self.rawValue = Pixels_d(Pixels_t(value))
     }
 
-    /// Create a `Pixels` by converting a `Int32`.
+    /// Create a `Pixels` by converting a `Int32` pixels value.
     ///
-    /// - Parameter value: A `Int32` value to convert to a `Pixels`.
-    public init(_ value: Int32) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Int32` pixels value to convert to a `Pixels`.
+    public init(pixels value: Int32) {
+        self.rawValue = Pixels_d(Pixels_t(value))
     }
 
-    /// Create a `Pixels` by converting a `Int64`.
+    /// Create a `Pixels` by converting a `Int64` pixels value.
     ///
-    /// - Parameter value: A `Int64` value to convert to a `Pixels`.
-    public init(_ value: Int64) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Int64` pixels value to convert to a `Pixels`.
+    public init(pixels value: Int64) {
+        self.rawValue = Pixels_d(Pixels_t(value))
     }
 
-    /// Create a `Pixels` by converting a `Int8`.
+    /// Create a `Pixels` by converting a `Int8` pixels value.
     ///
-    /// - Parameter value: A `Int8` value to convert to a `Pixels`.
-    public init(_ value: Int8) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `Int8` pixels value to convert to a `Pixels`.
+    public init(pixels value: Int8) {
+        self.rawValue = Pixels_d(Pixels_t(value))
     }
 
-    /// Create a `Pixels` by converting a `UInt`.
+    /// Create a `Pixels` by converting a `UInt` pixels value.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Pixels`.
-    public init(_ value: UInt) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `UInt` pixels value to convert to a `Pixels`.
+    public init(pixels value: UInt) {
+        self.rawValue = Pixels_d(Pixels_u(value))
     }
 
-    /// Create a `Pixels` by converting a `UInt16`.
+    /// Create a `Pixels` by converting a `UInt16` pixels value.
     ///
-    /// - Parameter value: A `UInt16` value to convert to a `Pixels`.
-    public init(_ value: UInt16) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `UInt16` pixels value to convert to a `Pixels`.
+    public init(pixels value: UInt16) {
+        self.rawValue = Pixels_d(Pixels_u(value))
     }
 
-    /// Create a `Pixels` by converting a `UInt32`.
+    /// Create a `Pixels` by converting a `UInt32` pixels value.
     ///
-    /// - Parameter value: A `UInt32` value to convert to a `Pixels`.
-    public init(_ value: UInt32) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `UInt32` pixels value to convert to a `Pixels`.
+    public init(pixels value: UInt32) {
+        self.rawValue = Pixels_d(Pixels_u(value))
     }
 
-    /// Create a `Pixels` by converting a `UInt64`.
+    /// Create a `Pixels` by converting a `UInt64` pixels value.
     ///
-    /// - Parameter value: A `UInt64` value to convert to a `Pixels`.
-    public init(_ value: UInt64) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `UInt64` pixels value to convert to a `Pixels`.
+    public init(pixels value: UInt64) {
+        self.rawValue = Pixels_d(Pixels_u(value))
     }
 
-    /// Create a `Pixels` by converting a `UInt8`.
+    /// Create a `Pixels` by converting a `UInt8` pixels value.
     ///
-    /// - Parameter value: A `UInt8` value to convert to a `Pixels`.
-    public init(_ value: UInt8) {
-        self.rawValue = Pixels_d(value)
+    /// - Parameter value: A `UInt8` pixels value to convert to a `Pixels`.
+    public init(pixels value: UInt8) {
+        self.rawValue = Pixels_d(Pixels_u(value))
     }
 
 }

@@ -194,88 +194,172 @@ public struct Angle: GUUnitsDType {
 
 // MARK: - Converting From Swift Numeric Types
 
-    /// Create a `Angle` by converting a `Double`.
+    /// Create a `Angle` by converting a `Double` degrees value.
     ///
-    /// - Parameter value: A `Double` value to convert to a `Angle`.
-    public init(_ value: Double) {
+    /// - Parameter value: A `Double` degrees value to convert to a `Angle`.
+    public init(degrees value: Double) {
         self.rawValue = Degrees_d(value)
     }
 
-    /// Create a `Angle` by converting a `Float`.
+    /// Create a `Angle` by converting a `Double` radians value.
     ///
-    /// - Parameter value: A `Float` value to convert to a `Angle`.
-    public init(_ value: Float) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Double` radians value to convert to a `Angle`.
+    public init(radians value: Double) {
+        self.rawValue = Degrees_d(Radians_d(value))
     }
 
-    /// Create a `Angle` by converting a `Int`.
+    /// Create a `Angle` by converting a `Float` degrees value.
     ///
-    /// - Parameter value: A `Int` value to convert to a `Angle`.
-    public init(_ value: Int) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Float` degrees value to convert to a `Angle`.
+    public init(degrees value: Float) {
+        self.rawValue = Degrees_d(Degrees_f(value))
     }
 
-    /// Create a `Angle` by converting a `Int16`.
+    /// Create a `Angle` by converting a `Float` radians value.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Angle`.
-    public init(_ value: Int16) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Float` radians value to convert to a `Angle`.
+    public init(radians value: Float) {
+        self.rawValue = Degrees_d(Radians_f(value))
     }
 
-    /// Create a `Angle` by converting a `Int32`.
+    /// Create a `Angle` by converting a `Int` degrees value.
     ///
-    /// - Parameter value: A `Int32` value to convert to a `Angle`.
-    public init(_ value: Int32) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int` degrees value to convert to a `Angle`.
+    public init(degrees value: Int) {
+        self.rawValue = Degrees_d(Degrees_t(value))
     }
 
-    /// Create a `Angle` by converting a `Int64`.
+    /// Create a `Angle` by converting a `Int` radians value.
     ///
-    /// - Parameter value: A `Int64` value to convert to a `Angle`.
-    public init(_ value: Int64) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int` radians value to convert to a `Angle`.
+    public init(radians value: Int) {
+        self.rawValue = Degrees_d(Radians_t(value))
     }
 
-    /// Create a `Angle` by converting a `Int8`.
+    /// Create a `Angle` by converting a `Int16` degrees value.
     ///
-    /// - Parameter value: A `Int8` value to convert to a `Angle`.
-    public init(_ value: Int8) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int16` degrees value to convert to a `Angle`.
+    public init(degrees value: Int16) {
+        self.rawValue = Degrees_d(Degrees_t(value))
     }
 
-    /// Create a `Angle` by converting a `UInt`.
+    /// Create a `Angle` by converting a `Int16` radians value.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Angle`.
-    public init(_ value: UInt) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int16` radians value to convert to a `Angle`.
+    public init(radians value: Int16) {
+        self.rawValue = Degrees_d(Radians_t(value))
     }
 
-    /// Create a `Angle` by converting a `UInt16`.
+    /// Create a `Angle` by converting a `Int32` degrees value.
     ///
-    /// - Parameter value: A `UInt16` value to convert to a `Angle`.
-    public init(_ value: UInt16) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int32` degrees value to convert to a `Angle`.
+    public init(degrees value: Int32) {
+        self.rawValue = Degrees_d(Degrees_t(value))
     }
 
-    /// Create a `Angle` by converting a `UInt32`.
+    /// Create a `Angle` by converting a `Int32` radians value.
     ///
-    /// - Parameter value: A `UInt32` value to convert to a `Angle`.
-    public init(_ value: UInt32) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int32` radians value to convert to a `Angle`.
+    public init(radians value: Int32) {
+        self.rawValue = Degrees_d(Radians_t(value))
     }
 
-    /// Create a `Angle` by converting a `UInt64`.
+    /// Create a `Angle` by converting a `Int64` degrees value.
     ///
-    /// - Parameter value: A `UInt64` value to convert to a `Angle`.
-    public init(_ value: UInt64) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int64` degrees value to convert to a `Angle`.
+    public init(degrees value: Int64) {
+        self.rawValue = Degrees_d(Degrees_t(value))
     }
 
-    /// Create a `Angle` by converting a `UInt8`.
+    /// Create a `Angle` by converting a `Int64` radians value.
     ///
-    /// - Parameter value: A `UInt8` value to convert to a `Angle`.
-    public init(_ value: UInt8) {
-        self.rawValue = Degrees_d(value)
+    /// - Parameter value: A `Int64` radians value to convert to a `Angle`.
+    public init(radians value: Int64) {
+        self.rawValue = Degrees_d(Radians_t(value))
+    }
+
+    /// Create a `Angle` by converting a `Int8` degrees value.
+    ///
+    /// - Parameter value: A `Int8` degrees value to convert to a `Angle`.
+    public init(degrees value: Int8) {
+        self.rawValue = Degrees_d(Degrees_t(value))
+    }
+
+    /// Create a `Angle` by converting a `Int8` radians value.
+    ///
+    /// - Parameter value: A `Int8` radians value to convert to a `Angle`.
+    public init(radians value: Int8) {
+        self.rawValue = Degrees_d(Radians_t(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt` degrees value.
+    ///
+    /// - Parameter value: A `UInt` degrees value to convert to a `Angle`.
+    public init(degrees value: UInt) {
+        self.rawValue = Degrees_d(Degrees_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt` radians value.
+    ///
+    /// - Parameter value: A `UInt` radians value to convert to a `Angle`.
+    public init(radians value: UInt) {
+        self.rawValue = Degrees_d(Radians_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt16` degrees value.
+    ///
+    /// - Parameter value: A `UInt16` degrees value to convert to a `Angle`.
+    public init(degrees value: UInt16) {
+        self.rawValue = Degrees_d(Degrees_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt16` radians value.
+    ///
+    /// - Parameter value: A `UInt16` radians value to convert to a `Angle`.
+    public init(radians value: UInt16) {
+        self.rawValue = Degrees_d(Radians_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt32` degrees value.
+    ///
+    /// - Parameter value: A `UInt32` degrees value to convert to a `Angle`.
+    public init(degrees value: UInt32) {
+        self.rawValue = Degrees_d(Degrees_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt32` radians value.
+    ///
+    /// - Parameter value: A `UInt32` radians value to convert to a `Angle`.
+    public init(radians value: UInt32) {
+        self.rawValue = Degrees_d(Radians_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt64` degrees value.
+    ///
+    /// - Parameter value: A `UInt64` degrees value to convert to a `Angle`.
+    public init(degrees value: UInt64) {
+        self.rawValue = Degrees_d(Degrees_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt64` radians value.
+    ///
+    /// - Parameter value: A `UInt64` radians value to convert to a `Angle`.
+    public init(radians value: UInt64) {
+        self.rawValue = Degrees_d(Radians_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt8` degrees value.
+    ///
+    /// - Parameter value: A `UInt8` degrees value to convert to a `Angle`.
+    public init(degrees value: UInt8) {
+        self.rawValue = Degrees_d(Degrees_u(value))
+    }
+
+    /// Create a `Angle` by converting a `UInt8` radians value.
+    ///
+    /// - Parameter value: A `UInt8` radians value to convert to a `Angle`.
+    public init(radians value: UInt8) {
+        self.rawValue = Degrees_d(Radians_u(value))
     }
 
 }

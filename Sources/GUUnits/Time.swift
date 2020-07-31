@@ -242,88 +242,256 @@ public struct Time: GUUnitsDType {
 
 // MARK: - Converting From Swift Numeric Types
 
-    /// Create a `Time` by converting a `Double`.
+    /// Create a `Time` by converting a `Double` microseconds value.
     ///
-    /// - Parameter value: A `Double` value to convert to a `Time`.
-    public init(_ value: Double) {
+    /// - Parameter value: A `Double` microseconds value to convert to a `Time`.
+    public init(microseconds value: Double) {
         self.rawValue = Microseconds_d(value)
     }
 
-    /// Create a `Time` by converting a `Float`.
+    /// Create a `Time` by converting a `Double` milliseconds value.
     ///
-    /// - Parameter value: A `Float` value to convert to a `Time`.
-    public init(_ value: Float) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Double` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Double) {
+        self.rawValue = Microseconds_d(Milliseconds_d(value))
     }
 
-    /// Create a `Time` by converting a `Int`.
+    /// Create a `Time` by converting a `Double` seconds value.
     ///
-    /// - Parameter value: A `Int` value to convert to a `Time`.
-    public init(_ value: Int) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Double` seconds value to convert to a `Time`.
+    public init(seconds value: Double) {
+        self.rawValue = Microseconds_d(Seconds_d(value))
     }
 
-    /// Create a `Time` by converting a `Int16`.
+    /// Create a `Time` by converting a `Float` microseconds value.
     ///
-    /// - Parameter value: A `Int16` value to convert to a `Time`.
-    public init(_ value: Int16) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Float` microseconds value to convert to a `Time`.
+    public init(microseconds value: Float) {
+        self.rawValue = Microseconds_d(Microseconds_f(value))
     }
 
-    /// Create a `Time` by converting a `Int32`.
+    /// Create a `Time` by converting a `Float` milliseconds value.
     ///
-    /// - Parameter value: A `Int32` value to convert to a `Time`.
-    public init(_ value: Int32) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Float` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Float) {
+        self.rawValue = Microseconds_d(Milliseconds_f(value))
     }
 
-    /// Create a `Time` by converting a `Int64`.
+    /// Create a `Time` by converting a `Float` seconds value.
     ///
-    /// - Parameter value: A `Int64` value to convert to a `Time`.
-    public init(_ value: Int64) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Float` seconds value to convert to a `Time`.
+    public init(seconds value: Float) {
+        self.rawValue = Microseconds_d(Seconds_f(value))
     }
 
-    /// Create a `Time` by converting a `Int8`.
+    /// Create a `Time` by converting a `Int` microseconds value.
     ///
-    /// - Parameter value: A `Int8` value to convert to a `Time`.
-    public init(_ value: Int8) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int` microseconds value to convert to a `Time`.
+    public init(microseconds value: Int) {
+        self.rawValue = Microseconds_d(Microseconds_t(value))
     }
 
-    /// Create a `Time` by converting a `UInt`.
+    /// Create a `Time` by converting a `Int` milliseconds value.
     ///
-    /// - Parameter value: A `UInt` value to convert to a `Time`.
-    public init(_ value: UInt) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Int) {
+        self.rawValue = Microseconds_d(Milliseconds_t(value))
     }
 
-    /// Create a `Time` by converting a `UInt16`.
+    /// Create a `Time` by converting a `Int` seconds value.
     ///
-    /// - Parameter value: A `UInt16` value to convert to a `Time`.
-    public init(_ value: UInt16) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int` seconds value to convert to a `Time`.
+    public init(seconds value: Int) {
+        self.rawValue = Microseconds_d(Seconds_t(value))
     }
 
-    /// Create a `Time` by converting a `UInt32`.
+    /// Create a `Time` by converting a `Int16` microseconds value.
     ///
-    /// - Parameter value: A `UInt32` value to convert to a `Time`.
-    public init(_ value: UInt32) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int16` microseconds value to convert to a `Time`.
+    public init(microseconds value: Int16) {
+        self.rawValue = Microseconds_d(Microseconds_t(value))
     }
 
-    /// Create a `Time` by converting a `UInt64`.
+    /// Create a `Time` by converting a `Int16` milliseconds value.
     ///
-    /// - Parameter value: A `UInt64` value to convert to a `Time`.
-    public init(_ value: UInt64) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int16` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Int16) {
+        self.rawValue = Microseconds_d(Milliseconds_t(value))
     }
 
-    /// Create a `Time` by converting a `UInt8`.
+    /// Create a `Time` by converting a `Int16` seconds value.
     ///
-    /// - Parameter value: A `UInt8` value to convert to a `Time`.
-    public init(_ value: UInt8) {
-        self.rawValue = Microseconds_d(value)
+    /// - Parameter value: A `Int16` seconds value to convert to a `Time`.
+    public init(seconds value: Int16) {
+        self.rawValue = Microseconds_d(Seconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int32` microseconds value.
+    ///
+    /// - Parameter value: A `Int32` microseconds value to convert to a `Time`.
+    public init(microseconds value: Int32) {
+        self.rawValue = Microseconds_d(Microseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int32` milliseconds value.
+    ///
+    /// - Parameter value: A `Int32` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Int32) {
+        self.rawValue = Microseconds_d(Milliseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int32` seconds value.
+    ///
+    /// - Parameter value: A `Int32` seconds value to convert to a `Time`.
+    public init(seconds value: Int32) {
+        self.rawValue = Microseconds_d(Seconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int64` microseconds value.
+    ///
+    /// - Parameter value: A `Int64` microseconds value to convert to a `Time`.
+    public init(microseconds value: Int64) {
+        self.rawValue = Microseconds_d(Microseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int64` milliseconds value.
+    ///
+    /// - Parameter value: A `Int64` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Int64) {
+        self.rawValue = Microseconds_d(Milliseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int64` seconds value.
+    ///
+    /// - Parameter value: A `Int64` seconds value to convert to a `Time`.
+    public init(seconds value: Int64) {
+        self.rawValue = Microseconds_d(Seconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int8` microseconds value.
+    ///
+    /// - Parameter value: A `Int8` microseconds value to convert to a `Time`.
+    public init(microseconds value: Int8) {
+        self.rawValue = Microseconds_d(Microseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int8` milliseconds value.
+    ///
+    /// - Parameter value: A `Int8` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: Int8) {
+        self.rawValue = Microseconds_d(Milliseconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `Int8` seconds value.
+    ///
+    /// - Parameter value: A `Int8` seconds value to convert to a `Time`.
+    public init(seconds value: Int8) {
+        self.rawValue = Microseconds_d(Seconds_t(value))
+    }
+
+    /// Create a `Time` by converting a `UInt` microseconds value.
+    ///
+    /// - Parameter value: A `UInt` microseconds value to convert to a `Time`.
+    public init(microseconds value: UInt) {
+        self.rawValue = Microseconds_d(Microseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: UInt) {
+        self.rawValue = Microseconds_d(Milliseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt` seconds value.
+    ///
+    /// - Parameter value: A `UInt` seconds value to convert to a `Time`.
+    public init(seconds value: UInt) {
+        self.rawValue = Microseconds_d(Seconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt16` microseconds value.
+    ///
+    /// - Parameter value: A `UInt16` microseconds value to convert to a `Time`.
+    public init(microseconds value: UInt16) {
+        self.rawValue = Microseconds_d(Microseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt16` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt16` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: UInt16) {
+        self.rawValue = Microseconds_d(Milliseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt16` seconds value.
+    ///
+    /// - Parameter value: A `UInt16` seconds value to convert to a `Time`.
+    public init(seconds value: UInt16) {
+        self.rawValue = Microseconds_d(Seconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt32` microseconds value.
+    ///
+    /// - Parameter value: A `UInt32` microseconds value to convert to a `Time`.
+    public init(microseconds value: UInt32) {
+        self.rawValue = Microseconds_d(Microseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt32` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt32` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: UInt32) {
+        self.rawValue = Microseconds_d(Milliseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt32` seconds value.
+    ///
+    /// - Parameter value: A `UInt32` seconds value to convert to a `Time`.
+    public init(seconds value: UInt32) {
+        self.rawValue = Microseconds_d(Seconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt64` microseconds value.
+    ///
+    /// - Parameter value: A `UInt64` microseconds value to convert to a `Time`.
+    public init(microseconds value: UInt64) {
+        self.rawValue = Microseconds_d(Microseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt64` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt64` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: UInt64) {
+        self.rawValue = Microseconds_d(Milliseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt64` seconds value.
+    ///
+    /// - Parameter value: A `UInt64` seconds value to convert to a `Time`.
+    public init(seconds value: UInt64) {
+        self.rawValue = Microseconds_d(Seconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt8` microseconds value.
+    ///
+    /// - Parameter value: A `UInt8` microseconds value to convert to a `Time`.
+    public init(microseconds value: UInt8) {
+        self.rawValue = Microseconds_d(Microseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt8` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt8` milliseconds value to convert to a `Time`.
+    public init(milliseconds value: UInt8) {
+        self.rawValue = Microseconds_d(Milliseconds_u(value))
+    }
+
+    /// Create a `Time` by converting a `UInt8` seconds value.
+    ///
+    /// - Parameter value: A `UInt8` seconds value to convert to a `Time`.
+    public init(seconds value: UInt8) {
+        self.rawValue = Microseconds_d(Seconds_u(value))
     }
 
 }
