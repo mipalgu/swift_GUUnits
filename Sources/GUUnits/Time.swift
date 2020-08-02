@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Time: GUUnitsDType {
+public struct Time {
 
 // MARK: - Converting Between The Internal Representation
 
