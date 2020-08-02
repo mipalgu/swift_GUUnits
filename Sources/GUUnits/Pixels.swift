@@ -149,6 +149,90 @@ public struct Pixels {
     /// Create a `Pixels` by converting a `Double` pixels value.
     ///
     /// - Parameter value: A `Double` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Double) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Float` pixels value.
+    ///
+    /// - Parameter value: A `Float` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Float) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Int` pixels value.
+    ///
+    /// - Parameter value: A `Int` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Int) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Int16` pixels value.
+    ///
+    /// - Parameter value: A `Int16` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Int16) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Int32` pixels value.
+    ///
+    /// - Parameter value: A `Int32` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Int32) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Int64` pixels value.
+    ///
+    /// - Parameter value: A `Int64` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Int64) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Int8` pixels value.
+    ///
+    /// - Parameter value: A `Int8` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: Int8) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt` pixels value.
+    ///
+    /// - Parameter value: A `UInt` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: UInt) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt16` pixels value.
+    ///
+    /// - Parameter value: A `UInt16` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: UInt16) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt32` pixels value.
+    ///
+    /// - Parameter value: A `UInt32` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: UInt32) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt64` pixels value.
+    ///
+    /// - Parameter value: A `UInt64` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: UInt64) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `UInt8` pixels value.
+    ///
+    /// - Parameter value: A `UInt8` pixels value to convert to a `Pixels`.
+    public static func pixels(_ value: UInt8) -> Pixels {
+        return Pixels(pixels: value)
+    }
+
+    /// Create a `Pixels` by converting a `Double` pixels value.
+    ///
+    /// - Parameter value: A `Double` pixels value to convert to a `Pixels`.
     public init(pixels value: Double) {
         self.rawValue = Pixels_d(value)
     }

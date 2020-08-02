@@ -245,6 +245,258 @@ public struct Distance {
     /// Create a `Distance` by converting a `Double` millimetres value.
     ///
     /// - Parameter value: A `Double` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Double) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Double` centimetres value.
+    ///
+    /// - Parameter value: A `Double` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Double) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Double` metres value.
+    ///
+    /// - Parameter value: A `Double` metres value to convert to a `Distance`.
+    public static func metres(_ value: Double) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Float` millimetres value.
+    ///
+    /// - Parameter value: A `Float` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Float) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Float` centimetres value.
+    ///
+    /// - Parameter value: A `Float` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Float) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Float` metres value.
+    ///
+    /// - Parameter value: A `Float` metres value to convert to a `Distance`.
+    public static func metres(_ value: Float) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int` millimetres value.
+    ///
+    /// - Parameter value: A `Int` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Int) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int` centimetres value.
+    ///
+    /// - Parameter value: A `Int` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Int) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int` metres value.
+    ///
+    /// - Parameter value: A `Int` metres value to convert to a `Distance`.
+    public static func metres(_ value: Int) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int16` millimetres value.
+    ///
+    /// - Parameter value: A `Int16` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Int16) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int16` centimetres value.
+    ///
+    /// - Parameter value: A `Int16` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Int16) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int16` metres value.
+    ///
+    /// - Parameter value: A `Int16` metres value to convert to a `Distance`.
+    public static func metres(_ value: Int16) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int32` millimetres value.
+    ///
+    /// - Parameter value: A `Int32` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Int32) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int32` centimetres value.
+    ///
+    /// - Parameter value: A `Int32` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Int32) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int32` metres value.
+    ///
+    /// - Parameter value: A `Int32` metres value to convert to a `Distance`.
+    public static func metres(_ value: Int32) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int64` millimetres value.
+    ///
+    /// - Parameter value: A `Int64` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Int64) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int64` centimetres value.
+    ///
+    /// - Parameter value: A `Int64` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Int64) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int64` metres value.
+    ///
+    /// - Parameter value: A `Int64` metres value to convert to a `Distance`.
+    public static func metres(_ value: Int64) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int8` millimetres value.
+    ///
+    /// - Parameter value: A `Int8` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: Int8) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int8` centimetres value.
+    ///
+    /// - Parameter value: A `Int8` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: Int8) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `Int8` metres value.
+    ///
+    /// - Parameter value: A `Int8` metres value to convert to a `Distance`.
+    public static func metres(_ value: Int8) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt` millimetres value.
+    ///
+    /// - Parameter value: A `UInt` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: UInt) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt` centimetres value.
+    ///
+    /// - Parameter value: A `UInt` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: UInt) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt` metres value.
+    ///
+    /// - Parameter value: A `UInt` metres value to convert to a `Distance`.
+    public static func metres(_ value: UInt) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt16` millimetres value.
+    ///
+    /// - Parameter value: A `UInt16` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: UInt16) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt16` centimetres value.
+    ///
+    /// - Parameter value: A `UInt16` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: UInt16) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt16` metres value.
+    ///
+    /// - Parameter value: A `UInt16` metres value to convert to a `Distance`.
+    public static func metres(_ value: UInt16) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt32` millimetres value.
+    ///
+    /// - Parameter value: A `UInt32` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: UInt32) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt32` centimetres value.
+    ///
+    /// - Parameter value: A `UInt32` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: UInt32) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt32` metres value.
+    ///
+    /// - Parameter value: A `UInt32` metres value to convert to a `Distance`.
+    public static func metres(_ value: UInt32) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt64` millimetres value.
+    ///
+    /// - Parameter value: A `UInt64` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: UInt64) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt64` centimetres value.
+    ///
+    /// - Parameter value: A `UInt64` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: UInt64) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt64` metres value.
+    ///
+    /// - Parameter value: A `UInt64` metres value to convert to a `Distance`.
+    public static func metres(_ value: UInt64) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt8` millimetres value.
+    ///
+    /// - Parameter value: A `UInt8` millimetres value to convert to a `Distance`.
+    public static func millimetres(_ value: UInt8) -> Distance {
+        return Distance(millimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt8` centimetres value.
+    ///
+    /// - Parameter value: A `UInt8` centimetres value to convert to a `Distance`.
+    public static func centimetres(_ value: UInt8) -> Distance {
+        return Distance(centimetres: value)
+    }
+
+    /// Create a `Distance` by converting a `UInt8` metres value.
+    ///
+    /// - Parameter value: A `UInt8` metres value to convert to a `Distance`.
+    public static func metres(_ value: UInt8) -> Distance {
+        return Distance(metres: value)
+    }
+
+    /// Create a `Distance` by converting a `Double` millimetres value.
+    ///
+    /// - Parameter value: A `Double` millimetres value to convert to a `Distance`.
     public init(millimetres value: Double) {
         self.rawValue = Millimetres_d(value)
     }

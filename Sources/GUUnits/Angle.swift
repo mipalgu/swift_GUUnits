@@ -197,6 +197,174 @@ public struct Angle {
     /// Create a `Angle` by converting a `Double` degrees value.
     ///
     /// - Parameter value: A `Double` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Double) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Double` radians value.
+    ///
+    /// - Parameter value: A `Double` radians value to convert to a `Angle`.
+    public static func radians(_ value: Double) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Float` degrees value.
+    ///
+    /// - Parameter value: A `Float` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Float) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Float` radians value.
+    ///
+    /// - Parameter value: A `Float` radians value to convert to a `Angle`.
+    public static func radians(_ value: Float) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Int` degrees value.
+    ///
+    /// - Parameter value: A `Int` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Int) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Int` radians value.
+    ///
+    /// - Parameter value: A `Int` radians value to convert to a `Angle`.
+    public static func radians(_ value: Int) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Int16` degrees value.
+    ///
+    /// - Parameter value: A `Int16` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Int16) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Int16` radians value.
+    ///
+    /// - Parameter value: A `Int16` radians value to convert to a `Angle`.
+    public static func radians(_ value: Int16) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Int32` degrees value.
+    ///
+    /// - Parameter value: A `Int32` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Int32) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Int32` radians value.
+    ///
+    /// - Parameter value: A `Int32` radians value to convert to a `Angle`.
+    public static func radians(_ value: Int32) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Int64` degrees value.
+    ///
+    /// - Parameter value: A `Int64` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Int64) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Int64` radians value.
+    ///
+    /// - Parameter value: A `Int64` radians value to convert to a `Angle`.
+    public static func radians(_ value: Int64) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Int8` degrees value.
+    ///
+    /// - Parameter value: A `Int8` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: Int8) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `Int8` radians value.
+    ///
+    /// - Parameter value: A `Int8` radians value to convert to a `Angle`.
+    public static func radians(_ value: Int8) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt` degrees value.
+    ///
+    /// - Parameter value: A `UInt` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: UInt) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt` radians value.
+    ///
+    /// - Parameter value: A `UInt` radians value to convert to a `Angle`.
+    public static func radians(_ value: UInt) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt16` degrees value.
+    ///
+    /// - Parameter value: A `UInt16` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: UInt16) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt16` radians value.
+    ///
+    /// - Parameter value: A `UInt16` radians value to convert to a `Angle`.
+    public static func radians(_ value: UInt16) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt32` degrees value.
+    ///
+    /// - Parameter value: A `UInt32` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: UInt32) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt32` radians value.
+    ///
+    /// - Parameter value: A `UInt32` radians value to convert to a `Angle`.
+    public static func radians(_ value: UInt32) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt64` degrees value.
+    ///
+    /// - Parameter value: A `UInt64` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: UInt64) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt64` radians value.
+    ///
+    /// - Parameter value: A `UInt64` radians value to convert to a `Angle`.
+    public static func radians(_ value: UInt64) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt8` degrees value.
+    ///
+    /// - Parameter value: A `UInt8` degrees value to convert to a `Angle`.
+    public static func degrees(_ value: UInt8) -> Angle {
+        return Angle(degrees: value)
+    }
+
+    /// Create a `Angle` by converting a `UInt8` radians value.
+    ///
+    /// - Parameter value: A `UInt8` radians value to convert to a `Angle`.
+    public static func radians(_ value: UInt8) -> Angle {
+        return Angle(radians: value)
+    }
+
+    /// Create a `Angle` by converting a `Double` degrees value.
+    ///
+    /// - Parameter value: A `Double` degrees value to convert to a `Angle`.
     public init(degrees value: Double) {
         self.rawValue = Degrees_d(value)
     }

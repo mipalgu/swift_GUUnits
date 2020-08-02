@@ -149,6 +149,90 @@ public struct Percent {
     /// Create a `Percent` by converting a `Double` percent value.
     ///
     /// - Parameter value: A `Double` percent value to convert to a `Percent`.
+    public static func percent(_ value: Double) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Float` percent value.
+    ///
+    /// - Parameter value: A `Float` percent value to convert to a `Percent`.
+    public static func percent(_ value: Float) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Int` percent value.
+    ///
+    /// - Parameter value: A `Int` percent value to convert to a `Percent`.
+    public static func percent(_ value: Int) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Int16` percent value.
+    ///
+    /// - Parameter value: A `Int16` percent value to convert to a `Percent`.
+    public static func percent(_ value: Int16) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Int32` percent value.
+    ///
+    /// - Parameter value: A `Int32` percent value to convert to a `Percent`.
+    public static func percent(_ value: Int32) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Int64` percent value.
+    ///
+    /// - Parameter value: A `Int64` percent value to convert to a `Percent`.
+    public static func percent(_ value: Int64) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Int8` percent value.
+    ///
+    /// - Parameter value: A `Int8` percent value to convert to a `Percent`.
+    public static func percent(_ value: Int8) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `UInt` percent value.
+    ///
+    /// - Parameter value: A `UInt` percent value to convert to a `Percent`.
+    public static func percent(_ value: UInt) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `UInt16` percent value.
+    ///
+    /// - Parameter value: A `UInt16` percent value to convert to a `Percent`.
+    public static func percent(_ value: UInt16) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `UInt32` percent value.
+    ///
+    /// - Parameter value: A `UInt32` percent value to convert to a `Percent`.
+    public static func percent(_ value: UInt32) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `UInt64` percent value.
+    ///
+    /// - Parameter value: A `UInt64` percent value to convert to a `Percent`.
+    public static func percent(_ value: UInt64) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `UInt8` percent value.
+    ///
+    /// - Parameter value: A `UInt8` percent value to convert to a `Percent`.
+    public static func percent(_ value: UInt8) -> Percent {
+        return Percent(percent: value)
+    }
+
+    /// Create a `Percent` by converting a `Double` percent value.
+    ///
+    /// - Parameter value: A `Double` percent value to convert to a `Percent`.
     public init(percent value: Double) {
         self.rawValue = Percent_d(value)
     }

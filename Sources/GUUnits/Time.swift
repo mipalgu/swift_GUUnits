@@ -245,6 +245,258 @@ public struct Time {
     /// Create a `Time` by converting a `Double` microseconds value.
     ///
     /// - Parameter value: A `Double` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Double) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Double` milliseconds value.
+    ///
+    /// - Parameter value: A `Double` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Double) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Double` seconds value.
+    ///
+    /// - Parameter value: A `Double` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Double) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Float` microseconds value.
+    ///
+    /// - Parameter value: A `Float` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Float) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Float` milliseconds value.
+    ///
+    /// - Parameter value: A `Float` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Float) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Float` seconds value.
+    ///
+    /// - Parameter value: A `Float` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Float) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int` microseconds value.
+    ///
+    /// - Parameter value: A `Int` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Int) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int` milliseconds value.
+    ///
+    /// - Parameter value: A `Int` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Int) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int` seconds value.
+    ///
+    /// - Parameter value: A `Int` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Int) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int16` microseconds value.
+    ///
+    /// - Parameter value: A `Int16` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Int16) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int16` milliseconds value.
+    ///
+    /// - Parameter value: A `Int16` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Int16) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int16` seconds value.
+    ///
+    /// - Parameter value: A `Int16` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Int16) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int32` microseconds value.
+    ///
+    /// - Parameter value: A `Int32` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Int32) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int32` milliseconds value.
+    ///
+    /// - Parameter value: A `Int32` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Int32) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int32` seconds value.
+    ///
+    /// - Parameter value: A `Int32` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Int32) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int64` microseconds value.
+    ///
+    /// - Parameter value: A `Int64` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Int64) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int64` milliseconds value.
+    ///
+    /// - Parameter value: A `Int64` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Int64) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int64` seconds value.
+    ///
+    /// - Parameter value: A `Int64` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Int64) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int8` microseconds value.
+    ///
+    /// - Parameter value: A `Int8` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: Int8) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int8` milliseconds value.
+    ///
+    /// - Parameter value: A `Int8` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: Int8) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `Int8` seconds value.
+    ///
+    /// - Parameter value: A `Int8` seconds value to convert to a `Time`.
+    public static func seconds(_ value: Int8) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt` microseconds value.
+    ///
+    /// - Parameter value: A `UInt` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: UInt) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: UInt) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt` seconds value.
+    ///
+    /// - Parameter value: A `UInt` seconds value to convert to a `Time`.
+    public static func seconds(_ value: UInt) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt16` microseconds value.
+    ///
+    /// - Parameter value: A `UInt16` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: UInt16) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt16` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt16` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: UInt16) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt16` seconds value.
+    ///
+    /// - Parameter value: A `UInt16` seconds value to convert to a `Time`.
+    public static func seconds(_ value: UInt16) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt32` microseconds value.
+    ///
+    /// - Parameter value: A `UInt32` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: UInt32) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt32` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt32` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: UInt32) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt32` seconds value.
+    ///
+    /// - Parameter value: A `UInt32` seconds value to convert to a `Time`.
+    public static func seconds(_ value: UInt32) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt64` microseconds value.
+    ///
+    /// - Parameter value: A `UInt64` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: UInt64) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt64` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt64` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: UInt64) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt64` seconds value.
+    ///
+    /// - Parameter value: A `UInt64` seconds value to convert to a `Time`.
+    public static func seconds(_ value: UInt64) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt8` microseconds value.
+    ///
+    /// - Parameter value: A `UInt8` microseconds value to convert to a `Time`.
+    public static func microseconds(_ value: UInt8) -> Time {
+        return Time(microseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt8` milliseconds value.
+    ///
+    /// - Parameter value: A `UInt8` milliseconds value to convert to a `Time`.
+    public static func milliseconds(_ value: UInt8) -> Time {
+        return Time(milliseconds: value)
+    }
+
+    /// Create a `Time` by converting a `UInt8` seconds value.
+    ///
+    /// - Parameter value: A `UInt8` seconds value to convert to a `Time`.
+    public static func seconds(_ value: UInt8) -> Time {
+        return Time(seconds: value)
+    }
+
+    /// Create a `Time` by converting a `Double` microseconds value.
+    ///
+    /// - Parameter value: A `Double` microseconds value to convert to a `Time`.
     public init(microseconds value: Double) {
         self.rawValue = Microseconds_d(value)
     }
