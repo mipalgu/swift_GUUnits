@@ -146,6 +146,11 @@ public struct Percent {
 
 // MARK: - Converting From Swift Numeric Types
 
+    /// Create a `Percent` equal to zero.
+    public static var zero: Percent {
+        return Percent(percent: 0)
+    }
+
     /// Create a `Percent` by converting a `Double` percent value.
     ///
     /// - Parameter value: A `Double` percent value to convert to a `Percent`.

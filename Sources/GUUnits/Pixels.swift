@@ -146,6 +146,11 @@ public struct Pixels {
 
 // MARK: - Converting From Swift Numeric Types
 
+    /// Create a `Pixels` equal to zero.
+    public static var zero: Pixels {
+        return Pixels(pixels: 0)
+    }
+
     /// Create a `Pixels` by converting a `Double` pixels value.
     ///
     /// - Parameter value: A `Double` pixels value to convert to a `Pixels`.

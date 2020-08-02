@@ -194,6 +194,11 @@ public struct Angle {
 
 // MARK: - Converting From Swift Numeric Types
 
+    /// Create a `Angle` equal to zero.
+    public static var zero: Angle {
+        return Angle(degrees: 0)
+    }
+
     /// Create a `Angle` by converting a `Double` degrees value.
     ///
     /// - Parameter value: A `Double` degrees value to convert to a `Angle`.

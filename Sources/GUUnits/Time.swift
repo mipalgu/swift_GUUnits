@@ -242,6 +242,11 @@ public struct Time {
 
 // MARK: - Converting From Swift Numeric Types
 
+    /// Create a `Time` equal to zero.
+    public static var zero: Time {
+        return Time(microseconds: 0)
+    }
+
     /// Create a `Time` by converting a `Double` microseconds value.
     ///
     /// - Parameter value: A `Double` microseconds value to convert to a `Time`.

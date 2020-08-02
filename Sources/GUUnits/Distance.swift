@@ -242,6 +242,11 @@ public struct Distance {
 
 // MARK: - Converting From Swift Numeric Types
 
+    /// Create a `Distance` equal to zero.
+    public static var zero: Distance {
+        return Distance(millimetres: 0)
+    }
+
     /// Create a `Distance` by converting a `Double` millimetres value.
     ///
     /// - Parameter value: A `Double` millimetres value to convert to a `Distance`.
