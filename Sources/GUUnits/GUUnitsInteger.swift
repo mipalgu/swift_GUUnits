@@ -80,6 +80,10 @@ public protocol GUUnitsTType: GUUnitsInteger, SignedInteger {}
 public protocol GUUnitsUType: GUUnitsInteger, UnsignedInteger {}
 
 extension GUUnitsInteger {
+    
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
 
     public static var bitWidth: Int {
         return RawValue.bitWidth

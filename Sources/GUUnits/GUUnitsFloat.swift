@@ -86,6 +86,10 @@ public protocol GUUnitsDType: GUUnitsFloat {}
 
 extension GUUnitsFloat {
     
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
     public static var radix: Int {
         RawValue.radix
     }

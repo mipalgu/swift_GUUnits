@@ -74,6 +74,14 @@ extension GUUnitsType where Self: CVarArg, Self.RawValue: CVarArg {
     
 }
 
+extension GUUnitsType where Self: Equatable, Self.RawValue: Equatable {
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+    
+}
+
 extension GUUnitsType where Self: CustomReflectable, Self.RawValue: CustomReflectable {
     
     public var customMirror: Mirror {
