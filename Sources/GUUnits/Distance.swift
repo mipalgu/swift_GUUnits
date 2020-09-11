@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Distance {
+public struct Distance: Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
@@ -874,7 +874,7 @@ public extension UInt8 {
 }
 
 /// A signed integer type for the millimetres unit.
-public struct Millimetres_t: GUUnitsTType {
+public struct Millimetres_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1063,7 +1063,7 @@ public struct Millimetres_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the millimetres unit.
-public struct Millimetres_u: GUUnitsUType {
+public struct Millimetres_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1252,7 +1252,7 @@ public struct Millimetres_u: GUUnitsUType {
 }
 
 /// A floating point type for the millimetres unit.
-public struct Millimetres_f: GUUnitsFType {
+public struct Millimetres_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1441,7 +1441,7 @@ public struct Millimetres_f: GUUnitsFType {
 }
 
 /// A double type for the millimetres unit.
-public struct Millimetres_d: GUUnitsDType {
+public struct Millimetres_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2041,7 +2041,7 @@ public extension UInt8 {
 
 
 /// A signed integer type for the centimetres unit.
-public struct Centimetres_t: GUUnitsTType {
+public struct Centimetres_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2230,7 +2230,7 @@ public struct Centimetres_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the centimetres unit.
-public struct Centimetres_u: GUUnitsUType {
+public struct Centimetres_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2419,7 +2419,7 @@ public struct Centimetres_u: GUUnitsUType {
 }
 
 /// A floating point type for the centimetres unit.
-public struct Centimetres_f: GUUnitsFType {
+public struct Centimetres_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2608,7 +2608,7 @@ public struct Centimetres_f: GUUnitsFType {
 }
 
 /// A double type for the centimetres unit.
-public struct Centimetres_d: GUUnitsDType {
+public struct Centimetres_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3208,7 +3208,7 @@ public extension UInt8 {
 
 
 /// A signed integer type for the metres unit.
-public struct Metres_t: GUUnitsTType {
+public struct Metres_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3397,7 +3397,7 @@ public struct Metres_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the metres unit.
-public struct Metres_u: GUUnitsUType {
+public struct Metres_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3586,7 +3586,7 @@ public struct Metres_u: GUUnitsUType {
 }
 
 /// A floating point type for the metres unit.
-public struct Metres_f: GUUnitsFType {
+public struct Metres_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3775,7 +3775,7 @@ public struct Metres_f: GUUnitsFType {
 }
 
 /// A double type for the metres unit.
-public struct Metres_d: GUUnitsDType {
+public struct Metres_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

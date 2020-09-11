@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Angle {
+public struct Angle: Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
@@ -658,7 +658,7 @@ public extension UInt8 {
 }
 
 /// A signed integer type for the degrees unit.
-public struct Degrees_t: GUUnitsTType {
+public struct Degrees_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -819,7 +819,7 @@ public struct Degrees_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the degrees unit.
-public struct Degrees_u: GUUnitsUType {
+public struct Degrees_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -980,7 +980,7 @@ public struct Degrees_u: GUUnitsUType {
 }
 
 /// A floating point type for the degrees unit.
-public struct Degrees_f: GUUnitsFType {
+public struct Degrees_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1141,7 +1141,7 @@ public struct Degrees_f: GUUnitsFType {
 }
 
 /// A double type for the degrees unit.
-public struct Degrees_d: GUUnitsDType {
+public struct Degrees_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1713,7 +1713,7 @@ public extension UInt8 {
 
 
 /// A signed integer type for the radians unit.
-public struct Radians_t: GUUnitsTType {
+public struct Radians_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1874,7 +1874,7 @@ public struct Radians_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the radians unit.
-public struct Radians_u: GUUnitsUType {
+public struct Radians_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2035,7 +2035,7 @@ public struct Radians_u: GUUnitsUType {
 }
 
 /// A floating point type for the radians unit.
-public struct Radians_f: GUUnitsFType {
+public struct Radians_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2196,7 +2196,7 @@ public struct Radians_f: GUUnitsFType {
 }
 
 /// A double type for the radians unit.
-public struct Radians_d: GUUnitsDType {
+public struct Radians_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Time {
+public struct Time: Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
@@ -874,7 +874,7 @@ public extension UInt8 {
 }
 
 /// A signed integer type for the microseconds unit.
-public struct Microseconds_t: GUUnitsTType {
+public struct Microseconds_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1063,7 +1063,7 @@ public struct Microseconds_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the microseconds unit.
-public struct Microseconds_u: GUUnitsUType {
+public struct Microseconds_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1252,7 +1252,7 @@ public struct Microseconds_u: GUUnitsUType {
 }
 
 /// A floating point type for the microseconds unit.
-public struct Microseconds_f: GUUnitsFType {
+public struct Microseconds_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -1441,7 +1441,7 @@ public struct Microseconds_f: GUUnitsFType {
 }
 
 /// A double type for the microseconds unit.
-public struct Microseconds_d: GUUnitsDType {
+public struct Microseconds_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2041,7 +2041,7 @@ public extension UInt8 {
 
 
 /// A signed integer type for the milliseconds unit.
-public struct Milliseconds_t: GUUnitsTType {
+public struct Milliseconds_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2230,7 +2230,7 @@ public struct Milliseconds_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the milliseconds unit.
-public struct Milliseconds_u: GUUnitsUType {
+public struct Milliseconds_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2419,7 +2419,7 @@ public struct Milliseconds_u: GUUnitsUType {
 }
 
 /// A floating point type for the milliseconds unit.
-public struct Milliseconds_f: GUUnitsFType {
+public struct Milliseconds_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -2608,7 +2608,7 @@ public struct Milliseconds_f: GUUnitsFType {
 }
 
 /// A double type for the milliseconds unit.
-public struct Milliseconds_d: GUUnitsDType {
+public struct Milliseconds_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3208,7 +3208,7 @@ public extension UInt8 {
 
 
 /// A signed integer type for the seconds unit.
-public struct Seconds_t: GUUnitsTType {
+public struct Seconds_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3397,7 +3397,7 @@ public struct Seconds_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the seconds unit.
-public struct Seconds_u: GUUnitsUType {
+public struct Seconds_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3586,7 +3586,7 @@ public struct Seconds_u: GUUnitsUType {
 }
 
 /// A floating point type for the seconds unit.
-public struct Seconds_f: GUUnitsFType {
+public struct Seconds_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -3775,7 +3775,7 @@ public struct Seconds_f: GUUnitsFType {
 }
 
 /// A double type for the seconds unit.
-public struct Seconds_d: GUUnitsDType {
+public struct Seconds_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

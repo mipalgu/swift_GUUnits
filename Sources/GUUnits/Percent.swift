@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Percent {
+public struct Percent: Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
@@ -442,7 +442,7 @@ public extension UInt8 {
 }
 
 /// A signed integer type for the percent unit.
-public struct Percent_t: GUUnitsTType {
+public struct Percent_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -566,7 +566,7 @@ public struct Percent_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the percent unit.
-public struct Percent_u: GUUnitsUType {
+public struct Percent_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -690,7 +690,7 @@ public struct Percent_u: GUUnitsUType {
 }
 
 /// A floating point type for the percent unit.
-public struct Percent_f: GUUnitsFType {
+public struct Percent_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -814,7 +814,7 @@ public struct Percent_f: GUUnitsFType {
 }
 
 /// A double type for the percent unit.
-public struct Percent_d: GUUnitsDType {
+public struct Percent_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 

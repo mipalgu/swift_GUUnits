@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Pixels {
+public struct Pixels: Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
@@ -442,7 +442,7 @@ public extension UInt8 {
 }
 
 /// A signed integer type for the pixels unit.
-public struct Pixels_t: GUUnitsTType {
+public struct Pixels_t: GUUnitsTType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -566,7 +566,7 @@ public struct Pixels_t: GUUnitsTType {
 }
 
 /// An unsigned integer type for the pixels unit.
-public struct Pixels_u: GUUnitsUType {
+public struct Pixels_u: GUUnitsUType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -690,7 +690,7 @@ public struct Pixels_u: GUUnitsUType {
 }
 
 /// A floating point type for the pixels unit.
-public struct Pixels_f: GUUnitsFType {
+public struct Pixels_f: GUUnitsFType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
@@ -814,7 +814,7 @@ public struct Pixels_f: GUUnitsFType {
 }
 
 /// A double type for the pixels unit.
-public struct Pixels_d: GUUnitsDType {
+public struct Pixels_d: GUUnitsDType, Hashable, Codable {
 
 // MARK: - Converting Between The Underlying guunits C Type
 
