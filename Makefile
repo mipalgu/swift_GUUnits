@@ -5,6 +5,8 @@
 
 ALL_TARGETS=host-local robot-local
 
+CI_NAME=swift_GUUnits
+
 .include "../../../mk/mipal.mk"
 
 # vim:ft=make
