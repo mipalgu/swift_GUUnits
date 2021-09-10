@@ -1,0 +1,11 @@
+#
+# Auto-generated cmake build file for swift_GUUnits
+#
+cmake_minimum_required(VERSION 3.15.0)
+project(swift_GUUnits )
+enable_testing()
+include( GNUInstallDirs )
+add_compile_definitions()
+add_custom_target(swift_GUUnits ALL ln -fs ${CMAKE_CURRENT_SOURCE_DIR}/Package.swift ${CMAKE_CURRENT_SOURCE_DIR}/Sources ${CMAKE_CURRENT_SOURCE_DIR}/Tests . COMMAND swift build --build-path ${PROJECT_BINARY_DIR}/.build -c debug  -Xswiftc -Xfrontend -Xswiftc -color-diagnostics -Xcc -O2 -Xcc -I/usr/local/include -Xcxx -I/usr/local/include -Xcc -I/usr/local/include -Xcxx -I/usr/local/include -Xcc -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks -Xcxx -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks -Xcc -I/Users/callum/src/MiPal/GUNao/Common -Xcxx -I/Users/callum/src/MiPal/GUNao/Common -Xcc -DSWIFT_GUUNITS_IS_REMOTE_ON -Xcxx -DSWIFT_GUUNITS_IS_REMOTE_ON -Xcc -DSWIFT_GUUNITS_IS_LOCAL_OFF -Xcxx -DSWIFT_GUUNITS_IS_LOCAL_OFF -Xcc -DIS_REMOTE_ON -Xcxx -DIS_REMOTE_ON -Xcc -DIS_LOCAL_OFF -Xcxx -DIS_LOCAL_OFF -Xcc -DHOST -Xcxx -DHOST -Xcc -DUSE_LIBDISPATCH -Xcxx -DUSE_LIBDISPATCH -Xcxx -O2 -Xlinker -L/usr/local/lib -Xlinker -L/usr/local/lib -Xlinker -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks VERBATIM USES_TERMINAL)
+add_test(test_swift_GUUnits COMMAND swift test --build-path ${PROJECT_BINARY_DIR}/.build -c debug  -Xswiftc -Xfrontend -Xswiftc -color-diagnostics -Xcc -O2 -Xcc -I/usr/local/include -Xcxx -I/usr/local/include -Xcc -I/usr/local/include -Xcxx -I/usr/local/include -Xcc -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks -Xcxx -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks -Xcc -I/Users/callum/src/MiPal/GUNao/Common -Xcxx -I/Users/callum/src/MiPal/GUNao/Common -Xcc -DSWIFT_GUUNITS_IS_REMOTE_ON -Xcxx -DSWIFT_GUUNITS_IS_REMOTE_ON -Xcc -DSWIFT_GUUNITS_IS_LOCAL_OFF -Xcxx -DSWIFT_GUUNITS_IS_LOCAL_OFF -Xcc -DIS_REMOTE_ON -Xcxx -DIS_REMOTE_ON -Xcc -DIS_LOCAL_OFF -Xcxx -DIS_LOCAL_OFF -Xcc -DHOST -Xcxx -DHOST -Xcc -DUSE_LIBDISPATCH -Xcxx -DUSE_LIBDISPATCH -Xcxx -O2 -Xlinker -L/usr/local/lib -Xlinker -L/usr/local/lib -Xlinker -F/Applications/Xcode-beta.app/Contents/Developer/Library/Frameworks)
+install(PROGRAMS ${PROJECT_BINARY_DIR}/.build/debug/swift_GUUnits TYPE BIN OPTIONAL)
