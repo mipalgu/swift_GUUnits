@@ -1,0 +1,11 @@
+author: Callum McColl
+theme: fullwidth
+github_url: https://github.com/mipalgu/swift_GUUnits
+github_file_prefix: https://github.com/mipalgu/swift_GUUnits/tree/main
+root_url: https://mipalgu.github.io/swift_GUUnits/
+
+exclude:
+    - Sources/*/gu_*.swift
+    - gu_util/*
+    - guunits/*
+
