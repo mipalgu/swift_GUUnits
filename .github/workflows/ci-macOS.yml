@@ -14,19 +14,8 @@ jobs:
         with:
             swift-version: "5.6.1"
 
-      - name: Clone guunits
-        uses: actions/checkout@v2
-        with:
-            repository: mipalgu/guunits
-            path: guunits
-
       - name: Install guunits
-        run: |
-            cd guunits/guunits
-            cmake -B build
-            cd build
-            make
-            sudo make install
+        uses: mipalgu/install-guunits@main
 
       - name: Checkout repo
         uses: actions/checkout@v2

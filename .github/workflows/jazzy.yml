@@ -13,68 +13,11 @@ jobs:
     - name: Install Ninja
       run: brew install ninja
 
-    - name: Clone gu_util
-      uses: actions/checkout@v2
-      with:
-        repository: mipalgu/gu_util
-        path: gu_util
-
-    - name: Install gu_util
-      run: |
-        cd gu_util
-        mkdir build
-        cd build
-        cmake -G Ninja ..
-        ninja
-        ninja install
-
-    - name: Clone guunits
-      uses: actions/checkout@v2
-      with:
-        repository: mipalgu/guunits
-        path: guunits
-
     - name: Install guunits
-      run: |
-        cd guunits/guunits
-        mkdir build
-        cd build
-        cmake -G Ninja ..
-        ninja
-        ninja install
-    
-    - name: Create symlinks
-      run: |
-        ln -s gu_util/gu_util.h /usr/local/include/
-
-    - name: Create pc files
-      run: |
-        mkdir -p /usr/local/lib/pkgconfig
-        echo 'prefix=/usr/local' > /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'exec_prefix=${prefix}' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'includedir=${prefix}/include' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'libdir=${exec_prefix}/lib' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo '' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'Name: guunits' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'Version: 1.0' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'Description: Simple units library.' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'Libs: -L${libdir} -lguunits' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'Cflags: -I${includedir} -I${includedir}/guunits' >> /usr/local/lib/pkgconfig/libguunits.pc
-        echo 'prefix=/usr/local' > /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'exec_prefix=${prefix}' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'includedir=${prefix}/include' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'libdir=${exec_prefix}/lib' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo '' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'Name: gu_util' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'Version: 1.0' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'Description: Simple units library.' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'Libs: -L${libdir} -lgu_util' >> /usr/local/lib/pkgconfig/libgu_util.pc
-        echo 'Cflags: -I${includedir} -I${includedir}/gu_util' >> /usr/local/lib/pkgconfig/libgu_util.pc
+      uses: mipalgu/install-guunits@main
 
     - name: Clone Repository 
       uses: actions/checkout@v2
-      with:
-        repository: mipalgu/swift_GUUnits
 
     - name: Compile GUUnits
       run: swift build
