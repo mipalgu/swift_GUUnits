@@ -23,8 +23,8 @@ jobs:
 
       - name: Debug Build
         shell: pwsh
-        run: swift build -c debug -Xcc -I"C:\Program Files (x86)\guunits\include" -Xlinker -L"C:\Program Files (x86)\guunits\lib"
+        run: swift build -c debug
 
       - name: Release build
         shell: pwsh
-        run: swift build -c release -Xcc -I"C:\Program Files (x86)\guunits\include" -Xlinker -L"C:\Program Files (x86)\guunits\lib"
+        run: swift build -c release
