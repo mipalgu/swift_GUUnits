@@ -31,5 +31,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Run tests
-        run: swift test
+      - name: Debug Build
+        run: swift build -c debug
+
+      - name: Release Build
+        run: swift build -c release
