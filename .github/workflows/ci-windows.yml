@@ -1,0 +1,41 @@
+name: Windows Latest Swift CI
+
+on:
+  push:
+    branches: [development, main]
+
+jobs:
+
+  exec-ci:
+    runs-on: windows-latest
+
+    steps:
+      - uses: compnerd/gha-setup-swift@main
+        with:
+            branch: swift-5.6.2-release
+            tag: 5.6.2-RELEASE
+
+      - name: Clone guunits
+        uses: actions/checkout@v2
+        with:
+            repository: mipalgu/guunits
+            path: guunits
+
+      - name: Install guunits
+        run: |
+            cd guunits/guunits
+            cmake -B .build
+            cmake --build .build --config Release
+            cmake --install .build
+            $env:PKG_CONFIG_PATH = "C:/Program Files (x86)/guunits/lib/pkgConfig" + $env:PKG_CONFIG_PATH
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Debug Build
+        shell: pwsh
+        run: swift build -c debug -Xcc -I"C:\Program Files (x86)\guunits\include" -Xlinker -L"C:\Program Files (x86)\guunits\lib"
+
+      - name: Release build
+        shell: pwsh
+        run: swift build -c release -Xcc -I"C:\Program Files (x86)\guunits\include" -Xlinker -L"C:\Program Files (x86)\guunits\lib"
