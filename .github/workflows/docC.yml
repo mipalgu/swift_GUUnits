@@ -10,10 +10,6 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: swift-actions/setup-swift@v1
-        with:
-          swift-version: "5.6.1"
-
       - name: Install guunits
         uses: mipalgu/install-guunits@main
 
@@ -24,6 +20,7 @@ jobs:
         uses: mipalgu/swiftpm-generate-documentation@main
         with:
           hosting-base-path: swift_GUUnits
+          swift-version: "5.6.1"
 
       - name: Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
