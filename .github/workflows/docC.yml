@@ -19,7 +19,6 @@ jobs:
       - name: Generate Documentation
         uses: mipalgu/swiftpm-generate-documentation@main
         with:
-          hosting-base-path: swift_GUUnits
           swift-version: "5.6.1"
 
       - name: Pages Deployment
