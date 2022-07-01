@@ -56,7 +56,7 @@
  *
  */
 
-public protocol GUUnitsType {
+public protocol GUUnitsType: Sendable {
 
     associatedtype RawValue
 

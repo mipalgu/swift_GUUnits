@@ -80,7 +80,7 @@ import CGUUnits
 /// necessary, then you may opt to use one of the integer
 /// variants of the underlying unit types that this type can convert
 /// to.
-public struct Percent: Hashable, Codable {
+public struct Percent: Sendable, Hashable, Codable {
 
 // MARK: - Converting Between The Internal Representation
 
